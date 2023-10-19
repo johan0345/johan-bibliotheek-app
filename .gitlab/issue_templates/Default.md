@@ -16,6 +16,10 @@ _Wat moet er minimaal gedaan worden om deze issue af te ronden_
 
 - [ ] To do
 
+_Wat kan je extra doen_
+
+- [ ] To do
+
 ### Overige details
 
 _Het kan handig zijn om technische details, afbeelding, ontwerpvoorstellen en links naar andere issues of websites toe te voegen_

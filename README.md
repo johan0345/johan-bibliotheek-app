@@ -7,6 +7,8 @@
 1. Ruby Toolbox for Gem files -> https://www.ruby-toolbox.com/
 1. Ruby Coding Styleguide -> https://rubystyle.guide/
 1. Rails Coding Styleguide -> https://rails.rubystyle.guide/
+1. Stimulus -> https://stimulus.hotwired.dev/
+1. Hotwire -> https://turbo.hotwired.dev/ && https://hotwired.dev/
 
 ### Tutorials / Youtube Channels
 

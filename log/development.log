@@ -28080,3 +28080,1235 @@ Processing by PagesController#index as HTML
 Completed 200 OK in 11ms (Views: 10.3ms | ActiveRecord: 0.1ms | Allocations: 8849)
 
 
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" /* loading for pp */ LIMIT ?[0m  [["LIMIT", 11]]
+Started GET "/" for 127.0.0.1 at 2024-02-29 10:35:53 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  [1m[36mBookPost Load (0.5ms)[0m  [1m[34mSELECT "book_posts".* FROM "book_posts"[0m
+  ↳ app/views/pages/index.html.erb:10
+  Rendered pages/index.html.erb within layouts/application (Duration: 138.5ms | Allocations: 12296)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:23
+  Rendered layout layouts/application.html.erb (Duration: 458.6ms | Allocations: 87940)
+Completed 200 OK in 565ms (Views: 462.8ms | ActiveRecord: 6.8ms | Allocations: 94500)
+
+
+Started GET "/pages?order=desc" for 127.0.0.1 at 2024-02-29 10:36:00 +0100
+Processing by PagesController#index as HTML
+  Parameters: {"order"=>"desc"}
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  [1m[36mBookPost Load (2.3ms)[0m  [1m[34mSELECT "book_posts".* FROM "book_posts" ORDER BY LOWER(title) desc[0m
+  ↳ app/views/pages/index.html.erb:10
+  Rendered pages/index.html.erb within layouts/application (Duration: 4.0ms | Allocations: 560)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:23
+  Rendered layout layouts/application.html.erb (Duration: 24.5ms | Allocations: 8638)
+Completed 200 OK in 26ms (Views: 22.2ms | ActiveRecord: 3.0ms | Allocations: 8962)
+
+
+Started GET "/" for 127.0.0.1 at 2024-02-29 10:36:04 +0100
+Processing by PagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  [1m[36mBookPost Load (0.1ms)[0m  [1m[34mSELECT "book_posts".* FROM "book_posts"[0m
+  ↳ app/views/pages/index.html.erb:10
+  Rendered pages/index.html.erb within layouts/application (Duration: 1.4ms | Allocations: 521)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:23
+  Rendered layout layouts/application.html.erb (Duration: 17.2ms | Allocations: 8695)
+Completed 200 OK in 19ms (Views: 17.5ms | ActiveRecord: 0.3ms | Allocations: 8972)
+
+
+Started GET "/users/edit" for 127.0.0.1 at 2024-02-29 10:36:05 +0100
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering users/registrations/edit.html.erb within layouts/application
+  Rendered users/shared/_error_messages.html.erb (Duration: 0.6ms | Allocations: 231)
+  Rendered users/registrations/edit.html.erb within layouts/application (Duration: 14.2ms | Allocations: 3727)
+  Rendered layout layouts/application.html.erb (Duration: 28.3ms | Allocations: 11063)
+Completed 200 OK in 35ms (Views: 31.6ms | ActiveRecord: 0.1ms | Allocations: 13351)
+
+
+Started DELETE "/users/sign_out?_method=delete" for 127.0.0.1 at 2024-02-29 10:36:08 +0100
+Processing by Devise::SessionsController#destroy as TURBO_STREAM
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+Redirected to http://127.0.0.1:3000/
+Completed 303 See Other in 11ms (ActiveRecord: 0.1ms | Allocations: 2903)
+
+
+Started GET "/" for 127.0.0.1 at 2024-02-29 10:36:08 +0100
+Processing by PagesController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  [1m[36mBookPost Load (0.1ms)[0m  [1m[34mSELECT "book_posts".* FROM "book_posts"[0m
+  ↳ app/views/pages/index.html.erb:10
+  Rendered pages/index.html.erb within layouts/application (Duration: 1.5ms | Allocations: 517)
+  Rendered layout layouts/application.html.erb (Duration: 69.5ms | Allocations: 8115)
+Completed 200 OK in 72ms (Views: 70.2ms | ActiveRecord: 0.1ms | Allocations: 8436)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2024-02-29 10:36:09 +0100
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/registrations/new.html.erb within layouts/application
+  Rendered users/shared/_error_messages.html.erb (Duration: 0.0ms | Allocations: 13)
+  Rendered users/shared/_links.html.erb (Duration: 1.1ms | Allocations: 514)
+  Rendered users/registrations/new.html.erb within layouts/application (Duration: 7.6ms | Allocations: 2267)
+  Rendered layout layouts/application.html.erb (Duration: 26.7ms | Allocations: 9516)
+Completed 200 OK in 30ms (Views: 27.9ms | ActiveRecord: 0.0ms | Allocations: 10270)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2024-02-29 10:36:12 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (Duration: 0.3ms | Allocations: 128)
+  Rendered users/sessions/new.html.erb within layouts/application (Duration: 6.0ms | Allocations: 1423)
+  Rendered layout layouts/application.html.erb (Duration: 20.7ms | Allocations: 8770)
+Completed 200 OK in 27ms (Views: 23.9ms | ActiveRecord: 0.0ms | Allocations: 9784)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2024-02-29 10:36:18 +0100
+Processing by Devise::SessionsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"johan.ton@lemone.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+Completed 401 Unauthorized in 3ms (ActiveRecord: 0.0ms | Allocations: 466)
+
+
+Processing by Devise::SessionsController#new as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"johan.ton@lemone.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendering layout layouts/application.html.erb
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (Duration: 0.1ms | Allocations: 115)
+  Rendered users/sessions/new.html.erb within layouts/application (Duration: 1.2ms | Allocations: 867)
+  Rendered layout layouts/application.html.erb (Duration: 9.2ms | Allocations: 8085)
+Completed 200 OK in 243ms (Views: 9.7ms | ActiveRecord: 0.0ms | Allocations: 9124)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2024-02-29 10:36:24 +0100
+Processing by Devise::SessionsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"johan.ton@lemone.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+Completed 401 Unauthorized in 2ms (ActiveRecord: 0.0ms | Allocations: 443)
+
+
+Processing by Devise::SessionsController#new as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"johan.ton@lemone.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendering layout layouts/application.html.erb
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (Duration: 0.1ms | Allocations: 115)
+  Rendered users/sessions/new.html.erb within layouts/application (Duration: 1.2ms | Allocations: 859)
+  Rendered layout layouts/application.html.erb (Duration: 9.1ms | Allocations: 8076)
+Completed 200 OK in 234ms (Views: 9.5ms | ActiveRecord: 0.0ms | Allocations: 8572)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2024-02-29 10:38:12 +0100
+Processing by Devise::SessionsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"johan.ton@lemone.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+Completed 401 Unauthorized in 2ms (ActiveRecord: 0.0ms | Allocations: 633)
+
+
+Processing by Devise::SessionsController#new as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"johan.ton@lemone.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendering layout layouts/application.html.erb
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (Duration: 1.0ms | Allocations: 554)
+  Rendered users/sessions/new.html.erb within layouts/application (Duration: 8.4ms | Allocations: 1766)
+  Rendered layout layouts/application.html.erb (Duration: 39.8ms | Allocations: 29206)
+Completed 200 OK in 273ms (Views: 42.4ms | ActiveRecord: 1.7ms | Allocations: 35311)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2024-02-29 10:38:14 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (Duration: 0.2ms | Allocations: 115)
+  Rendered users/sessions/new.html.erb within layouts/application (Duration: 1.6ms | Allocations: 881)
+  Rendered layout layouts/application.html.erb (Duration: 12.9ms | Allocations: 8180)
+Completed 200 OK in 15ms (Views: 13.3ms | ActiveRecord: 0.0ms | Allocations: 8829)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2024-02-29 10:38:21 +0100
+Processing by Devise::SessionsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"johan.ton@lemone.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms | Allocations: 434)
+
+
+Processing by Devise::SessionsController#new as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"johan.ton@lemone.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendering layout layouts/application.html.erb
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (Duration: 0.1ms | Allocations: 115)
+  Rendered users/sessions/new.html.erb within layouts/application (Duration: 1.2ms | Allocations: 859)
+  Rendered layout layouts/application.html.erb (Duration: 9.3ms | Allocations: 8076)
+Completed 200 OK in 229ms (Views: 9.8ms | ActiveRecord: 0.0ms | Allocations: 8575)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2024-02-29 10:38:35 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (Duration: 1.0ms | Allocations: 550)
+  Rendered users/sessions/new.html.erb within layouts/application (Duration: 6.7ms | Allocations: 1788)
+  Rendered layout layouts/application.html.erb (Duration: 42.4ms | Allocations: 29256)
+Completed 200 OK in 59ms (Views: 49.7ms | ActiveRecord: 2.7ms | Allocations: 35716)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2024-02-29 10:39:03 +0100
+Processing by Devise::SessionsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"johan.ton@lemone.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "johan.ton@lemone.com"], ["LIMIT", 1]]
+Redirected to http://127.0.0.1:3000/
+Completed 303 See Other in 268ms (ActiveRecord: 0.2ms | Allocations: 6769)
+
+
+Started GET "/" for 127.0.0.1 at 2024-02-29 10:39:03 +0100
+Processing by PagesController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  [1m[36mBookPost Load (0.1ms)[0m  [1m[34mSELECT "book_posts".* FROM "book_posts"[0m
+  ↳ app/views/pages/index.html.erb:10
+  Rendered pages/index.html.erb within layouts/application (Duration: 6.9ms | Allocations: 3898)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:23
+  Rendered layout layouts/application.html.erb (Duration: 23.9ms | Allocations: 12159)
+Completed 200 OK in 29ms (Views: 25.7ms | ActiveRecord: 0.7ms | Allocations: 13532)
+
+
+Started GET "/admin" for 127.0.0.1 at 2024-02-29 10:39:05 +0100
+Processing by AdminController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering admin/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/admin/index.html.erb:31
+  Rendered admin/index.html.erb within layouts/application (Duration: 28.2ms | Allocations: 4820)
+  Rendered layout layouts/application.html.erb (Duration: 54.7ms | Allocations: 12178)
+Completed 200 OK in 63ms (Views: 58.2ms | ActiveRecord: 0.4ms | Allocations: 14149)
+
+
+Started GET "/users/edit" for 127.0.0.1 at 2024-02-29 10:39:05 +0100
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering users/registrations/edit.html.erb within layouts/application
+  Rendered users/shared/_error_messages.html.erb (Duration: 0.7ms | Allocations: 212)
+  Rendered users/registrations/edit.html.erb within layouts/application (Duration: 5.7ms | Allocations: 2328)
+  Rendered layout layouts/application.html.erb (Duration: 18.3ms | Allocations: 9653)
+Completed 200 OK in 23ms (Views: 19.9ms | ActiveRecord: 0.1ms | Allocations: 11627)
+
+
+Started GET "/admin" for 127.0.0.1 at 2024-02-29 10:39:05 +0100
+Processing by AdminController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering admin/index.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/admin/index.html.erb:31
+  Rendered admin/index.html.erb within layouts/application (Duration: 33.8ms | Allocations: 3909)
+  Rendered layout layouts/application.html.erb (Duration: 55.7ms | Allocations: 11163)
+Completed 200 OK in 84ms (Views: 58.6ms | ActiveRecord: 0.5ms | Allocations: 12825)
+
+
+Started DELETE "/users/sign_out?_method=delete" for 127.0.0.1 at 2024-02-29 10:39:06 +0100
+Processing by Devise::SessionsController#destroy as TURBO_STREAM
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Redirected to http://127.0.0.1:3000/
+Completed 303 See Other in 6ms (ActiveRecord: 0.1ms | Allocations: 1921)
+
+
+Started GET "/" for 127.0.0.1 at 2024-02-29 10:39:06 +0100
+Processing by PagesController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  [1m[36mBookPost Load (0.1ms)[0m  [1m[34mSELECT "book_posts".* FROM "book_posts"[0m
+  ↳ app/views/pages/index.html.erb:10
+  Rendered pages/index.html.erb within layouts/application (Duration: 7.9ms | Allocations: 516)
+  Rendered layout layouts/application.html.erb (Duration: 99.7ms | Allocations: 8036)
+Completed 200 OK in 103ms (Views: 101.0ms | ActiveRecord: 0.1ms | Allocations: 8310)
+
+
+Started GET "/pages?order=asc" for 127.0.0.1 at 2024-02-29 10:39:06 +0100
+Processing by PagesController#index as HTML
+  Parameters: {"order"=>"asc"}
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  [1m[36mBookPost Load (0.2ms)[0m  [1m[34mSELECT "book_posts".* FROM "book_posts" ORDER BY LOWER(title) asc[0m
+  ↳ app/views/pages/index.html.erb:10
+  Rendered pages/index.html.erb within layouts/application (Duration: 1.7ms | Allocations: 549)
+  Rendered layout layouts/application.html.erb (Duration: 48.2ms | Allocations: 8098)
+Completed 200 OK in 50ms (Views: 48.8ms | ActiveRecord: 0.2ms | Allocations: 8410)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2024-02-29 10:39:07 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (Duration: 0.6ms | Allocations: 117)
+  Rendered users/sessions/new.html.erb within layouts/application (Duration: 4.0ms | Allocations: 874)
+  Rendered layout layouts/application.html.erb (Duration: 35.4ms | Allocations: 8178)
+Completed 200 OK in 38ms (Views: 36.1ms | ActiveRecord: 0.0ms | Allocations: 8815)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2024-02-29 10:39:07 +0100
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/registrations/new.html.erb within layouts/application
+  Rendered users/shared/_error_messages.html.erb (Duration: 0.0ms | Allocations: 13)
+  Rendered users/shared/_links.html.erb (Duration: 0.3ms | Allocations: 76)
+  Rendered users/registrations/new.html.erb within layouts/application (Duration: 6.2ms | Allocations: 1665)
+  Rendered layout layouts/application.html.erb (Duration: 22.7ms | Allocations: 8911)
+Completed 200 OK in 27ms (Views: 25.4ms | ActiveRecord: 0.0ms | Allocations: 9605)
+
+
+Started POST "/users" for 127.0.0.1 at 2024-02-29 10:39:24 +0100
+Processing by Devise::RegistrationsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"username"=>"user13", "email"=>"user13@gmail.com", "phone"=>"31634594356234", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+[31mUnpermitted parameters: :username, :phone. Context: { controller: Devise::RegistrationsController, action: create, request: #<ActionDispatch::Request:0x00000001079c0010>, params: {"authenticity_token"=>"[FILTERED]", "user"=>{"username"=>"user13", "email"=>"user13@gmail.com", "phone"=>"31634594356234", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up", "controller"=>"devise/registrations", "action"=>"create"} }[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (1.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "user13@gmail.com"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mCACHE User Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "user13@gmail.com"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."phone" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  Rendering layout layouts/application.html.erb
+  Rendering users/registrations/new.html.erb within layouts/application
+  Rendered users/shared/_error_messages.html.erb (Duration: 3.7ms | Allocations: 778)
+  Rendered users/shared/_links.html.erb (Duration: 0.1ms | Allocations: 70)
+  Rendered users/registrations/new.html.erb within layouts/application (Duration: 9.3ms | Allocations: 2893)
+  Rendered layout layouts/application.html.erb (Duration: 32.0ms | Allocations: 10134)
+Completed 422 Unprocessable Entity in 350ms (Views: 32.6ms | ActiveRecord: 1.6ms | Allocations: 19152)
+
+
+Started GET "/" for 127.0.0.1 at 2024-02-29 10:50:13 +0100
+Processing by PagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  [1m[36mBookPost Load (2.2ms)[0m  [1m[34mSELECT "book_posts".* FROM "book_posts"[0m
+  ↳ app/views/pages/index.html.erb:10
+  Rendered pages/index.html.erb within layouts/application (Duration: 20.9ms | Allocations: 3818)
+  Rendered layout layouts/application.html.erb (Duration: 82.5ms | Allocations: 31546)
+Completed 200 OK in 104ms (Views: 93.8ms | ActiveRecord: 3.0ms | Allocations: 33146)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2024-02-29 10:50:14 +0100
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/registrations/new.html.erb within layouts/application
+  Rendered users/shared/_error_messages.html.erb (Duration: 0.4ms | Allocations: 214)
+  Rendered users/shared/_links.html.erb (Duration: 0.9ms | Allocations: 501)
+  Rendered users/registrations/new.html.erb within layouts/application (Duration: 5.8ms | Allocations: 2528)
+  Rendered layout layouts/application.html.erb (Duration: 18.2ms | Allocations: 9864)
+Completed 200 OK in 27ms (Views: 22.0ms | ActiveRecord: 0.0ms | Allocations: 15011)
+
+
+Started POST "/users" for 127.0.0.1 at 2024-02-29 10:50:31 +0100
+Processing by Devise::RegistrationsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"username"=>"user14", "email"=>"user14@gmail.com", "phone"=>"316491934131", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+[31mUnpermitted parameters: :username, :phone. Context: { controller: Devise::RegistrationsController, action: create, request: #<ActionDispatch::Request:0x0000000107800a18>, params: {"authenticity_token"=>"[FILTERED]", "user"=>{"username"=>"user14", "email"=>"user14@gmail.com", "phone"=>"316491934131", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up", "controller"=>"devise/registrations", "action"=>"create"} }[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (1.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "user14@gmail.com"], ["LIMIT", 1]]
+  [1m[36mCACHE User Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "user14@gmail.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "created_at", "updated_at", "role", "username", "phone") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["email", "user14@gmail.com"], ["encrypted_password", "[FILTERED]"], ["reset_password_token", "[FILTERED]"], ["reset_password_sent_at", "[FILTERED]"], ["remember_created_at", nil], ["created_at", "2024-02-29 09:50:31.783690"], ["updated_at", "2024-02-29 09:50:31.783690"], ["role", nil], ["username", nil], ["phone", nil]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://127.0.0.1:3000/
+Completed 303 See Other in 227ms (ActiveRecord: 1.6ms | Allocations: 8754)
+
+
+Started GET "/" for 127.0.0.1 at 2024-02-29 10:50:31 +0100
+Processing by PagesController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  [1m[36mBookPost Load (0.1ms)[0m  [1m[34mSELECT "book_posts".* FROM "book_posts"[0m
+  ↳ app/views/pages/index.html.erb:10
+  Rendered pages/index.html.erb within layouts/application (Duration: 1.3ms | Allocations: 517)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:23
+  Rendered layout layouts/application.html.erb (Duration: 11.7ms | Allocations: 8941)
+Completed 200 OK in 14ms (Views: 12.1ms | ActiveRecord: 0.2ms | Allocations: 9259)
+
+
+Started GET "/book_posts/new" for 127.0.0.1 at 2024-02-29 10:50:33 +0100
+Processing by BookPostsController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering book_posts/new.html.erb within layouts/application
+  Rendered book_posts/_form.html.erb (Duration: 6.6ms | Allocations: 1522)
+  Rendered book_posts/new.html.erb within layouts/application (Duration: 10.3ms | Allocations: 1759)
+  Rendered layout layouts/application.html.erb (Duration: 45.2ms | Allocations: 9011)
+Completed 200 OK in 56ms (Views: 48.3ms | ActiveRecord: 0.1ms | Allocations: 10944)
+
+
+Started GET "/users/edit" for 127.0.0.1 at 2024-02-29 10:50:33 +0100
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering users/registrations/edit.html.erb within layouts/application
+  Rendered users/shared/_error_messages.html.erb (Duration: 0.0ms | Allocations: 13)
+  Rendered users/registrations/edit.html.erb within layouts/application (Duration: 3.1ms | Allocations: 2037)
+  Rendered layout layouts/application.html.erb (Duration: 14.2ms | Allocations: 9285)
+Completed 200 OK in 18ms (Views: 15.6ms | ActiveRecord: 0.1ms | Allocations: 10972)
+
+
+Started GET "/" for 127.0.0.1 at 2024-02-29 10:53:52 +0100
+Processing by PagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  [1m[36mBookPost Load (0.1ms)[0m  [1m[34mSELECT "book_posts".* FROM "book_posts"[0m
+  ↳ app/views/pages/index.html.erb:10
+  Rendered pages/index.html.erb within layouts/application (Duration: 8.2ms | Allocations: 4319)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:23
+  Rendered layout layouts/application.html.erb (Duration: 49.9ms | Allocations: 37403)
+Completed 200 OK in 58ms (Views: 50.4ms | ActiveRecord: 2.2ms | Allocations: 39802)
+
+
+Started GET "/users/edit" for 127.0.0.1 at 2024-02-29 10:53:53 +0100
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering users/registrations/edit.html.erb within layouts/application
+  Rendered users/shared/_error_messages.html.erb (Duration: 0.4ms | Allocations: 214)
+  Rendered users/registrations/edit.html.erb within layouts/application (Duration: 3.9ms | Allocations: 2387)
+  Rendered layout layouts/application.html.erb (Duration: 20.9ms | Allocations: 9717)
+Completed 200 OK in 28ms (Views: 25.0ms | ActiveRecord: 0.1ms | Allocations: 12007)
+
+
+Started DELETE "/users/sign_out?_method=delete" for 127.0.0.1 at 2024-02-29 10:53:54 +0100
+Processing by Devise::SessionsController#destroy as TURBO_STREAM
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+Redirected to http://127.0.0.1:3000/
+Completed 303 See Other in 5ms (ActiveRecord: 0.1ms | Allocations: 2172)
+
+
+Started GET "/" for 127.0.0.1 at 2024-02-29 10:53:54 +0100
+Processing by PagesController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  [1m[36mBookPost Load (0.1ms)[0m  [1m[34mSELECT "book_posts".* FROM "book_posts"[0m
+  ↳ app/views/pages/index.html.erb:10
+  Rendered pages/index.html.erb within layouts/application (Duration: 1.4ms | Allocations: 517)
+  Rendered layout layouts/application.html.erb (Duration: 9.9ms | Allocations: 8138)
+Completed 200 OK in 11ms (Views: 10.2ms | ActiveRecord: 0.1ms | Allocations: 8458)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2024-02-29 10:53:55 +0100
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/registrations/new.html.erb within layouts/application
+  Rendered users/shared/_error_messages.html.erb (Duration: 0.0ms | Allocations: 13)
+  Rendered users/shared/_links.html.erb (Duration: 1.4ms | Allocations: 494)
+  Rendered users/registrations/new.html.erb within layouts/application (Duration: 4.2ms | Allocations: 2146)
+  Rendered layout layouts/application.html.erb (Duration: 15.4ms | Allocations: 9437)
+Completed 200 OK in 18ms (Views: 16.5ms | ActiveRecord: 0.0ms | Allocations: 10174)
+
+
+Started POST "/users" for 127.0.0.1 at 2024-02-29 10:54:15 +0100
+Processing by Devise::RegistrationsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"username"=>"user15", "email"=>"user15@gmail.com", "phone"=>"3162434234", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (1.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "user15@gmail.com"], ["LIMIT", 1]]
+  [1m[36mCACHE User Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "user15@gmail.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "created_at", "updated_at", "role", "username", "phone") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["email", "user15@gmail.com"], ["encrypted_password", "[FILTERED]"], ["reset_password_token", "[FILTERED]"], ["reset_password_sent_at", "[FILTERED]"], ["remember_created_at", nil], ["created_at", "2024-02-29 09:54:15.993213"], ["updated_at", "2024-02-29 09:54:15.993213"], ["role", nil], ["username", "user15"], ["phone", "3162434234"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://127.0.0.1:3000/
+Completed 303 See Other in 223ms (ActiveRecord: 1.7ms | Allocations: 7349)
+
+
+Started GET "/" for 127.0.0.1 at 2024-02-29 10:54:16 +0100
+Processing by PagesController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  [1m[36mBookPost Load (0.1ms)[0m  [1m[34mSELECT "book_posts".* FROM "book_posts"[0m
+  ↳ app/views/pages/index.html.erb:10
+  Rendered pages/index.html.erb within layouts/application (Duration: 1.1ms | Allocations: 515)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:23
+  Rendered layout layouts/application.html.erb (Duration: 11.0ms | Allocations: 8616)
+Completed 200 OK in 13ms (Views: 12.3ms | ActiveRecord: 0.1ms | Allocations: 8890)
+
+
+Started GET "/users/edit" for 127.0.0.1 at 2024-02-29 10:54:17 +0100
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering users/registrations/edit.html.erb within layouts/application
+  Rendered users/shared/_error_messages.html.erb (Duration: 0.0ms | Allocations: 13)
+  Rendered users/registrations/edit.html.erb within layouts/application (Duration: 1.8ms | Allocations: 1478)
+  Rendered layout layouts/application.html.erb (Duration: 15.3ms | Allocations: 8738)
+Completed 200 OK in 18ms (Views: 16.0ms | ActiveRecord: 0.1ms | Allocations: 10379)
+
+
+Started DELETE "/users/sign_out?_method=delete" for 127.0.0.1 at 2024-02-29 10:54:19 +0100
+Processing by Devise::SessionsController#destroy as TURBO_STREAM
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+Redirected to http://127.0.0.1:3000/
+Completed 303 See Other in 3ms (ActiveRecord: 0.1ms | Allocations: 1771)
+
+
+Started GET "/" for 127.0.0.1 at 2024-02-29 10:54:19 +0100
+Processing by PagesController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  [1m[36mBookPost Load (0.1ms)[0m  [1m[34mSELECT "book_posts".* FROM "book_posts"[0m
+  ↳ app/views/pages/index.html.erb:10
+  Rendered pages/index.html.erb within layouts/application (Duration: 1.1ms | Allocations: 515)
+  Rendered layout layouts/application.html.erb (Duration: 26.1ms | Allocations: 8100)
+Completed 200 OK in 28ms (Views: 26.7ms | ActiveRecord: 0.1ms | Allocations: 8375)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2024-02-29 10:54:20 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (Duration: 0.2ms | Allocations: 126)
+  Rendered users/sessions/new.html.erb within layouts/application (Duration: 1.7ms | Allocations: 1211)
+  Rendered layout layouts/application.html.erb (Duration: 12.2ms | Allocations: 8458)
+Completed 200 OK in 15ms (Views: 13.4ms | ActiveRecord: 0.0ms | Allocations: 9336)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2024-02-29 10:54:28 +0100
+Processing by Devise::SessionsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"johan.ton@lemone.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "johan.ton@lemone.com"], ["LIMIT", 1]]
+Redirected to http://127.0.0.1:3000/
+Completed 303 See Other in 227ms (ActiveRecord: 0.1ms | Allocations: 2696)
+
+
+Started GET "/" for 127.0.0.1 at 2024-02-29 10:54:29 +0100
+Processing by PagesController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  [1m[36mBookPost Load (0.1ms)[0m  [1m[34mSELECT "book_posts".* FROM "book_posts"[0m
+  ↳ app/views/pages/index.html.erb:10
+  Rendered pages/index.html.erb within layouts/application (Duration: 1.1ms | Allocations: 515)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:23
+  Rendered layout layouts/application.html.erb (Duration: 9.8ms | Allocations: 8618)
+Completed 200 OK in 11ms (Views: 10.0ms | ActiveRecord: 0.1ms | Allocations: 8892)
+
+
+Started GET "/users/edit" for 127.0.0.1 at 2024-02-29 10:54:30 +0100
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering users/registrations/edit.html.erb within layouts/application
+  Rendered users/shared/_error_messages.html.erb (Duration: 0.0ms | Allocations: 13)
+  Rendered users/registrations/edit.html.erb within layouts/application (Duration: 2.3ms | Allocations: 1477)
+  Rendered layout layouts/application.html.erb (Duration: 21.4ms | Allocations: 8754)
+Completed 200 OK in 25ms (Views: 22.0ms | ActiveRecord: 0.1ms | Allocations: 10413)
+
+
+Started GET "/admin" for 127.0.0.1 at 2024-02-29 10:54:30 +0100
+Processing by AdminController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering admin/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/admin/index.html.erb:31
+  Rendered admin/index.html.erb within layouts/application (Duration: 7.4ms | Allocations: 5576)
+  Rendered layout layouts/application.html.erb (Duration: 15.3ms | Allocations: 12908)
+Completed 200 OK in 20ms (Views: 16.3ms | ActiveRecord: 0.2ms | Allocations: 14901)
+
+
+Started GET "/users/edit" for 127.0.0.1 at 2024-02-29 10:54:30 +0100
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering users/registrations/edit.html.erb within layouts/application
+  Rendered users/shared/_error_messages.html.erb (Duration: 0.0ms | Allocations: 13)
+  Rendered users/registrations/edit.html.erb within layouts/application (Duration: 2.4ms | Allocations: 1477)
+  Rendered layout layouts/application.html.erb (Duration: 11.6ms | Allocations: 8729)
+Completed 200 OK in 15ms (Views: 12.2ms | ActiveRecord: 0.1ms | Allocations: 10381)
+
+
+Started GET "/users/edit" for 127.0.0.1 at 2024-02-29 10:54:31 +0100
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering users/registrations/edit.html.erb within layouts/application
+  Rendered users/shared/_error_messages.html.erb (Duration: 0.0ms | Allocations: 13)
+  Rendered users/registrations/edit.html.erb within layouts/application (Duration: 1.7ms | Allocations: 1477)
+  Rendered layout layouts/application.html.erb (Duration: 10.3ms | Allocations: 8729)
+Completed 200 OK in 13ms (Views: 10.7ms | ActiveRecord: 0.1ms | Allocations: 10375)
+
+
+Started PUT "/users" for 127.0.0.1 at 2024-02-29 10:54:40 +0100
+Processing by Devise::RegistrationsController#update as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"username"=>"johan admi", "email"=>"johan.ton@lemone.com", "phone"=>"31612345678", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "current_password"=>"[FILTERED]"}, "commit"=>"Update"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[31mUnpermitted parameters: :username, :phone. Context: { controller: Devise::RegistrationsController, action: update, request: #<ActionDispatch::Request:0x0000000107194d00>, params: {"_method"=>"put", "authenticity_token"=>"[FILTERED]", "user"=>{"username"=>"johan admi", "email"=>"johan.ton@lemone.com", "phone"=>"31612345678", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "current_password"=>"[FILTERED]"}, "commit"=>"Update", "controller"=>"devise/registrations", "action"=>"update"} }[0m
+  Rendering layout layouts/application.html.erb
+  Rendering users/registrations/edit.html.erb within layouts/application
+  Rendered users/shared/_error_messages.html.erb (Duration: 0.6ms | Allocations: 417)
+  Rendered users/registrations/edit.html.erb within layouts/application (Duration: 2.9ms | Allocations: 2334)
+  Rendered layout layouts/application.html.erb (Duration: 12.8ms | Allocations: 9616)
+Completed 422 Unprocessable Entity in 232ms (Views: 13.2ms | ActiveRecord: 0.6ms | Allocations: 14617)
+
+
+Started PUT "/users" for 127.0.0.1 at 2024-02-29 10:54:46 +0100
+Processing by Devise::RegistrationsController#update as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"username"=>"johan admi", "email"=>"johan.ton@lemone.com", "phone"=>"31612345678", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "current_password"=>"[FILTERED]"}, "commit"=>"Update"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[31mUnpermitted parameters: :username, :phone. Context: { controller: Devise::RegistrationsController, action: update, request: #<ActionDispatch::Request:0x0000000107982e40>, params: {"_method"=>"put", "authenticity_token"=>"[FILTERED]", "user"=>{"username"=>"johan admi", "email"=>"johan.ton@lemone.com", "phone"=>"31612345678", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "current_password"=>"[FILTERED]"}, "commit"=>"Update", "controller"=>"devise/registrations", "action"=>"update"} }[0m
+[31mUnpermitted parameters: :username, :phone. Context: { controller: Devise::RegistrationsController, action: update, request: #<ActionDispatch::Request:0x0000000107982e40>, params: {"_method"=>"put", "authenticity_token"=>"[FILTERED]", "user"=>{"username"=>"johan admi", "email"=>"johan.ton@lemone.com", "phone"=>"31612345678", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "current_password"=>"[FILTERED]"}, "commit"=>"Update", "controller"=>"devise/registrations", "action"=>"update"} }[0m
+[31mUnpermitted parameters: :username, :phone. Context: { controller: Devise::RegistrationsController, action: update, request: #<ActionDispatch::Request:0x0000000107982e40>, params: {"_method"=>"put", "authenticity_token"=>"[FILTERED]", "user"=>{"username"=>"johan admi", "email"=>"johan.ton@lemone.com", "phone"=>"31612345678", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "current_password"=>"[FILTERED]"}, "commit"=>"Update", "controller"=>"devise/registrations", "action"=>"update"} }[0m
+[31mUnpermitted parameters: :username, :phone. Context: { controller: Devise::RegistrationsController, action: update, request: #<ActionDispatch::Request:0x0000000107982e40>, params: {"_method"=>"put", "authenticity_token"=>"[FILTERED]", "user"=>{"username"=>"johan admi", "email"=>"johan.ton@lemone.com", "phone"=>"31612345678", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "current_password"=>"[FILTERED]"}, "commit"=>"Update", "controller"=>"devise/registrations", "action"=>"update"} }[0m
+Redirected to http://127.0.0.1:3000/
+Completed 303 See Other in 308ms (ActiveRecord: 0.1ms | Allocations: 4106)
+
+
+Started GET "/" for 127.0.0.1 at 2024-02-29 10:54:46 +0100
+Processing by PagesController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  [1m[36mBookPost Load (0.1ms)[0m  [1m[34mSELECT "book_posts".* FROM "book_posts"[0m
+  ↳ app/views/pages/index.html.erb:10
+  Rendered pages/index.html.erb within layouts/application (Duration: 2.0ms | Allocations: 515)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:23
+  Rendered layout layouts/application.html.erb (Duration: 28.8ms | Allocations: 8730)
+Completed 200 OK in 31ms (Views: 29.7ms | ActiveRecord: 0.1ms | Allocations: 9004)
+
+
+Started GET "/users/edit" for 127.0.0.1 at 2024-02-29 10:54:47 +0100
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering users/registrations/edit.html.erb within layouts/application
+  Rendered users/shared/_error_messages.html.erb (Duration: 0.5ms | Allocations: 13)
+  Rendered users/registrations/edit.html.erb within layouts/application (Duration: 6.4ms | Allocations: 1477)
+  Rendered layout layouts/application.html.erb (Duration: 68.6ms | Allocations: 8729)
+Completed 200 OK in 82ms (Views: 69.7ms | ActiveRecord: 0.1ms | Allocations: 10364)
+
+
+Started GET "/admin" for 127.0.0.1 at 2024-02-29 10:54:48 +0100
+Processing by AdminController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering admin/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/admin/index.html.erb:31
+  Rendered admin/index.html.erb within layouts/application (Duration: 6.6ms | Allocations: 4929)
+  Rendered layout layouts/application.html.erb (Duration: 15.0ms | Allocations: 12183)
+Completed 200 OK in 18ms (Views: 15.3ms | ActiveRecord: 0.1ms | Allocations: 13845)
+
+
+Started GET "/users/edit" for 127.0.0.1 at 2024-02-29 10:54:49 +0100
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering users/registrations/edit.html.erb within layouts/application
+  Rendered users/shared/_error_messages.html.erb (Duration: 0.0ms | Allocations: 13)
+  Rendered users/registrations/edit.html.erb within layouts/application (Duration: 1.7ms | Allocations: 1477)
+  Rendered layout layouts/application.html.erb (Duration: 11.4ms | Allocations: 8758)
+Completed 200 OK in 15ms (Views: 11.9ms | ActiveRecord: 0.1ms | Allocations: 10384)
+
+
+Started GET "/users/edit" for 127.0.0.1 at 2024-02-29 10:54:50 +0100
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering users/registrations/edit.html.erb within layouts/application
+  Rendered users/shared/_error_messages.html.erb (Duration: 0.0ms | Allocations: 13)
+  Rendered users/registrations/edit.html.erb within layouts/application (Duration: 2.7ms | Allocations: 1459)
+  Rendered layout layouts/application.html.erb (Duration: 13.1ms | Allocations: 8799)
+Completed 200 OK in 17ms (Views: 14.3ms | ActiveRecord: 0.1ms | Allocations: 10441)
+
+
+Started PUT "/users" for 127.0.0.1 at 2024-02-29 10:55:04 +0100
+Processing by Devise::RegistrationsController#update as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"username"=>"johan admi", "email"=>"johan.ton@lemone.com", "phone"=>"31612345678", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "current_password"=>"[FILTERED]"}, "commit"=>"Update"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[31mUnpermitted parameters: :username, :phone. Context: { controller: Devise::RegistrationsController, action: update, request: #<ActionDispatch::Request:0x0000000108140e70>, params: {"_method"=>"put", "authenticity_token"=>"[FILTERED]", "user"=>{"username"=>"johan admi", "email"=>"johan.ton@lemone.com", "phone"=>"31612345678", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "current_password"=>"[FILTERED]"}, "commit"=>"Update", "controller"=>"devise/registrations", "action"=>"update"} }[0m
+[31mUnpermitted parameters: :username, :phone. Context: { controller: Devise::RegistrationsController, action: update, request: #<ActionDispatch::Request:0x0000000108140e70>, params: {"_method"=>"put", "authenticity_token"=>"[FILTERED]", "user"=>{"username"=>"johan admi", "email"=>"johan.ton@lemone.com", "phone"=>"31612345678", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "current_password"=>"[FILTERED]"}, "commit"=>"Update", "controller"=>"devise/registrations", "action"=>"update"} }[0m
+[31mUnpermitted parameters: :username, :phone. Context: { controller: Devise::RegistrationsController, action: update, request: #<ActionDispatch::Request:0x0000000108140e70>, params: {"_method"=>"put", "authenticity_token"=>"[FILTERED]", "user"=>{"username"=>"johan admi", "email"=>"johan.ton@lemone.com", "phone"=>"31612345678", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "current_password"=>"[FILTERED]"}, "commit"=>"Update", "controller"=>"devise/registrations", "action"=>"update"} }[0m
+[31mUnpermitted parameters: :username, :phone. Context: { controller: Devise::RegistrationsController, action: update, request: #<ActionDispatch::Request:0x0000000108140e70>, params: {"_method"=>"put", "authenticity_token"=>"[FILTERED]", "user"=>{"username"=>"johan admi", "email"=>"johan.ton@lemone.com", "phone"=>"31612345678", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "current_password"=>"[FILTERED]"}, "commit"=>"Update", "controller"=>"devise/registrations", "action"=>"update"} }[0m
+Redirected to http://127.0.0.1:3000/
+Completed 303 See Other in 220ms (ActiveRecord: 0.1ms | Allocations: 4010)
+
+
+Started GET "/" for 127.0.0.1 at 2024-02-29 10:55:04 +0100
+Processing by PagesController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  [1m[36mBookPost Load (0.1ms)[0m  [1m[34mSELECT "book_posts".* FROM "book_posts"[0m
+  ↳ app/views/pages/index.html.erb:10
+  Rendered pages/index.html.erb within layouts/application (Duration: 1.0ms | Allocations: 515)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:23
+  Rendered layout layouts/application.html.erb (Duration: 9.7ms | Allocations: 8678)
+Completed 200 OK in 11ms (Views: 10.0ms | ActiveRecord: 0.1ms | Allocations: 8953)
+
+
+Started GET "/admin" for 127.0.0.1 at 2024-02-29 10:55:06 +0100
+Processing by AdminController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering admin/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/admin/index.html.erb:31
+  Rendered admin/index.html.erb within layouts/application (Duration: 8.6ms | Allocations: 4929)
+  Rendered layout layouts/application.html.erb (Duration: 18.4ms | Allocations: 12183)
+Completed 200 OK in 22ms (Views: 19.0ms | ActiveRecord: 0.1ms | Allocations: 13815)
+
+
+Started GET "/users/edit" for 127.0.0.1 at 2024-02-29 10:55:07 +0100
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering users/registrations/edit.html.erb within layouts/application
+  Rendered users/shared/_error_messages.html.erb (Duration: 0.1ms | Allocations: 13)
+  Rendered users/registrations/edit.html.erb within layouts/application (Duration: 4.4ms | Allocations: 1477)
+  Rendered layout layouts/application.html.erb (Duration: 26.9ms | Allocations: 8758)
+Completed 200 OK in 33ms (Views: 27.6ms | ActiveRecord: 0.2ms | Allocations: 10399)
+
+
+Started DELETE "/users/sign_out?_method=delete" for 127.0.0.1 at 2024-02-29 10:55:08 +0100
+Processing by Devise::SessionsController#destroy as TURBO_STREAM
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Redirected to http://127.0.0.1:3000/
+Completed 303 See Other in 3ms (ActiveRecord: 0.1ms | Allocations: 1749)
+
+
+Started GET "/" for 127.0.0.1 at 2024-02-29 10:55:08 +0100
+Processing by PagesController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  [1m[36mBookPost Load (0.1ms)[0m  [1m[34mSELECT "book_posts".* FROM "book_posts"[0m
+  ↳ app/views/pages/index.html.erb:10
+  Rendered pages/index.html.erb within layouts/application (Duration: 1.0ms | Allocations: 515)
+  Rendered layout layouts/application.html.erb (Duration: 8.9ms | Allocations: 8116)
+Completed 200 OK in 10ms (Views: 9.2ms | ActiveRecord: 0.1ms | Allocations: 8391)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2024-02-29 10:55:09 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (Duration: 0.5ms | Allocations: 115)
+  Rendered users/sessions/new.html.erb within layouts/application (Duration: 1.8ms | Allocations: 871)
+  Rendered layout layouts/application.html.erb (Duration: 9.9ms | Allocations: 8116)
+Completed 200 OK in 11ms (Views: 10.4ms | ActiveRecord: 0.0ms | Allocations: 8783)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2024-02-29 10:55:09 +0100
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/registrations/new.html.erb within layouts/application
+  Rendered users/shared/_error_messages.html.erb (Duration: 0.0ms | Allocations: 13)
+  Rendered users/shared/_links.html.erb (Duration: 0.1ms | Allocations: 70)
+  Rendered users/registrations/new.html.erb within layouts/application (Duration: 2.1ms | Allocations: 1230)
+  Rendered layout layouts/application.html.erb (Duration: 12.7ms | Allocations: 8471)
+Completed 200 OK in 15ms (Views: 13.3ms | ActiveRecord: 0.0ms | Allocations: 9112)
+
+
+Started POST "/users" for 127.0.0.1 at 2024-02-29 10:55:28 +0100
+Processing by Devise::RegistrationsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"username"=>"user16", "email"=>"user16@gmail.com", "phone"=>"3162523432", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (1.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "user16@gmail.com"], ["LIMIT", 1]]
+  [1m[36mCACHE User Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "user16@gmail.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "created_at", "updated_at", "role", "username", "phone") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["email", "user16@gmail.com"], ["encrypted_password", "[FILTERED]"], ["reset_password_token", "[FILTERED]"], ["reset_password_sent_at", "[FILTERED]"], ["remember_created_at", nil], ["created_at", "2024-02-29 09:55:29.214174"], ["updated_at", "2024-02-29 09:55:29.214174"], ["role", nil], ["username", "user16"], ["phone", "3162523432"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://127.0.0.1:3000/
+Completed 303 See Other in 228ms (ActiveRecord: 1.9ms | Allocations: 6629)
+
+
+Started GET "/" for 127.0.0.1 at 2024-02-29 10:55:29 +0100
+Processing by PagesController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  [1m[36mBookPost Load (0.1ms)[0m  [1m[34mSELECT "book_posts".* FROM "book_posts"[0m
+  ↳ app/views/pages/index.html.erb:10
+  Rendered pages/index.html.erb within layouts/application (Duration: 1.0ms | Allocations: 515)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:23
+  Rendered layout layouts/application.html.erb (Duration: 13.2ms | Allocations: 8652)
+Completed 200 OK in 14ms (Views: 13.5ms | ActiveRecord: 0.2ms | Allocations: 8927)
+
+
+Started GET "/users/edit" for 127.0.0.1 at 2024-02-29 10:55:30 +0100
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering users/registrations/edit.html.erb within layouts/application
+  Rendered users/shared/_error_messages.html.erb (Duration: 0.0ms | Allocations: 13)
+  Rendered users/registrations/edit.html.erb within layouts/application (Duration: 2.1ms | Allocations: 1477)
+  Rendered layout layouts/application.html.erb (Duration: 10.3ms | Allocations: 8738)
+Completed 200 OK in 13ms (Views: 11.0ms | ActiveRecord: 0.1ms | Allocations: 10391)
+
+
+Started PUT "/users" for 127.0.0.1 at 2024-02-29 10:55:37 +0100
+Processing by Devise::RegistrationsController#update as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"username"=>"user166", "email"=>"user16@gmail.com", "phone"=>"3162523432", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "current_password"=>"[FILTERED]"}, "commit"=>"Update"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+[31mUnpermitted parameters: :username, :phone. Context: { controller: Devise::RegistrationsController, action: update, request: #<ActionDispatch::Request:0x00000001080c4e38>, params: {"_method"=>"put", "authenticity_token"=>"[FILTERED]", "user"=>{"username"=>"user166", "email"=>"user16@gmail.com", "phone"=>"3162523432", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "current_password"=>"[FILTERED]"}, "commit"=>"Update", "controller"=>"devise/registrations", "action"=>"update"} }[0m
+[31mUnpermitted parameters: :username, :phone. Context: { controller: Devise::RegistrationsController, action: update, request: #<ActionDispatch::Request:0x00000001080c4e38>, params: {"_method"=>"put", "authenticity_token"=>"[FILTERED]", "user"=>{"username"=>"user166", "email"=>"user16@gmail.com", "phone"=>"3162523432", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "current_password"=>"[FILTERED]"}, "commit"=>"Update", "controller"=>"devise/registrations", "action"=>"update"} }[0m
+[31mUnpermitted parameters: :username, :phone. Context: { controller: Devise::RegistrationsController, action: update, request: #<ActionDispatch::Request:0x00000001080c4e38>, params: {"_method"=>"put", "authenticity_token"=>"[FILTERED]", "user"=>{"username"=>"user166", "email"=>"user16@gmail.com", "phone"=>"3162523432", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "current_password"=>"[FILTERED]"}, "commit"=>"Update", "controller"=>"devise/registrations", "action"=>"update"} }[0m
+[31mUnpermitted parameters: :username, :phone. Context: { controller: Devise::RegistrationsController, action: update, request: #<ActionDispatch::Request:0x00000001080c4e38>, params: {"_method"=>"put", "authenticity_token"=>"[FILTERED]", "user"=>{"username"=>"user166", "email"=>"user16@gmail.com", "phone"=>"3162523432", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "current_password"=>"[FILTERED]"}, "commit"=>"Update", "controller"=>"devise/registrations", "action"=>"update"} }[0m
+Redirected to http://127.0.0.1:3000/
+Completed 303 See Other in 217ms (ActiveRecord: 0.1ms | Allocations: 4036)
+
+
+Started GET "/" for 127.0.0.1 at 2024-02-29 10:55:37 +0100
+Processing by PagesController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  [1m[36mBookPost Load (0.1ms)[0m  [1m[34mSELECT "book_posts".* FROM "book_posts"[0m
+  ↳ app/views/pages/index.html.erb:10
+  Rendered pages/index.html.erb within layouts/application (Duration: 0.9ms | Allocations: 515)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:23
+  Rendered layout layouts/application.html.erb (Duration: 9.9ms | Allocations: 8606)
+Completed 200 OK in 11ms (Views: 10.3ms | ActiveRecord: 0.1ms | Allocations: 8880)
+
+
+Started GET "/users/edit" for 127.0.0.1 at 2024-02-29 10:57:39 +0100
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering users/registrations/edit.html.erb within layouts/application
+  Rendered users/shared/_error_messages.html.erb (Duration: 0.1ms | Allocations: 13)
+  Rendered users/registrations/edit.html.erb within layouts/application (Duration: 2.8ms | Allocations: 1477)
+  Rendered layout layouts/application.html.erb (Duration: 12.7ms | Allocations: 8713)
+Completed 200 OK in 17ms (Views: 13.3ms | ActiveRecord: 0.1ms | Allocations: 10378)
+
+
+Started PUT "/users" for 127.0.0.1 at 2024-02-29 10:58:05 +0100
+Processing by Devise::RegistrationsController#update as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"username"=>"user16", "email"=>"user17@gmail.com", "phone"=>"3162523432", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "current_password"=>"[FILTERED]"}, "commit"=>"Update"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+[31mUnpermitted parameters: :username, :phone. Context: { controller: Devise::RegistrationsController, action: update, request: #<ActionDispatch::Request:0x0000000108288030>, params: {"_method"=>"put", "authenticity_token"=>"[FILTERED]", "user"=>{"username"=>"user16", "email"=>"user17@gmail.com", "phone"=>"3162523432", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "current_password"=>"[FILTERED]"}, "commit"=>"Update", "controller"=>"devise/registrations", "action"=>"update"} }[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (4.9ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? AND "users"."id" != ? LIMIT ?[0m  [["email", "user17@gmail.com"], ["id", 9], ["LIMIT", 1]]
+  [1m[36mCACHE User Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? AND "users"."id" != ? LIMIT ?[0m  [["email", "user17@gmail.com"], ["id", 9], ["LIMIT", 1]]
+  [1m[36mUser Update (0.3ms)[0m  [1m[33mUPDATE "users" SET "email" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["email", "user17@gmail.com"], ["updated_at", "2024-02-29 09:58:05.966363"], ["id", 9]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+[31mUnpermitted parameters: :username, :phone. Context: { controller: Devise::RegistrationsController, action: update, request: #<ActionDispatch::Request:0x0000000108288030>, params: {"_method"=>"put", "authenticity_token"=>"[FILTERED]", "user"=>{"username"=>"user16", "email"=>"user17@gmail.com", "phone"=>"3162523432", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "current_password"=>"[FILTERED]"}, "commit"=>"Update", "controller"=>"devise/registrations", "action"=>"update"} }[0m
+[31mUnpermitted parameters: :username, :phone. Context: { controller: Devise::RegistrationsController, action: update, request: #<ActionDispatch::Request:0x0000000108288030>, params: {"_method"=>"put", "authenticity_token"=>"[FILTERED]", "user"=>{"username"=>"user16", "email"=>"user17@gmail.com", "phone"=>"3162523432", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "current_password"=>"[FILTERED]"}, "commit"=>"Update", "controller"=>"devise/registrations", "action"=>"update"} }[0m
+[31mUnpermitted parameters: :username, :phone. Context: { controller: Devise::RegistrationsController, action: update, request: #<ActionDispatch::Request:0x0000000108288030>, params: {"_method"=>"put", "authenticity_token"=>"[FILTERED]", "user"=>{"username"=>"user16", "email"=>"user17@gmail.com", "phone"=>"3162523432", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "current_password"=>"[FILTERED]"}, "commit"=>"Update", "controller"=>"devise/registrations", "action"=>"update"} }[0m
+Redirected to http://127.0.0.1:3000/
+Completed 303 See Other in 272ms (ActiveRecord: 5.6ms | Allocations: 9561)
+
+
+Started GET "/" for 127.0.0.1 at 2024-02-29 10:58:05 +0100
+Processing by PagesController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  [1m[36mBookPost Load (0.3ms)[0m  [1m[34mSELECT "book_posts".* FROM "book_posts"[0m
+  ↳ app/views/pages/index.html.erb:10
+  Rendered pages/index.html.erb within layouts/application (Duration: 2.7ms | Allocations: 515)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:23
+  Rendered layout layouts/application.html.erb (Duration: 31.3ms | Allocations: 8708)
+Completed 200 OK in 34ms (Views: 32.3ms | ActiveRecord: 0.5ms | Allocations: 8983)
+
+
+Started GET "/users/edit" for 127.0.0.1 at 2024-02-29 10:58:07 +0100
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering users/registrations/edit.html.erb within layouts/application
+  Rendered users/shared/_error_messages.html.erb (Duration: 0.0ms | Allocations: 13)
+  Rendered users/registrations/edit.html.erb within layouts/application (Duration: 2.8ms | Allocations: 1477)
+  Rendered layout layouts/application.html.erb (Duration: 14.4ms | Allocations: 8721)
+Completed 200 OK in 17ms (Views: 14.9ms | ActiveRecord: 0.1ms | Allocations: 10361)
+
+
+Started PUT "/users" for 127.0.0.1 at 2024-02-29 10:58:24 +0100
+Processing by Devise::RegistrationsController#update as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"username"=>"user17", "email"=>"user17@gmail.com", "phone"=>"3162523432", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "current_password"=>"[FILTERED]"}, "commit"=>"Update"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+[31mUnpermitted parameters: :username, :phone. Context: { controller: Devise::RegistrationsController, action: update, request: #<ActionDispatch::Request:0x0000000107a4f148>, params: {"_method"=>"put", "authenticity_token"=>"[FILTERED]", "user"=>{"username"=>"user17", "email"=>"user17@gmail.com", "phone"=>"3162523432", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "current_password"=>"[FILTERED]"}, "commit"=>"Update", "controller"=>"devise/registrations", "action"=>"update"} }[0m
+[31mUnpermitted parameters: :username, :phone. Context: { controller: Devise::RegistrationsController, action: update, request: #<ActionDispatch::Request:0x0000000107a4f148>, params: {"_method"=>"put", "authenticity_token"=>"[FILTERED]", "user"=>{"username"=>"user17", "email"=>"user17@gmail.com", "phone"=>"3162523432", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "current_password"=>"[FILTERED]"}, "commit"=>"Update", "controller"=>"devise/registrations", "action"=>"update"} }[0m
+[31mUnpermitted parameters: :username, :phone. Context: { controller: Devise::RegistrationsController, action: update, request: #<ActionDispatch::Request:0x0000000107a4f148>, params: {"_method"=>"put", "authenticity_token"=>"[FILTERED]", "user"=>{"username"=>"user17", "email"=>"user17@gmail.com", "phone"=>"3162523432", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "current_password"=>"[FILTERED]"}, "commit"=>"Update", "controller"=>"devise/registrations", "action"=>"update"} }[0m
+[31mUnpermitted parameters: :username, :phone. Context: { controller: Devise::RegistrationsController, action: update, request: #<ActionDispatch::Request:0x0000000107a4f148>, params: {"_method"=>"put", "authenticity_token"=>"[FILTERED]", "user"=>{"username"=>"user17", "email"=>"user17@gmail.com", "phone"=>"3162523432", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "current_password"=>"[FILTERED]"}, "commit"=>"Update", "controller"=>"devise/registrations", "action"=>"update"} }[0m
+Redirected to http://127.0.0.1:3000/
+Completed 303 See Other in 224ms (ActiveRecord: 0.2ms | Allocations: 4015)
+
+
+Started GET "/" for 127.0.0.1 at 2024-02-29 10:58:25 +0100
+Processing by PagesController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  [1m[36mBookPost Load (0.1ms)[0m  [1m[34mSELECT "book_posts".* FROM "book_posts"[0m
+  ↳ app/views/pages/index.html.erb:10
+  Rendered pages/index.html.erb within layouts/application (Duration: 1.0ms | Allocations: 515)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:23
+  Rendered layout layouts/application.html.erb (Duration: 10.5ms | Allocations: 8626)
+Completed 200 OK in 11ms (Views: 10.8ms | ActiveRecord: 0.1ms | Allocations: 8901)
+
+
+Started GET "/book_posts/new" for 127.0.0.1 at 2024-02-29 10:58:26 +0100
+Processing by BookPostsController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering book_posts/new.html.erb within layouts/application
+  Rendered book_posts/_form.html.erb (Duration: 5.9ms | Allocations: 1323)
+  Rendered book_posts/new.html.erb within layouts/application (Duration: 7.7ms | Allocations: 1555)
+  Rendered layout layouts/application.html.erb (Duration: 45.1ms | Allocations: 8916)
+Completed 200 OK in 57ms (Views: 46.5ms | ActiveRecord: 0.1ms | Allocations: 10872)
+
+
+Started GET "/users/edit" for 127.0.0.1 at 2024-02-29 10:58:27 +0100
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering users/registrations/edit.html.erb within layouts/application
+  Rendered users/shared/_error_messages.html.erb (Duration: 0.0ms | Allocations: 13)
+  Rendered users/registrations/edit.html.erb within layouts/application (Duration: 2.2ms | Allocations: 1477)
+  Rendered layout layouts/application.html.erb (Duration: 10.9ms | Allocations: 8778)
+Completed 200 OK in 14ms (Views: 11.4ms | ActiveRecord: 0.1ms | Allocations: 10419)
+
+
+Started GET "/book_posts/new" for 127.0.0.1 at 2024-02-29 11:07:40 +0100
+Started GET "/" for 127.0.0.1 at 2024-02-29 11:07:40 +0100
+Processing by BookPostsController#new as HTML
+  [1m[36mUser Load (2.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering book_posts/new.html.erb within layouts/application
+  Rendered book_posts/_form.html.erb (Duration: 3.1ms | Allocations: 1383)
+  Rendered book_posts/new.html.erb within layouts/application (Duration: 4.0ms | Allocations: 1617)
+  Rendered layout layouts/application.html.erb (Duration: 42.7ms | Allocations: 29031)
+Completed 200 OK in 83ms (Views: 45.6ms | ActiveRecord: 3.5ms | Allocations: 39951)
+
+
+Processing by PagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  [1m[36mBookPost Load (0.1ms)[0m  [1m[34mSELECT "book_posts".* FROM "book_posts"[0m
+  ↳ app/views/pages/index.html.erb:10
+  Rendered pages/index.html.erb within layouts/application (Duration: 6.8ms | Allocations: 4318)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:23
+  Rendered layout layouts/application.html.erb (Duration: 40.1ms | Allocations: 37300)
+Completed 200 OK in 51ms (Views: 39.7ms | ActiveRecord: 2.1ms | Allocations: 39701)
+
+
+Started DELETE "/users/sign_out?_method=delete" for 127.0.0.1 at 2024-02-29 11:07:41 +0100
+Processing by Devise::SessionsController#destroy as TURBO_STREAM
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.1ms | Allocations: 2027)
+
+
+  
+ArgumentError (wrong number of arguments (given 2, expected 1)):
+  
+app/controllers/application_controller.rb:7:in `configure_permitted_parameters'
+Started GET "/" for 127.0.0.1 at 2024-02-29 11:07:47 +0100
+Processing by PagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  [1m[36mBookPost Load (0.1ms)[0m  [1m[34mSELECT "book_posts".* FROM "book_posts"[0m
+  ↳ app/views/pages/index.html.erb:10
+  Rendered pages/index.html.erb within layouts/application (Duration: 17.4ms | Allocations: 4316)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:23
+  Rendered layout layouts/application.html.erb (Duration: 172.2ms | Allocations: 37399)
+Completed 200 OK in 180ms (Views: 171.5ms | ActiveRecord: 3.7ms | Allocations: 39791)
+
+
+Started GET "/users/edit" for 127.0.0.1 at 2024-02-29 11:07:48 +0100
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering users/registrations/edit.html.erb within layouts/application
+  Rendered users/shared/_error_messages.html.erb (Duration: 0.4ms | Allocations: 214)
+  Rendered users/registrations/edit.html.erb within layouts/application (Duration: 21.6ms | Allocations: 2410)
+  Rendered layout layouts/application.html.erb (Duration: 47.6ms | Allocations: 9865)
+Completed 200 OK in 74ms (Views: 57.4ms | ActiveRecord: 0.1ms | Allocations: 12150)
+
+
+Started DELETE "/users/sign_out?_method=delete" for 127.0.0.1 at 2024-02-29 11:07:49 +0100
+Processing by Devise::SessionsController#destroy as TURBO_STREAM
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+Redirected to http://127.0.0.1:3000/
+Completed 303 See Other in 5ms (ActiveRecord: 0.1ms | Allocations: 2175)
+
+
+Started GET "/" for 127.0.0.1 at 2024-02-29 11:07:49 +0100
+Processing by PagesController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  [1m[36mBookPost Load (0.1ms)[0m  [1m[34mSELECT "book_posts".* FROM "book_posts"[0m
+  ↳ app/views/pages/index.html.erb:10
+  Rendered pages/index.html.erb within layouts/application (Duration: 1.0ms | Allocations: 517)
+  Rendered layout layouts/application.html.erb (Duration: 18.3ms | Allocations: 8097)
+Completed 200 OK in 19ms (Views: 18.7ms | ActiveRecord: 0.1ms | Allocations: 8415)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2024-02-29 11:07:49 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (Duration: 1.0ms | Allocations: 544)
+  Rendered users/sessions/new.html.erb within layouts/application (Duration: 3.8ms | Allocations: 1694)
+  Rendered layout layouts/application.html.erb (Duration: 14.4ms | Allocations: 8947)
+Completed 200 OK in 20ms (Views: 15.9ms | ActiveRecord: 0.0ms | Allocations: 9825)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2024-02-29 11:07:50 +0100
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/registrations/new.html.erb within layouts/application
+  Rendered users/shared/_error_messages.html.erb (Duration: 0.0ms | Allocations: 13)
+  Rendered users/shared/_links.html.erb (Duration: 0.1ms | Allocations: 76)
+  Rendered users/registrations/new.html.erb within layouts/application (Duration: 2.7ms | Allocations: 1663)
+  Rendered layout layouts/application.html.erb (Duration: 12.9ms | Allocations: 8904)
+Completed 200 OK in 15ms (Views: 13.6ms | ActiveRecord: 0.0ms | Allocations: 9600)
+
+
+Started POST "/users" for 127.0.0.1 at 2024-02-29 11:08:04 +0100
+Processing by Devise::RegistrationsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"username"=>"user19", "email"=>"user19@gmail.com", "phone"=>"31635354", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (1.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "user19@gmail.com"], ["LIMIT", 1]]
+  [1m[36mCACHE User Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "user19@gmail.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "created_at", "updated_at", "role", "username", "phone") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["email", "user19@gmail.com"], ["encrypted_password", "[FILTERED]"], ["reset_password_token", "[FILTERED]"], ["reset_password_sent_at", "[FILTERED]"], ["remember_created_at", nil], ["created_at", "2024-02-29 10:08:04.829016"], ["updated_at", "2024-02-29 10:08:04.829016"], ["role", nil], ["username", "user19"], ["phone", "31635354"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://127.0.0.1:3000/
+Completed 303 See Other in 225ms (ActiveRecord: 1.6ms | Allocations: 7345)
+
+
+Started GET "/" for 127.0.0.1 at 2024-02-29 11:08:04 +0100
+Processing by PagesController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  [1m[36mBookPost Load (0.1ms)[0m  [1m[34mSELECT "book_posts".* FROM "book_posts"[0m
+  ↳ app/views/pages/index.html.erb:10
+  Rendered pages/index.html.erb within layouts/application (Duration: 0.9ms | Allocations: 515)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:23
+  Rendered layout layouts/application.html.erb (Duration: 10.5ms | Allocations: 8626)
+Completed 200 OK in 12ms (Views: 10.8ms | ActiveRecord: 0.1ms | Allocations: 8900)
+
+
+Started GET "/book_posts/new" for 127.0.0.1 at 2024-02-29 11:08:05 +0100
+Processing by BookPostsController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering book_posts/new.html.erb within layouts/application
+  Rendered book_posts/_form.html.erb (Duration: 1.6ms | Allocations: 1348)
+  Rendered book_posts/new.html.erb within layouts/application (Duration: 2.8ms | Allocations: 1577)
+  Rendered layout layouts/application.html.erb (Duration: 12.8ms | Allocations: 8831)
+Completed 200 OK in 21ms (Views: 15.3ms | ActiveRecord: 0.1ms | Allocations: 10770)
+
+
+Started GET "/book_posts/new" for 127.0.0.1 at 2024-02-29 11:08:06 +0100
+Processing by BookPostsController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering book_posts/new.html.erb within layouts/application
+  Rendered book_posts/_form.html.erb (Duration: 1.4ms | Allocations: 884)
+  Rendered book_posts/new.html.erb within layouts/application (Duration: 1.6ms | Allocations: 948)
+  Rendered layout layouts/application.html.erb (Duration: 11.7ms | Allocations: 8400)
+Completed 200 OK in 15ms (Views: 12.1ms | ActiveRecord: 0.1ms | Allocations: 10034)
+
+
+Started GET "/users/edit" for 127.0.0.1 at 2024-02-29 11:08:06 +0100
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering users/registrations/edit.html.erb within layouts/application
+  Rendered users/shared/_error_messages.html.erb (Duration: 0.0ms | Allocations: 13)
+  Rendered users/registrations/edit.html.erb within layouts/application (Duration: 2.1ms | Allocations: 1477)
+  Rendered layout layouts/application.html.erb (Duration: 10.8ms | Allocations: 8830)
+Completed 200 OK in 14ms (Views: 11.2ms | ActiveRecord: 0.1ms | Allocations: 10479)
+
+
+Started GET "/book_posts/new" for 127.0.0.1 at 2024-02-29 11:08:15 +0100
+Processing by BookPostsController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering book_posts/new.html.erb within layouts/application
+  Rendered book_posts/_form.html.erb (Duration: 2.7ms | Allocations: 884)
+  Rendered book_posts/new.html.erb within layouts/application (Duration: 3.0ms | Allocations: 948)
+  Rendered layout layouts/application.html.erb (Duration: 26.2ms | Allocations: 8198)
+Completed 200 OK in 32ms (Views: 26.7ms | ActiveRecord: 0.1ms | Allocations: 9819)
+
+
+Started PUT "/users" for 127.0.0.1 at 2024-02-29 11:08:20 +0100
+Processing by Devise::RegistrationsController#update as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"username"=>"user199", "email"=>"user19@gmail.com", "phone"=>"31635354", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "current_password"=>"[FILTERED]"}, "commit"=>"Update"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+[31mUnpermitted parameters: :username, :phone. Context: { controller: Devise::RegistrationsController, action: update, request: #<ActionDispatch::Request:0x0000000107be96c0>, params: {"_method"=>"put", "authenticity_token"=>"[FILTERED]", "user"=>{"username"=>"user199", "email"=>"user19@gmail.com", "phone"=>"31635354", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "current_password"=>"[FILTERED]"}, "commit"=>"Update", "controller"=>"devise/registrations", "action"=>"update"} }[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+[31mUnpermitted parameters: :username, :phone. Context: { controller: Devise::RegistrationsController, action: update, request: #<ActionDispatch::Request:0x0000000107be96c0>, params: {"_method"=>"put", "authenticity_token"=>"[FILTERED]", "user"=>{"username"=>"user199", "email"=>"user19@gmail.com", "phone"=>"31635354", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "current_password"=>"[FILTERED]"}, "commit"=>"Update", "controller"=>"devise/registrations", "action"=>"update"} }[0m
+[31mUnpermitted parameters: :username, :phone. Context: { controller: Devise::RegistrationsController, action: update, request: #<ActionDispatch::Request:0x0000000107be96c0>, params: {"_method"=>"put", "authenticity_token"=>"[FILTERED]", "user"=>{"username"=>"user199", "email"=>"user19@gmail.com", "phone"=>"31635354", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "current_password"=>"[FILTERED]"}, "commit"=>"Update", "controller"=>"devise/registrations", "action"=>"update"} }[0m
+[31mUnpermitted parameters: :username, :phone. Context: { controller: Devise::RegistrationsController, action: update, request: #<ActionDispatch::Request:0x0000000107be96c0>, params: {"_method"=>"put", "authenticity_token"=>"[FILTERED]", "user"=>{"username"=>"user199", "email"=>"user19@gmail.com", "phone"=>"31635354", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "current_password"=>"[FILTERED]"}, "commit"=>"Update", "controller"=>"devise/registrations", "action"=>"update"} }[0m
+Redirected to http://127.0.0.1:3000/
+Completed 303 See Other in 224ms (ActiveRecord: 2.0ms | Allocations: 7434)
+
+
+Started GET "/" for 127.0.0.1 at 2024-02-29 11:08:21 +0100
+Processing by PagesController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  [1m[36mBookPost Load (0.1ms)[0m  [1m[34mSELECT "book_posts".* FROM "book_posts"[0m
+  ↳ app/views/pages/index.html.erb:10
+  Rendered pages/index.html.erb within layouts/application (Duration: 0.9ms | Allocations: 515)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:23
+  Rendered layout layouts/application.html.erb (Duration: 9.9ms | Allocations: 8606)
+Completed 200 OK in 11ms (Views: 10.1ms | ActiveRecord: 0.1ms | Allocations: 8880)
+
+
+Started GET "/users/edit" for 127.0.0.1 at 2024-02-29 11:09:38 +0100
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering users/registrations/edit.html.erb within layouts/application
+  Rendered users/shared/_error_messages.html.erb (Duration: 1.4ms | Allocations: 214)
+  Rendered users/registrations/edit.html.erb within layouts/application (Duration: 10.9ms | Allocations: 2421)
+  Rendered layout layouts/application.html.erb (Duration: 59.8ms | Allocations: 30034)
+Completed 200 OK in 96ms (Views: 68.6ms | ActiveRecord: 3.7ms | Allocations: 37749)
+
+
+Started GET "/" for 127.0.0.1 at 2024-02-29 11:09:39 +0100
+Processing by PagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  [1m[36mBookPost Load (0.2ms)[0m  [1m[34mSELECT "book_posts".* FROM "book_posts"[0m
+  ↳ app/views/pages/index.html.erb:10
+  Rendered pages/index.html.erb within layouts/application (Duration: 8.6ms | Allocations: 3898)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:23
+  Rendered layout layouts/application.html.erb (Duration: 26.9ms | Allocations: 12093)
+Completed 200 OK in 32ms (Views: 28.1ms | ActiveRecord: 0.8ms | Allocations: 13474)
+
+
+Started GET "/users/edit" for 127.0.0.1 at 2024-02-29 11:09:40 +0100
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering users/registrations/edit.html.erb within layouts/application
+  Rendered users/shared/_error_messages.html.erb (Duration: 0.0ms | Allocations: 13)
+  Rendered users/registrations/edit.html.erb within layouts/application (Duration: 1.7ms | Allocations: 1478)
+  Rendered layout layouts/application.html.erb (Duration: 9.4ms | Allocations: 8714)
+Completed 200 OK in 12ms (Views: 10.1ms | ActiveRecord: 0.1ms | Allocations: 10370)
+
+
+Started PUT "/users" for 127.0.0.1 at 2024-02-29 11:09:46 +0100
+Processing by Devise::RegistrationsController#update as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"username"=>"user199", "email"=>"user19@gmail.com", "phone"=>"31635354", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "current_password"=>"[FILTERED]"}, "commit"=>"Update"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+[31mUnpermitted parameters: :username, :phone. Context: { controller: Devise::RegistrationsController, action: update, request: #<ActionDispatch::Request:0x00000001072f99c0>, params: {"_method"=>"put", "authenticity_token"=>"[FILTERED]", "user"=>{"username"=>"user199", "email"=>"user19@gmail.com", "phone"=>"31635354", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "current_password"=>"[FILTERED]"}, "commit"=>"Update", "controller"=>"devise/registrations", "action"=>"update"} }[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+[31mUnpermitted parameters: :username, :phone. Context: { controller: Devise::RegistrationsController, action: update, request: #<ActionDispatch::Request:0x00000001072f99c0>, params: {"_method"=>"put", "authenticity_token"=>"[FILTERED]", "user"=>{"username"=>"user199", "email"=>"user19@gmail.com", "phone"=>"31635354", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "current_password"=>"[FILTERED]"}, "commit"=>"Update", "controller"=>"devise/registrations", "action"=>"update"} }[0m
+[31mUnpermitted parameters: :username, :phone. Context: { controller: Devise::RegistrationsController, action: update, request: #<ActionDispatch::Request:0x00000001072f99c0>, params: {"_method"=>"put", "authenticity_token"=>"[FILTERED]", "user"=>{"username"=>"user199", "email"=>"user19@gmail.com", "phone"=>"31635354", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "current_password"=>"[FILTERED]"}, "commit"=>"Update", "controller"=>"devise/registrations", "action"=>"update"} }[0m
+[31mUnpermitted parameters: :username, :phone. Context: { controller: Devise::RegistrationsController, action: update, request: #<ActionDispatch::Request:0x00000001072f99c0>, params: {"_method"=>"put", "authenticity_token"=>"[FILTERED]", "user"=>{"username"=>"user199", "email"=>"user19@gmail.com", "phone"=>"31635354", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "current_password"=>"[FILTERED]"}, "commit"=>"Update", "controller"=>"devise/registrations", "action"=>"update"} }[0m
+Redirected to http://127.0.0.1:3000/
+Completed 303 See Other in 227ms (ActiveRecord: 1.6ms | Allocations: 7794)
+
+
+Started GET "/" for 127.0.0.1 at 2024-02-29 11:09:46 +0100
+Processing by PagesController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  [1m[36mBookPost Load (0.1ms)[0m  [1m[34mSELECT "book_posts".* FROM "book_posts"[0m
+  ↳ app/views/pages/index.html.erb:10
+  Rendered pages/index.html.erb within layouts/application (Duration: 1.2ms | Allocations: 516)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:23
+  Rendered layout layouts/application.html.erb (Duration: 14.8ms | Allocations: 8675)
+Completed 200 OK in 16ms (Views: 15.1ms | ActiveRecord: 0.1ms | Allocations: 8993)
+
+
+Started GET "/" for 127.0.0.1 at 2024-02-29 11:10:45 +0100
+Processing by PagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  [1m[36mBookPost Load (0.4ms)[0m  [1m[34mSELECT "book_posts".* FROM "book_posts"[0m
+  ↳ app/views/pages/index.html.erb:10
+  Rendered pages/index.html.erb within layouts/application (Duration: 72.5ms | Allocations: 4318)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:23
+  Rendered layout layouts/application.html.erb (Duration: 131.1ms | Allocations: 37394)
+Completed 200 OK in 173ms (Views: 128.2ms | ActiveRecord: 15.2ms | Allocations: 39817)
+
+
+Started GET "/users/edit" for 127.0.0.1 at 2024-02-29 11:10:45 +0100
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering users/registrations/edit.html.erb within layouts/application
+  Rendered users/shared/_error_messages.html.erb (Duration: 0.6ms | Allocations: 214)
+  Rendered users/registrations/edit.html.erb within layouts/application (Duration: 5.7ms | Allocations: 2410)
+  Rendered layout layouts/application.html.erb (Duration: 30.2ms | Allocations: 9773)
+Completed 200 OK in 40ms (Views: 36.1ms | ActiveRecord: 0.1ms | Allocations: 12057)
+
+
+Started GET "/users/edit" for 127.0.0.1 at 2024-02-29 11:10:46 +0100
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering users/registrations/edit.html.erb within layouts/application
+  Rendered users/shared/_error_messages.html.erb (Duration: 0.0ms | Allocations: 13)
+  Rendered users/registrations/edit.html.erb within layouts/application (Duration: 2.6ms | Allocations: 1477)
+  Rendered layout layouts/application.html.erb (Duration: 12.5ms | Allocations: 8817)
+Completed 200 OK in 15ms (Views: 12.9ms | ActiveRecord: 0.1ms | Allocations: 10481)
+
+
+Started GET "/users/edit" for 127.0.0.1 at 2024-02-29 11:10:48 +0100
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering users/registrations/edit.html.erb within layouts/application
+  Rendered users/shared/_error_messages.html.erb (Duration: 0.0ms | Allocations: 13)
+  Rendered users/registrations/edit.html.erb within layouts/application (Duration: 2.9ms | Allocations: 1459)
+  Rendered layout layouts/application.html.erb (Duration: 13.1ms | Allocations: 8768)
+Completed 200 OK in 16ms (Views: 13.6ms | ActiveRecord: 0.1ms | Allocations: 10411)
+
+
+Started PUT "/users" for 127.0.0.1 at 2024-02-29 11:10:54 +0100
+Processing by Devise::RegistrationsController#update as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"username"=>"user199", "email"=>"user19@gmail.com", "phone"=>"31635354", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "current_password"=>"[FILTERED]"}, "commit"=>"Update"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering users/registrations/edit.html.erb within layouts/application
+  Rendered users/shared/_error_messages.html.erb (Duration: 0.4ms | Allocations: 417)
+  Rendered users/registrations/edit.html.erb within layouts/application (Duration: 2.3ms | Allocations: 2334)
+  Rendered layout layouts/application.html.erb (Duration: 17.6ms | Allocations: 9700)
+Completed 422 Unprocessable Entity in 248ms (Views: 18.1ms | ActiveRecord: 0.6ms | Allocations: 14762)
+
+
+Started PUT "/users" for 127.0.0.1 at 2024-02-29 11:11:00 +0100
+Processing by Devise::RegistrationsController#update as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"username"=>"user199", "email"=>"user19@gmail.com", "phone"=>"31635354", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "current_password"=>"[FILTERED]"}, "commit"=>"Update"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Update (1.1ms)[0m  [1m[33mUPDATE "users" SET "updated_at" = ?, "username" = ? WHERE "users"."id" = ?[0m  [["updated_at", "2024-02-29 10:11:00.747307"], ["username", "user199"], ["id", 10]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://127.0.0.1:3000/
+Completed 303 See Other in 221ms (ActiveRecord: 1.3ms | Allocations: 6817)
+
+
+Started GET "/" for 127.0.0.1 at 2024-02-29 11:11:00 +0100
+Processing by PagesController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  [1m[36mBookPost Load (0.1ms)[0m  [1m[34mSELECT "book_posts".* FROM "book_posts"[0m
+  ↳ app/views/pages/index.html.erb:10
+  Rendered pages/index.html.erb within layouts/application (Duration: 1.1ms | Allocations: 517)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:23
+  Rendered layout layouts/application.html.erb (Duration: 14.0ms | Allocations: 8805)
+Completed 200 OK in 15ms (Views: 14.2ms | ActiveRecord: 0.1ms | Allocations: 9124)
+
+

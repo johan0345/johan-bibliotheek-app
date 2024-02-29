@@ -8,7 +8,13 @@ class User < ApplicationRecord
 
   validates :email, uniqueness: true
 
+  validate :email_domain
 
+  private
 
+  def email_domain
+    domain = email.split("@").last
+    errors.add(:email, "is not from a permitted domain.") unless domain == 'lemone.com'
+  end
 
 end

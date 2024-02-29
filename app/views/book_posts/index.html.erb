@@ -1,0 +1,18 @@
+<%
+=begin%>
+ 
+ <div class="relative">
+  <div class="mt-5">
+    <h2 class="text-2xl font-bold">My Library</h1>
+  </div>
+  <div>
+      <% @book_posts.each do |book_post| %>
+      <div class="mt-4">
+        <h2 class="text-xl font-bold underline"><%= link_to book_post.title, book_post %></h2>
+      </div>
+    <% end %>
+  </div>
+</div>  
+<%
+=end
+%>

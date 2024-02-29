@@ -1,0 +1,47 @@
+<div>
+  <div class="font-bold mb-5">
+    <h1>Admin Panel</h1>
+  </div>
+
+  <div class="mb-4">
+  <div>
+    <h2 class="mb-2">Create User</h2>
+  </div>
+  <%= form_with(model: @user, url: admin_index_path, method: :post) do |f| %>
+    <%= f.text_field :username, placeholder: "Username" %><br />
+    <%= f.email_field :email, placeholder: "Email" %><br />
+    <%= f.text_field :phone, placeholder: "Phone" %><br />
+    <%= f.select :role, User.roles.keys.map { |w| [w.humanize, w] }, include_blank: 
+    "Select a role" %>
+    <br />
+    <%= f.password_field :password, placeholder: "Password" %>
+    <%= f.password_field :password_confirmation, placeholder: "Password Confirmation" %>
+    <br />
+    <button type="button" class="border-2 border-gray-400	p-1">
+      <%= f.submit "Create" %>
+    </button>
+  <% end %>
+  </div>
+
+  <div>
+    <div>
+      <h2 class="mb-2">Update User</h2>
+    </div>
+    <div class="inline">
+<% @users.each do |user| %>
+  <div style="display: inline-block;">
+    <%= form_for(user, url: admin_path(user), remote: true, method: :patch) do |f| %>
+      <%= f.text_field :username, placeholder: 'Username' %> - <%= f.text_field :email %> - <%= f.select(:role, User.roles.keys.map { |w| [w.humanize, w] }) %> - <%= f.text_field :phone, placeholder: 'Phone' %> - <%= f.submit "Update" %>
+    <% end %>
+  </div>
+
+  <div style="display: inline-block;">
+    <%= form_for(user, url: admin_path(user), data: { confirm: "Are you sure you want to delete the account?", turbo_confirm: "Are you sure you want to delete the account?" }, method: :delete) do |v| %>
+      - <%= v.submit "Delete" %>
+    <% end %>
+  </div>
+<% end %>
+
+    </div>
+  </div>
+</div>

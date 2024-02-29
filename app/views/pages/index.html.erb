@@ -1,0 +1,16 @@
+<div class="relative">
+  <div class="mt-5">
+    <h2 class="text-2xl font-bold">My Library</h1>
+  </div>
+  <div>
+    <div class="flex gap-x-5">
+      <h2 class="inline font-bold text-xl"><%= link_to "Order by ascending", pages_path(order: :asc) %></h2>
+      <h2 class="inline font-bold text-xl"><%= link_to "Order by descending", pages_path(order: :desc) %></h2>
+    </div>
+    <% @book_posts.each do |book_post| %>
+      <div class="mt-4">
+        <h2 class="text-xl font-bold underline"><%= link_to book_post.title, book_post %></h2>
+      </div>
+    <% end %>
+  </div>
+</div>

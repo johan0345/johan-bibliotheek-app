@@ -68,7 +68,7 @@ end
 
 gem "devise", "~> 4.9"
 
-gem 'devise-two-factor'
-
 gem "tailwindcss-rails", "~> 2.3"
 
+
+gem "devise-two-factor", "~> 5.0"

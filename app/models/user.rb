@@ -1,9 +1,9 @@
 class User < ApplicationRecord
-  devise :two_factor_authenticatable, :otp_secret_encryption_key => ENV['DEVISE_SECRET_KEY']
+  devise :two_factor_authenticatable
+
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
-  devise :registerable,
-         :recoverable, :rememberable, :validatable, :authentication_keys => [:email]
+  devise :registerable, :recoverable, :rememberable, :validatable, :authentication_keys => [:email]
   enum role: { standard: 0, admin: 1 }
 
 

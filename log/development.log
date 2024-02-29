@@ -29729,3 +29729,2620 @@ Migrating to AddDeviseTwoFactorToUsers (20240229104307)
   [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20240229104307') RETURNING "version"[0m
   [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
   [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started DELETE "/users/sign_out?_method=delete" for 127.0.0.1 at 2024-02-29 11:52:19 +0100
+  
+NameError (uninitialized constant Devise::Models::TwoFactorAuthenticatable):
+  
+app/models/user.rb:2:in `<class:User>'
+app/models/user.rb:1:in `<main>'
+config/routes.rb:7:in `block in <main>'
+config/routes.rb:1:in `<main>'
+Started GET "/users/edit" for 127.0.0.1 at 2024-02-29 11:53:51 +0100
+  
+NameError (uninitialized constant Devise::Models::TwoFactorAuthenticatable):
+  
+app/models/user.rb:2:in `<class:User>'
+app/models/user.rb:1:in `<main>'
+config/routes.rb:7:in `block in <main>'
+config/routes.rb:1:in `<main>'
+Started GET "/users/edit" for 127.0.0.1 at 2024-02-29 11:58:56 +0100
+  
+NameError (uninitialized constant Devise::Models::TwoFactorAuthenticatable):
+  
+app/models/user.rb:4:in `<class:User>'
+app/models/user.rb:1:in `<main>'
+config/routes.rb:7:in `block in <main>'
+config/routes.rb:1:in `<main>'
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/users/edit" for 127.0.0.1 at 2024-02-29 13:06:14 +0100
+  
+NameError (uninitialized constant Devise::Models::TwoFactorAuthenticatable):
+  
+app/models/user.rb:4:in `<class:User>'
+app/models/user.rb:1:in `<main>'
+config/routes.rb:7:in `block in <main>'
+config/routes.rb:1:in `<main>'
+Started GET "/users/edit" for 127.0.0.1 at 2024-02-29 13:10:33 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/users/edit"):
+  
+Started GET "/users/edit" for 127.0.0.1 at 2024-02-29 13:10:34 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/users/edit"):
+  
+Started GET "/users/edit" for 127.0.0.1 at 2024-02-29 13:10:49 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/users/edit"):
+  
+Started GET "/" for 127.0.0.1 at 2024-02-29 13:20:09 +0100
+Processing by PagesController#index as HTML
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.0ms | Allocations: 1739)
+
+
+  
+NameError (uninitialized constant Devise::Models::TwoFactorAuthenticatable):
+  
+app/models/user.rb:4:in `<class:User>'
+app/models/user.rb:1:in `<main>'
+Started GET "/" for 127.0.0.1 at 2024-02-29 13:23:48 +0100
+  
+NameError (uninitialized constant Devise::Models::TwoFactorAuthenticatable):
+  
+app/models/user.rb:4:in `<class:User>'
+app/models/user.rb:1:in `<main>'
+config/routes.rb:7:in `block in <main>'
+config/routes.rb:1:in `<main>'
+Started GET "/" for 127.0.0.1 at 2024-02-29 13:23:55 +0100
+  
+NameError (uninitialized constant Devise::Models::TwoFactorAuthenticatable):
+  
+app/models/user.rb:4:in `<class:User>'
+app/models/user.rb:1:in `<main>'
+config/routes.rb:7:in `block in <main>'
+config/routes.rb:1:in `<main>'
+Started GET "/" for 127.0.0.1 at 2024-02-29 13:27:02 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  [1m[36mBookPost Load (0.2ms)[0m  [1m[34mSELECT "book_posts".* FROM "book_posts"[0m
+  ↳ app/views/pages/index.html.erb:10
+  Rendered pages/index.html.erb within layouts/application (Duration: 48.8ms | Allocations: 7807)
+  Rendered layout layouts/application.html.erb (Duration: 228.5ms | Allocations: 63553)
+Completed 200 OK in 336ms (Views: 236.7ms | ActiveRecord: 3.9ms | Allocations: 95759)
+
+
+Started GET "/users/edit" for 127.0.0.1 at 2024-02-29 13:27:06 +0100
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering users/registrations/edit.html.erb within layouts/application
+  Rendered users/shared/_error_messages.html.erb (Duration: 3.6ms | Allocations: 231)
+  Rendered users/registrations/edit.html.erb within layouts/application (Duration: 16.5ms | Allocations: 3721)
+  Rendered layout layouts/application.html.erb (Duration: 40.5ms | Allocations: 11186)
+Completed 200 OK in 51ms (Views: 46.3ms | ActiveRecord: 0.1ms | Allocations: 13644)
+
+
+Started DELETE "/users/sign_out?_method=delete" for 127.0.0.1 at 2024-02-29 13:27:12 +0100
+Processing by Devise::SessionsController#destroy as TURBO_STREAM
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+Redirected to http://127.0.0.1:3000/
+Completed 303 See Other in 9ms (ActiveRecord: 0.1ms | Allocations: 2926)
+
+
+Started GET "/" for 127.0.0.1 at 2024-02-29 13:27:12 +0100
+Processing by PagesController#index as TURBO_STREAM
+Completed 401 Unauthorized in 5ms (ActiveRecord: 0.0ms | Allocations: 441)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2024-02-29 13:27:12 +0100
+Processing by Devise::SessionsController#new as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (Duration: 2.4ms | Allocations: 564)
+  Rendered users/sessions/new.html.erb within layouts/application (Duration: 15.4ms | Allocations: 1936)
+  Rendered layout layouts/application.html.erb (Duration: 36.9ms | Allocations: 9283)
+Completed 200 OK in 42ms (Views: 40.2ms | ActiveRecord: 0.0ms | Allocations: 10322)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2024-02-29 13:27:13 +0100
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/registrations/new.html.erb within layouts/application
+  Rendered users/shared/_error_messages.html.erb (Duration: 0.0ms | Allocations: 13)
+  Rendered users/shared/_links.html.erb (Duration: 0.1ms | Allocations: 76)
+  Rendered users/registrations/new.html.erb within layouts/application (Duration: 5.4ms | Allocations: 1762)
+  Rendered layout layouts/application.html.erb (Duration: 25.5ms | Allocations: 8992)
+Completed 200 OK in 28ms (Views: 27.3ms | ActiveRecord: 0.0ms | Allocations: 9783)
+
+
+Started POST "/users" for 127.0.0.1 at 2024-02-29 13:27:26 +0100
+Processing by Devise::RegistrationsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"username"=>"user22", "email"=>"urser22@lemone.com", "phone"=>"3124124121", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (1.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "urser22@lemone.com"], ["LIMIT", 1]]
+  [1m[36mCACHE User Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "urser22@lemone.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "created_at", "updated_at", "role", "username", "phone", "otp_secret", "consumed_timestep", "otp_required_for_login") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["email", "urser22@lemone.com"], ["encrypted_password", "[FILTERED]"], ["reset_password_token", "[FILTERED]"], ["reset_password_sent_at", "[FILTERED]"], ["remember_created_at", nil], ["created_at", "2024-02-29 12:27:27.085214"], ["updated_at", "2024-02-29 12:27:27.085214"], ["role", nil], ["username", "user22"], ["phone", "3124124121"], ["otp_secret", "[FILTERED]"], ["consumed_timestep", nil], ["otp_required_for_login", "[FILTERED]"]]
+  [1m[36mTRANSACTION (1.9ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://127.0.0.1:3000/
+Completed 303 See Other in 253ms (ActiveRecord: 3.3ms | Allocations: 9751)
+
+
+Started GET "/" for 127.0.0.1 at 2024-02-29 13:27:27 +0100
+Processing by PagesController#index as TURBO_STREAM
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  [1m[36mBookPost Load (0.1ms)[0m  [1m[34mSELECT "book_posts".* FROM "book_posts"[0m
+  ↳ app/views/pages/index.html.erb:10
+  Rendered pages/index.html.erb within layouts/application (Duration: 1.2ms | Allocations: 516)
+  Rendered layout layouts/application.html.erb (Duration: 21.4ms | Allocations: 7829)
+Completed 200 OK in 25ms (Views: 21.9ms | ActiveRecord: 0.2ms | Allocations: 9530)
+
+
+Started GET "/" for 127.0.0.1 at 2024-02-29 13:27:39 +0100
+Processing by PagesController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  [1m[36mBookPost Load (0.1ms)[0m  [1m[34mSELECT "book_posts".* FROM "book_posts"[0m
+  ↳ app/views/pages/index.html.erb:10
+  Rendered pages/index.html.erb within layouts/application (Duration: 7.3ms | Allocations: 3905)
+  Rendered layout layouts/application.html.erb (Duration: 41.3ms | Allocations: 31432)
+Completed 200 OK in 60ms (Views: 43.0ms | ActiveRecord: 3.8ms | Allocations: 41364)
+
+
+Started GET "/book_posts/1" for 127.0.0.1 at 2024-02-29 13:27:40 +0100
+Processing by BookPostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `authenticate_user_using_2fa'
+  [1m[36mBookPost Load (0.2ms)[0m  [1m[34mSELECT "book_posts".* FROM "book_posts" WHERE "book_posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/book_posts_controller.rb:48:in `set_book_post'
+  Rendering layout layouts/application.html.erb
+  Rendering book_posts/show.html.erb within layouts/application
+  Rendered book_posts/show.html.erb within layouts/application (Duration: 1.3ms | Allocations: 242)
+  Rendered layout layouts/application.html.erb (Duration: 19.8ms | Allocations: 7726)
+Completed 200 OK in 26ms (Views: 21.1ms | ActiveRecord: 0.2ms | Allocations: 10181)
+
+
+Started GET "/" for 127.0.0.1 at 2024-02-29 13:27:41 +0100
+Processing by PagesController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  [1m[36mBookPost Load (0.1ms)[0m  [1m[34mSELECT "book_posts".* FROM "book_posts"[0m
+  ↳ app/views/pages/index.html.erb:10
+  Rendered pages/index.html.erb within layouts/application (Duration: 1.8ms | Allocations: 514)
+  Rendered layout layouts/application.html.erb (Duration: 23.6ms | Allocations: 7808)
+Completed 200 OK in 28ms (Views: 24.4ms | ActiveRecord: 0.2ms | Allocations: 9429)
+
+
+Started DELETE "/users/sign_out?_method=delete" for 127.0.0.1 at 2024-02-29 13:34:53 +0100
+  
+ActionController::RoutingError (uninitialized constant Users):
+  
+Started GET "/" for 127.0.0.1 at 2024-02-29 13:34:53 +0100
+Processing by PagesController#index as HTML
+  [1m[36mUser Load (3.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  [1m[36mBookPost Load (0.1ms)[0m  [1m[34mSELECT "book_posts".* FROM "book_posts"[0m
+  ↳ app/views/pages/index.html.erb:10
+  Rendered pages/index.html.erb within layouts/application (Duration: 9.8ms | Allocations: 3493)
+  Rendered layout layouts/application.html.erb (Duration: 43.7ms | Allocations: 31146)
+Completed 200 OK in 72ms (Views: 46.7ms | ActiveRecord: 6.3ms | Allocations: 40297)
+
+
+Started DELETE "/users/sign_out?_method=delete" for 127.0.0.1 at 2024-02-29 13:34:55 +0100
+  
+ActionController::RoutingError (uninitialized constant Users):
+  
+Started GET "/" for 127.0.0.1 at 2024-02-29 13:34:55 +0100
+Processing by PagesController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  [1m[36mBookPost Load (0.1ms)[0m  [1m[34mSELECT "book_posts".* FROM "book_posts"[0m
+  ↳ app/views/pages/index.html.erb:10
+  Rendered pages/index.html.erb within layouts/application (Duration: 1.6ms | Allocations: 515)
+  Rendered layout layouts/application.html.erb (Duration: 26.1ms | Allocations: 7894)
+Completed 200 OK in 35ms (Views: 26.4ms | ActiveRecord: 0.3ms | Allocations: 9537)
+
+
+Started DELETE "/users/sign_out?_method=delete" for 127.0.0.1 at 2024-02-29 13:34:56 +0100
+  
+ActionController::RoutingError (uninitialized constant Users):
+  
+Started GET "/" for 127.0.0.1 at 2024-02-29 13:34:56 +0100
+Processing by PagesController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  [1m[36mBookPost Load (0.2ms)[0m  [1m[34mSELECT "book_posts".* FROM "book_posts"[0m
+  ↳ app/views/pages/index.html.erb:10
+  Rendered pages/index.html.erb within layouts/application (Duration: 2.1ms | Allocations: 514)
+  Rendered layout layouts/application.html.erb (Duration: 14.6ms | Allocations: 7894)
+Completed 200 OK in 28ms (Views: 15.5ms | ActiveRecord: 0.3ms | Allocations: 9529)
+
+
+Started DELETE "/users/sign_out?_method=delete" for 127.0.0.1 at 2024-02-29 13:34:57 +0100
+  
+ActionController::RoutingError (uninitialized constant Users):
+  
+Started GET "/" for 127.0.0.1 at 2024-02-29 13:34:57 +0100
+Processing by PagesController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  [1m[36mBookPost Load (0.1ms)[0m  [1m[34mSELECT "book_posts".* FROM "book_posts"[0m
+  ↳ app/views/pages/index.html.erb:10
+  Rendered pages/index.html.erb within layouts/application (Duration: 1.3ms | Allocations: 514)
+  Rendered layout layouts/application.html.erb (Duration: 22.0ms | Allocations: 7778)
+Completed 200 OK in 27ms (Views: 22.9ms | ActiveRecord: 0.2ms | Allocations: 9410)
+
+
+Started GET "/book_posts/new" for 127.0.0.1 at 2024-02-29 13:34:58 +0100
+Processing by BookPostsController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `authenticate_user_using_2fa'
+  Rendering layout layouts/application.html.erb
+  Rendering book_posts/new.html.erb within layouts/application
+  Rendered book_posts/_form.html.erb (Duration: 7.4ms | Allocations: 1543)
+  Rendered book_posts/new.html.erb within layouts/application (Duration: 9.3ms | Allocations: 1777)
+  Rendered layout layouts/application.html.erb (Duration: 56.5ms | Allocations: 9228)
+Completed 200 OK in 65ms (Views: 61.1ms | ActiveRecord: 0.1ms | Allocations: 10691)
+
+
+Started GET "/users/edit" for 127.0.0.1 at 2024-02-29 13:34:59 +0100
+  
+ActionController::RoutingError (uninitialized constant Users):
+  
+Started GET "/users/edit" for 127.0.0.1 at 2024-02-29 13:35:06 +0100
+  
+ActionController::RoutingError (uninitialized constant Users):
+  
+Started GET "/" for 127.0.0.1 at 2024-02-29 13:35:24 +0100
+Processing by PagesController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  [1m[36mBookPost Load (0.1ms)[0m  [1m[34mSELECT "book_posts".* FROM "book_posts"[0m
+  ↳ app/views/pages/index.html.erb:10
+  Rendered pages/index.html.erb within layouts/application (Duration: 1.6ms | Allocations: 514)
+  Rendered layout layouts/application.html.erb (Duration: 18.5ms | Allocations: 7753)
+Completed 200 OK in 29ms (Views: 24.0ms | ActiveRecord: 0.2ms | Allocations: 9398)
+
+
+Started GET "/" for 127.0.0.1 at 2024-02-29 13:35:25 +0100
+Processing by PagesController#index as HTML
+  [1m[36mUser Load (3.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  [1m[36mBookPost Load (0.1ms)[0m  [1m[34mSELECT "book_posts".* FROM "book_posts"[0m
+  ↳ app/views/pages/index.html.erb:10
+  Rendered pages/index.html.erb within layouts/application (Duration: 1.8ms | Allocations: 514)
+  Rendered layout layouts/application.html.erb (Duration: 31.7ms | Allocations: 7991)
+Completed 200 OK in 62ms (Views: 32.1ms | ActiveRecord: 3.4ms | Allocations: 9632)
+
+
+Started DELETE "/users/sign_out?_method=delete" for 127.0.0.1 at 2024-02-29 13:35:26 +0100
+  
+ActionController::RoutingError (uninitialized constant Users):
+  
+Started GET "/" for 127.0.0.1 at 2024-02-29 13:35:26 +0100
+Processing by PagesController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  [1m[36mBookPost Load (0.1ms)[0m  [1m[34mSELECT "book_posts".* FROM "book_posts"[0m
+  ↳ app/views/pages/index.html.erb:10
+  Rendered pages/index.html.erb within layouts/application (Duration: 1.4ms | Allocations: 514)
+  Rendered layout layouts/application.html.erb (Duration: 27.6ms | Allocations: 7972)
+Completed 200 OK in 33ms (Views: 28.0ms | ActiveRecord: 0.1ms | Allocations: 9620)
+
+
+Started DELETE "/users/sign_out?_method=delete" for 127.0.0.1 at 2024-02-29 13:35:27 +0100
+  
+ActionController::RoutingError (uninitialized constant Users):
+  
+Started GET "/" for 127.0.0.1 at 2024-02-29 13:35:27 +0100
+Processing by PagesController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  [1m[36mBookPost Load (0.1ms)[0m  [1m[34mSELECT "book_posts".* FROM "book_posts"[0m
+  ↳ app/views/pages/index.html.erb:10
+  Rendered pages/index.html.erb within layouts/application (Duration: 1.1ms | Allocations: 514)
+  Rendered layout layouts/application.html.erb (Duration: 13.7ms | Allocations: 7985)
+Completed 200 OK in 19ms (Views: 14.2ms | ActiveRecord: 0.2ms | Allocations: 9633)
+
+
+Started DELETE "/users/sign_out?_method=delete" for 127.0.0.1 at 2024-02-29 13:35:27 +0100
+  
+ActionController::RoutingError (uninitialized constant Users):
+  
+Started GET "/" for 127.0.0.1 at 2024-02-29 13:35:27 +0100
+Processing by PagesController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  [1m[36mBookPost Load (0.2ms)[0m  [1m[34mSELECT "book_posts".* FROM "book_posts"[0m
+  ↳ app/views/pages/index.html.erb:10
+  Rendered pages/index.html.erb within layouts/application (Duration: 1.6ms | Allocations: 514)
+  Rendered layout layouts/application.html.erb (Duration: 41.6ms | Allocations: 7752)
+Completed 200 OK in 46ms (Views: 42.0ms | ActiveRecord: 0.2ms | Allocations: 9370)
+
+
+Started GET "/book_posts/new" for 127.0.0.1 at 2024-02-29 13:35:31 +0100
+Processing by BookPostsController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `authenticate_user_using_2fa'
+  Rendering layout layouts/application.html.erb
+  Rendering book_posts/new.html.erb within layouts/application
+  Rendered book_posts/_form.html.erb (Duration: 2.5ms | Allocations: 884)
+  Rendered book_posts/new.html.erb within layouts/application (Duration: 2.8ms | Allocations: 948)
+  Rendered layout layouts/application.html.erb (Duration: 22.8ms | Allocations: 8189)
+Completed 200 OK in 27ms (Views: 23.5ms | ActiveRecord: 0.1ms | Allocations: 9348)
+
+
+Started POST "/book_posts" for 127.0.0.1 at 2024-02-29 13:35:34 +0100
+Processing by BookPostsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "book_post"=>{"title"=>"e3", "author"=>"3e", "genre"=>"3e", "isbn"=>"e3"}, "button"=>""}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `authenticate_user_using_2fa'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/book_posts_controller.rb:18:in `create'
+  [1m[36mBookPost Exists? (1.4ms)[0m  [1m[34mSELECT 1 AS one FROM "book_posts" WHERE "book_posts"."isbn" = ? LIMIT ?[0m  [["isbn", 0], ["LIMIT", 1]]
+  ↳ app/controllers/book_posts_controller.rb:18:in `create'
+  [1m[36mBookPost Create (0.3ms)[0m  [1m[32mINSERT INTO "book_posts" ("title", "author", "genre", "isbn", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["title", "e3"], ["author", "3e"], ["genre", "3e"], ["isbn", 0], ["created_at", "2024-02-29 12:35:34.251336"], ["updated_at", "2024-02-29 12:35:34.251336"]]
+  ↳ app/controllers/book_posts_controller.rb:18:in `create'
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/book_posts_controller.rb:18:in `create'
+Redirected to http://127.0.0.1:3000/book_posts/2
+Completed 302 Found in 14ms (ActiveRecord: 2.7ms | Allocations: 3560)
+
+
+Started GET "/book_posts/2" for 127.0.0.1 at 2024-02-29 13:35:34 +0100
+Processing by BookPostsController#show as TURBO_STREAM
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `authenticate_user_using_2fa'
+  [1m[36mBookPost Load (0.1ms)[0m  [1m[34mSELECT "book_posts".* FROM "book_posts" WHERE "book_posts"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/book_posts_controller.rb:48:in `set_book_post'
+  Rendering layout layouts/application.html.erb
+  Rendering book_posts/show.html.erb within layouts/application
+  Rendered book_posts/show.html.erb within layouts/application (Duration: 1.3ms | Allocations: 228)
+  Rendered layout layouts/application.html.erb (Duration: 23.0ms | Allocations: 7707)
+Completed 200 OK in 28ms (Views: 23.7ms | ActiveRecord: 0.2ms | Allocations: 9892)
+
+
+Started DELETE "/users/sign_out?_method=delete" for 127.0.0.1 at 2024-02-29 13:35:37 +0100
+  
+ActionController::RoutingError (uninitialized constant Users):
+  
+Started GET "/book_posts/2" for 127.0.0.1 at 2024-02-29 13:35:37 +0100
+Processing by BookPostsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `authenticate_user_using_2fa'
+  [1m[36mBookPost Load (0.1ms)[0m  [1m[34mSELECT "book_posts".* FROM "book_posts" WHERE "book_posts"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/book_posts_controller.rb:48:in `set_book_post'
+  Rendering layout layouts/application.html.erb
+  Rendering book_posts/show.html.erb within layouts/application
+  Rendered book_posts/show.html.erb within layouts/application (Duration: 0.2ms | Allocations: 53)
+  Rendered layout layouts/application.html.erb (Duration: 26.2ms | Allocations: 7369)
+Completed 200 OK in 35ms (Views: 27.2ms | ActiveRecord: 0.2ms | Allocations: 8814)
+
+
+Started DELETE "/users/sign_out?_method=delete" for 127.0.0.1 at 2024-02-29 13:35:38 +0100
+  
+ActionController::RoutingError (uninitialized constant Users):
+  
+Started GET "/book_posts/2" for 127.0.0.1 at 2024-02-29 13:35:38 +0100
+Processing by BookPostsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `authenticate_user_using_2fa'
+  [1m[36mBookPost Load (0.1ms)[0m  [1m[34mSELECT "book_posts".* FROM "book_posts" WHERE "book_posts"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/book_posts_controller.rb:48:in `set_book_post'
+  Rendering layout layouts/application.html.erb
+  Rendering book_posts/show.html.erb within layouts/application
+  Rendered book_posts/show.html.erb within layouts/application (Duration: 0.2ms | Allocations: 53)
+  Rendered layout layouts/application.html.erb (Duration: 17.0ms | Allocations: 7540)
+Completed 200 OK in 21ms (Views: 17.5ms | ActiveRecord: 0.2ms | Allocations: 8977)
+
+
+Started GET "/users/edit" for 127.0.0.1 at 2024-02-29 13:35:38 +0100
+  
+ActionController::RoutingError (uninitialized constant Users):
+  
+Started GET "/users/edit" for 127.0.0.1 at 2024-02-29 13:36:02 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/users/edit"):
+  
+Started GET "/users/edit" for 127.0.0.1 at 2024-02-29 13:36:09 +0100
+  
+ActionController::RoutingError (uninitialized constant Users):
+  
+Started GET "/users/edit" for 127.0.0.1 at 2024-02-29 13:36:26 +0100
+  
+ActionController::RoutingError (uninitialized constant Users):
+  
+Started GET "/users/edit" for 127.0.0.1 at 2024-02-29 13:36:27 +0100
+  
+ActionController::RoutingError (uninitialized constant Users):
+  
+Started GET "/users/edit" for 127.0.0.1 at 2024-02-29 13:36:27 +0100
+  
+ActionController::RoutingError (uninitialized constant Users):
+  
+Started GET "/users/edit" for 127.0.0.1 at 2024-02-29 13:36:43 +0100
+  
+ActionController::RoutingError (uninitialized constant Users):
+  
+Started GET "/users/edit" for 127.0.0.1 at 2024-02-29 13:40:58 +0100
+  
+ActionController::RoutingError (uninitialized constant Users):
+  
+Started GET "/users/edit" for 127.0.0.1 at 2024-02-29 13:40:59 +0100
+  
+ActionController::RoutingError (uninitialized constant Users):
+  
+Started GET "/users/edit" for 127.0.0.1 at 2024-02-29 13:40:59 +0100
+  
+ActionController::RoutingError (uninitialized constant Users):
+  
+Started GET "/users/edit" for 127.0.0.1 at 2024-02-29 13:41:11 +0100
+  
+ActionController::RoutingError (uninitialized constant Users):
+  
+Started GET "/users/edit" for 127.0.0.1 at 2024-02-29 13:41:12 +0100
+  
+ActionController::RoutingError (uninitialized constant Users):
+  
+Started GET "/users/edit" for 127.0.0.1 at 2024-02-29 13:41:42 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/users/edit"):
+  
+Started GET "/users/edit" for 127.0.0.1 at 2024-02-29 13:41:55 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/users/edit"):
+  
+Started GET "/users/edit" for 127.0.0.1 at 2024-02-29 13:42:02 +0100
+  
+ActionController::RoutingError (uninitialized constant Users):
+  
+Started GET "/users/edit" for 127.0.0.1 at 2024-02-29 13:42:16 +0100
+  
+ActionController::RoutingError (uninitialized constant Users):
+  
+Started GET "/users/edit" for 127.0.0.1 at 2024-02-29 13:42:23 +0100
+  
+ActionController::RoutingError (uninitialized constant Users::RegistrationsController):
+  
+Started GET "/users/edit" for 127.0.0.1 at 2024-02-29 13:42:25 +0100
+  
+ActionController::RoutingError (uninitialized constant Users::RegistrationsController):
+  
+Started GET "/users/edit" for 127.0.0.1 at 2024-02-29 13:42:25 +0100
+  
+ActionController::RoutingError (uninitialized constant Users::RegistrationsController):
+  
+Started GET "/users/edit" for 127.0.0.1 at 2024-02-29 13:43:12 +0100
+  
+ActionController::RoutingError (uninitialized constant Users):
+  
+Started GET "/users/edit" for 127.0.0.1 at 2024-02-29 13:47:11 +0100
+  
+NameError (uninitialized constant User):
+  
+config/routes.rb:8:in `block in <main>'
+config/routes.rb:1:in `<main>'
+Started GET "/users/edit" for 127.0.0.1 at 2024-02-29 13:47:48 +0100
+  
+NameError (uninitialized constant User):
+  
+config/routes.rb:8:in `block in <main>'
+config/routes.rb:1:in `<main>'
+Started GET "/users/edit" for 127.0.0.1 at 2024-02-29 13:48:11 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/users/edit"):
+  
+Started GET "/users/edit" for 127.0.0.1 at 2024-02-29 13:48:14 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/users/edit"):
+  
+Started GET "/users/edit" for 127.0.0.1 at 2024-02-29 13:48:14 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/users/edit"):
+  
+Started GET "/users/edit" for 127.0.0.1 at 2024-02-29 13:48:18 +0100
+  
+ActionController::RoutingError (uninitialized constant Users):
+  
+Started GET "/users/edit" for 127.0.0.1 at 2024-02-29 13:48:38 +0100
+  
+ActionController::RoutingError (uninitialized constant Users):
+  
+Started GET "/users/edit" for 127.0.0.1 at 2024-02-29 13:48:39 +0100
+  
+ActionController::RoutingError (uninitialized constant Users):
+  
+Started GET "/users/edit" for 127.0.0.1 at 2024-02-29 13:49:46 +0100
+  
+ActionController::RoutingError (uninitialized constant Users):
+  
+Started GET "/users/edit" for 127.0.0.1 at 2024-02-29 13:49:47 +0100
+  
+ActionController::RoutingError (uninitialized constant Users):
+  
+Started GET "/users/edit" for 127.0.0.1 at 2024-02-29 13:50:02 +0100
+  
+ActionController::RoutingError (uninitialized constant User::RegistrationsController):
+  
+Started GET "/users/edit" for 127.0.0.1 at 2024-02-29 13:50:12 +0100
+  
+ActionController::RoutingError (uninitialized constant Users):
+  
+Started GET "/users/edit" for 127.0.0.1 at 2024-02-29 13:50:27 +0100
+  
+ActionController::RoutingError (uninitialized constant Users):
+  
+Started GET "/users/edit" for 127.0.0.1 at 2024-02-29 13:50:28 +0100
+  
+ActionController::RoutingError (uninitialized constant Users):
+  
+Started GET "/users/edit" for 127.0.0.1 at 2024-02-29 13:50:28 +0100
+  
+ActionController::RoutingError (uninitialized constant Users):
+  
+Started GET "/users/edit" for 127.0.0.1 at 2024-02-29 13:50:53 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/users/edit"):
+  
+Started GET "/users/edit" for 127.0.0.1 at 2024-02-29 13:51:16 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/users/edit"):
+  
+Started GET "/users/edit" for 127.0.0.1 at 2024-02-29 13:52:37 +0100
+  
+ActionController::RoutingError (uninitialized constant Users):
+  
+Started GET "/users/edit" for 127.0.0.1 at 2024-02-29 13:52:39 +0100
+  
+ActionController::RoutingError (uninitialized constant Users):
+  
+Started GET "/users/edit" for 127.0.0.1 at 2024-02-29 13:52:39 +0100
+  
+ActionController::RoutingError (uninitialized constant Users):
+  
+  [1m[36mActiveRecord::InternalMetadata Load (0.7ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/users/edit" for 127.0.0.1 at 2024-02-29 13:55:11 +0100
+  
+ActionController::RoutingError (uninitialized constant Users):
+  
+Started GET "/users/edit" for 127.0.0.1 at 2024-02-29 13:55:45 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (uninitialized constant Users):
+  
+Started GET "/users/edit" for 127.0.0.1 at 2024-02-29 13:58:23 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/users/edit"):
+  
+Started GET "/users/edit" for 127.0.0.1 at 2024-02-29 13:58:28 +0100
+  
+ActionController::RoutingError (uninitialized constant Users):
+  
+Started GET "/users/edit" for 127.0.0.1 at 2024-02-29 13:59:09 +0100
+  
+ActionController::RoutingError (uninitialized constant Users):
+  
+Started GET "/users/edit" for 127.0.0.1 at 2024-02-29 13:59:10 +0100
+  
+ActionController::RoutingError (uninitialized constant Users):
+  
+Started GET "/users/edit" for 127.0.0.1 at 2024-02-29 13:59:28 +0100
+  
+ActionController::RoutingError (uninitialized constant Users):
+  
+Started GET "/users/edit" for 127.0.0.1 at 2024-02-29 14:07:44 +0100
+  
+ActionController::RoutingError (uninitialized constant Users):
+  
+Started GET "/users/edit" for 127.0.0.1 at 2024-02-29 14:07:45 +0100
+  
+ActionController::RoutingError (uninitialized constant Users):
+  
+Started GET "/users/edit" for 127.0.0.1 at 2024-02-29 14:07:46 +0100
+  
+ActionController::RoutingError (uninitialized constant Users):
+  
+Started GET "/users/edit" for 127.0.0.1 at 2024-02-29 14:08:14 +0100
+  
+NameError (uninitialized constant User):
+  
+config/routes.rb:8:in `block in <main>'
+config/routes.rb:1:in `<main>'
+Started GET "/users/edit" for 127.0.0.1 at 2024-02-29 14:08:16 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/users/edit"):
+  
+Started GET "/users/edit" for 127.0.0.1 at 2024-02-29 14:08:17 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/users/edit"):
+  
+Started GET "/users/edit" for 127.0.0.1 at 2024-02-29 14:08:18 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/users/edit"):
+  
+Started GET "/users/edit" for 127.0.0.1 at 2024-02-29 14:08:18 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/users/edit"):
+  
+Started GET "/users/edit" for 127.0.0.1 at 2024-02-29 14:08:18 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/users/edit"):
+  
+Started GET "/users/edit" for 127.0.0.1 at 2024-02-29 14:08:18 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/users/edit"):
+  
+Started GET "/users/edit" for 127.0.0.1 at 2024-02-29 14:08:19 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/users/edit"):
+  
+Started GET "/" for 127.0.0.1 at 2024-02-29 14:08:28 +0100
+Processing by PagesController#index as HTML
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 0.0ms | Allocations: 2492)
+
+
+  
+NameError (uninitialized constant User):
+  
+activesupport (7.1.3) lib/active_support/inflector/methods.rb:290:in `const_get'
+activesupport (7.1.3) lib/active_support/inflector/methods.rb:290:in `constantize'
+activesupport (7.1.3) lib/active_support/core_ext/string/inflections.rb:74:in `constantize'
+devise (4.9.3) lib/devise.rb:327:in `get'
+devise (4.9.3) lib/devise/mapping.rb:83:in `to'
+devise (4.9.3) lib/devise.rb:496:in `block (2 levels) in configure_warden!'
+warden (1.2.9) lib/warden/session_serializer.rb:35:in `fetch'
+warden (1.2.9) lib/warden/proxy.rb:224:in `user'
+warden (1.2.9) lib/warden/proxy.rb:334:in `_perform_authentication'
+warden (1.2.9) lib/warden/proxy.rb:133:in `authenticate!'
+devise (4.9.3) lib/devise/controllers/helpers.rb:118:in `authenticate_user!'
+activesupport (7.1.3) lib/active_support/callbacks.rb:403:in `block in make_lambda'
+activesupport (7.1.3) lib/active_support/callbacks.rb:202:in `block (2 levels) in halting'
+actionpack (7.1.3) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (7.1.3) lib/active_support/callbacks.rb:203:in `block in halting'
+activesupport (7.1.3) lib/active_support/callbacks.rb:598:in `block in invoke_before'
+activesupport (7.1.3) lib/active_support/callbacks.rb:598:in `each'
+activesupport (7.1.3) lib/active_support/callbacks.rb:598:in `invoke_before'
+activesupport (7.1.3) lib/active_support/callbacks.rb:119:in `block in run_callbacks'
+turbo-rails (2.0.2) lib/turbo-rails.rb:24:in `with_request_id'
+turbo-rails (2.0.2) app/controllers/concerns/turbo/request_id_tracking.rb:10:in `turbo_tracking_request_id'
+activesupport (7.1.3) lib/active_support/callbacks.rb:130:in `block in run_callbacks'
+actiontext (7.1.3) lib/action_text/rendering.rb:23:in `with_renderer'
+actiontext (7.1.3) lib/action_text/engine.rb:69:in `block (4 levels) in <class:Engine>'
+activesupport (7.1.3) lib/active_support/callbacks.rb:130:in `instance_exec'
+activesupport (7.1.3) lib/active_support/callbacks.rb:130:in `block in run_callbacks'
+activesupport (7.1.3) lib/active_support/callbacks.rb:141:in `run_callbacks'
+actionpack (7.1.3) lib/abstract_controller/callbacks.rb:258:in `process_action'
+actionpack (7.1.3) lib/action_controller/metal/rescue.rb:25:in `process_action'
+actionpack (7.1.3) lib/action_controller/metal/instrumentation.rb:74:in `block in process_action'
+activesupport (7.1.3) lib/active_support/notifications.rb:206:in `block in instrument'
+activesupport (7.1.3) lib/active_support/notifications/instrumenter.rb:58:in `instrument'
+activesupport (7.1.3) lib/active_support/notifications.rb:206:in `instrument'
+actionpack (7.1.3) lib/action_controller/metal/instrumentation.rb:73:in `process_action'
+actionpack (7.1.3) lib/action_controller/metal/params_wrapper.rb:261:in `process_action'
+activerecord (7.1.3) lib/active_record/railties/controller_runtime.rb:32:in `process_action'
+actionpack (7.1.3) lib/abstract_controller/base.rb:160:in `process'
+actionview (7.1.3) lib/action_view/rendering.rb:40:in `process'
+actionpack (7.1.3) lib/action_controller/metal.rb:227:in `dispatch'
+actionpack (7.1.3) lib/action_controller/metal.rb:309:in `dispatch'
+actionpack (7.1.3) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.1.3) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.1.3) lib/action_dispatch/journey/router.rb:51:in `block in serve'
+actionpack (7.1.3) lib/action_dispatch/journey/router.rb:131:in `block in find_routes'
+actionpack (7.1.3) lib/action_dispatch/journey/router.rb:124:in `each'
+actionpack (7.1.3) lib/action_dispatch/journey/router.rb:124:in `find_routes'
+actionpack (7.1.3) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.1.3) lib/action_dispatch/routing/route_set.rb:882:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (3.0.9) lib/rack/tempfile_reaper.rb:20:in `call'
+rack (3.0.9) lib/rack/etag.rb:29:in `call'
+rack (3.0.9) lib/rack/conditional_get.rb:31:in `call'
+rack (3.0.9) lib/rack/head.rb:15:in `call'
+actionpack (7.1.3) lib/action_dispatch/http/permissions_policy.rb:36:in `call'
+actionpack (7.1.3) lib/action_dispatch/http/content_security_policy.rb:33:in `call'
+rack-session (2.0.0) lib/rack/session/abstract/id.rb:272:in `context'
+rack-session (2.0.0) lib/rack/session/abstract/id.rb:266:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/cookies.rb:689:in `call'
+activerecord (7.1.3) lib/active_record/migration.rb:655:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+activesupport (7.1.3) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (7.1.3) lib/action_dispatch/middleware/callbacks.rb:28:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/actionable_exceptions.rb:16:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (7.1.3) lib/rails/rack/logger.rb:37:in `call_app'
+railties (7.1.3) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (7.1.3) lib/active_support/tagged_logging.rb:135:in `block in tagged'
+activesupport (7.1.3) lib/active_support/tagged_logging.rb:39:in `tagged'
+activesupport (7.1.3) lib/active_support/tagged_logging.rb:135:in `tagged'
+activesupport (7.1.3) lib/active_support/broadcast_logger.rb:240:in `method_missing'
+railties (7.1.3) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/remote_ip.rb:92:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/request_id.rb:28:in `call'
+rack (3.0.9) lib/rack/method_override.rb:28:in `call'
+rack (3.0.9) lib/rack/runtime.rb:24:in `call'
+activesupport (7.1.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/server_timing.rb:59:in `block in call'
+actionpack (7.1.3) lib/action_dispatch/middleware/server_timing.rb:24:in `collect_events'
+actionpack (7.1.3) lib/action_dispatch/middleware/server_timing.rb:58:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/static.rb:25:in `call'
+rack (3.0.9) lib/rack/sendfile.rb:114:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/host_authorization.rb:141:in `call'
+railties (7.1.3) lib/rails/engine.rb:536:in `call'
+puma (6.4.2) lib/puma/configuration.rb:272:in `call'
+puma (6.4.2) lib/puma/request.rb:100:in `block in handle_request'
+puma (6.4.2) lib/puma/thread_pool.rb:378:in `with_force_shutdown'
+puma (6.4.2) lib/puma/request.rb:99:in `handle_request'
+puma (6.4.2) lib/puma/server.rb:464:in `process_client'
+puma (6.4.2) lib/puma/server.rb:245:in `block in run'
+puma (6.4.2) lib/puma/thread_pool.rb:155:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2024-02-29 14:09:09 +0100
+  
+NameError (uninitialized constant User):
+  
+config/routes.rb:8:in `block in <main>'
+config/routes.rb:1:in `<main>'
+Started GET "/" for 127.0.0.1 at 2024-02-29 14:09:11 +0100
+Processing by PagesController#index as HTML
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms | Allocations: 1591)
+
+
+  
+NameError (uninitialized constant User):
+  
+activesupport (7.1.3) lib/active_support/inflector/methods.rb:290:in `const_get'
+activesupport (7.1.3) lib/active_support/inflector/methods.rb:290:in `constantize'
+activesupport (7.1.3) lib/active_support/core_ext/string/inflections.rb:74:in `constantize'
+devise (4.9.3) lib/devise.rb:327:in `get'
+devise (4.9.3) lib/devise/mapping.rb:83:in `to'
+devise (4.9.3) lib/devise.rb:496:in `block (2 levels) in configure_warden!'
+warden (1.2.9) lib/warden/session_serializer.rb:35:in `fetch'
+warden (1.2.9) lib/warden/proxy.rb:224:in `user'
+warden (1.2.9) lib/warden/proxy.rb:334:in `_perform_authentication'
+warden (1.2.9) lib/warden/proxy.rb:133:in `authenticate!'
+devise (4.9.3) lib/devise/controllers/helpers.rb:118:in `authenticate_user!'
+activesupport (7.1.3) lib/active_support/callbacks.rb:403:in `block in make_lambda'
+activesupport (7.1.3) lib/active_support/callbacks.rb:202:in `block (2 levels) in halting'
+actionpack (7.1.3) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (7.1.3) lib/active_support/callbacks.rb:203:in `block in halting'
+activesupport (7.1.3) lib/active_support/callbacks.rb:598:in `block in invoke_before'
+activesupport (7.1.3) lib/active_support/callbacks.rb:598:in `each'
+activesupport (7.1.3) lib/active_support/callbacks.rb:598:in `invoke_before'
+activesupport (7.1.3) lib/active_support/callbacks.rb:119:in `block in run_callbacks'
+turbo-rails (2.0.2) lib/turbo-rails.rb:24:in `with_request_id'
+turbo-rails (2.0.2) app/controllers/concerns/turbo/request_id_tracking.rb:10:in `turbo_tracking_request_id'
+activesupport (7.1.3) lib/active_support/callbacks.rb:130:in `block in run_callbacks'
+actiontext (7.1.3) lib/action_text/rendering.rb:23:in `with_renderer'
+actiontext (7.1.3) lib/action_text/engine.rb:69:in `block (4 levels) in <class:Engine>'
+activesupport (7.1.3) lib/active_support/callbacks.rb:130:in `instance_exec'
+activesupport (7.1.3) lib/active_support/callbacks.rb:130:in `block in run_callbacks'
+activesupport (7.1.3) lib/active_support/callbacks.rb:141:in `run_callbacks'
+actionpack (7.1.3) lib/abstract_controller/callbacks.rb:258:in `process_action'
+actionpack (7.1.3) lib/action_controller/metal/rescue.rb:25:in `process_action'
+actionpack (7.1.3) lib/action_controller/metal/instrumentation.rb:74:in `block in process_action'
+activesupport (7.1.3) lib/active_support/notifications.rb:206:in `block in instrument'
+activesupport (7.1.3) lib/active_support/notifications/instrumenter.rb:58:in `instrument'
+activesupport (7.1.3) lib/active_support/notifications.rb:206:in `instrument'
+actionpack (7.1.3) lib/action_controller/metal/instrumentation.rb:73:in `process_action'
+actionpack (7.1.3) lib/action_controller/metal/params_wrapper.rb:261:in `process_action'
+activerecord (7.1.3) lib/active_record/railties/controller_runtime.rb:32:in `process_action'
+actionpack (7.1.3) lib/abstract_controller/base.rb:160:in `process'
+actionview (7.1.3) lib/action_view/rendering.rb:40:in `process'
+actionpack (7.1.3) lib/action_controller/metal.rb:227:in `dispatch'
+actionpack (7.1.3) lib/action_controller/metal.rb:309:in `dispatch'
+actionpack (7.1.3) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.1.3) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.1.3) lib/action_dispatch/journey/router.rb:51:in `block in serve'
+actionpack (7.1.3) lib/action_dispatch/journey/router.rb:131:in `block in find_routes'
+actionpack (7.1.3) lib/action_dispatch/journey/router.rb:124:in `each'
+actionpack (7.1.3) lib/action_dispatch/journey/router.rb:124:in `find_routes'
+actionpack (7.1.3) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.1.3) lib/action_dispatch/routing/route_set.rb:882:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (3.0.9) lib/rack/tempfile_reaper.rb:20:in `call'
+rack (3.0.9) lib/rack/etag.rb:29:in `call'
+rack (3.0.9) lib/rack/conditional_get.rb:31:in `call'
+rack (3.0.9) lib/rack/head.rb:15:in `call'
+actionpack (7.1.3) lib/action_dispatch/http/permissions_policy.rb:36:in `call'
+actionpack (7.1.3) lib/action_dispatch/http/content_security_policy.rb:33:in `call'
+rack-session (2.0.0) lib/rack/session/abstract/id.rb:272:in `context'
+rack-session (2.0.0) lib/rack/session/abstract/id.rb:266:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/cookies.rb:689:in `call'
+activerecord (7.1.3) lib/active_record/migration.rb:655:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+activesupport (7.1.3) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (7.1.3) lib/action_dispatch/middleware/callbacks.rb:28:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/actionable_exceptions.rb:16:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (7.1.3) lib/rails/rack/logger.rb:37:in `call_app'
+railties (7.1.3) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (7.1.3) lib/active_support/tagged_logging.rb:135:in `block in tagged'
+activesupport (7.1.3) lib/active_support/tagged_logging.rb:39:in `tagged'
+activesupport (7.1.3) lib/active_support/tagged_logging.rb:135:in `tagged'
+activesupport (7.1.3) lib/active_support/broadcast_logger.rb:240:in `method_missing'
+railties (7.1.3) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/remote_ip.rb:92:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/request_id.rb:28:in `call'
+rack (3.0.9) lib/rack/method_override.rb:28:in `call'
+rack (3.0.9) lib/rack/runtime.rb:24:in `call'
+activesupport (7.1.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/server_timing.rb:59:in `block in call'
+actionpack (7.1.3) lib/action_dispatch/middleware/server_timing.rb:24:in `collect_events'
+actionpack (7.1.3) lib/action_dispatch/middleware/server_timing.rb:58:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/static.rb:25:in `call'
+rack (3.0.9) lib/rack/sendfile.rb:114:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/host_authorization.rb:141:in `call'
+railties (7.1.3) lib/rails/engine.rb:536:in `call'
+puma (6.4.2) lib/puma/configuration.rb:272:in `call'
+puma (6.4.2) lib/puma/request.rb:100:in `block in handle_request'
+puma (6.4.2) lib/puma/thread_pool.rb:378:in `with_force_shutdown'
+puma (6.4.2) lib/puma/request.rb:99:in `handle_request'
+puma (6.4.2) lib/puma/server.rb:464:in `process_client'
+puma (6.4.2) lib/puma/server.rb:245:in `block in run'
+puma (6.4.2) lib/puma/thread_pool.rb:155:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2024-02-29 14:09:16 +0100
+  
+NameError (uninitialized constant User):
+  
+config/routes.rb:8:in `block in <main>'
+config/routes.rb:1:in `<main>'
+Started GET "/" for 127.0.0.1 at 2024-02-29 14:09:59 +0100
+Processing by PagesController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  [1m[36mBookPost Load (0.1ms)[0m  [1m[34mSELECT "book_posts".* FROM "book_posts"[0m
+  ↳ app/views/pages/index.html.erb:10
+  Rendered pages/index.html.erb within layouts/application (Duration: 21.5ms | Allocations: 7687)
+  Rendered layout layouts/application.html.erb (Duration: 160.0ms | Allocations: 63657)
+Completed 200 OK in 291ms (Views: 161.8ms | ActiveRecord: 3.6ms | Allocations: 90672)
+
+
+Started GET "/book_posts/new" for 127.0.0.1 at 2024-02-29 14:10:01 +0100
+Processing by BookPostsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `authenticate_user_using_2fa'
+  Rendering layout layouts/application.html.erb
+  Rendering book_posts/new.html.erb within layouts/application
+  Rendered book_posts/_form.html.erb (Duration: 28.3ms | Allocations: 2041)
+  Rendered book_posts/new.html.erb within layouts/application (Duration: 31.2ms | Allocations: 2276)
+  Rendered layout layouts/application.html.erb (Duration: 71.3ms | Allocations: 9607)
+Completed 200 OK in 80ms (Views: 75.0ms | ActiveRecord: 0.3ms | Allocations: 11110)
+
+
+Started GET "/users/edit" for 127.0.0.1 at 2024-02-29 14:10:01 +0100
+  
+ActionController::RoutingError (uninitialized constant Users):
+  
+Started GET "/users/edit" for 127.0.0.1 at 2024-02-29 14:10:39 +0100
+  
+ActionController::RoutingError (uninitialized constant Users):
+  
+Started GET "/users/edit" for 127.0.0.1 at 2024-02-29 14:10:42 +0100
+  
+ActionController::RoutingError (uninitialized constant Users):
+  
+Started GET "/users/edit" for 127.0.0.1 at 2024-02-29 14:13:25 +0100
+  
+ActionController::RoutingError (uninitialized constant Users):
+  
+Started GET "/users/edit" for 127.0.0.1 at 2024-02-29 14:13:26 +0100
+  
+ActionController::RoutingError (uninitialized constant Users):
+  
+Started GET "/users/edit" for 127.0.0.1 at 2024-02-29 14:13:26 +0100
+  
+ActionController::RoutingError (uninitialized constant Users):
+  
+Started GET "/users/edit" for 127.0.0.1 at 2024-02-29 14:13:34 +0100
+  
+ActionController::RoutingError (uninitialized constant Users):
+  
+Started GET "/users/edit" for 127.0.0.1 at 2024-02-29 14:13:35 +0100
+  
+ActionController::RoutingError (uninitialized constant Users):
+  
+Started GET "/users/edit" for 127.0.0.1 at 2024-02-29 14:14:57 +0100
+  
+ActionController::RoutingError (uninitialized constant Users):
+  
+Started GET "/users/edit" for 127.0.0.1 at 2024-02-29 14:14:58 +0100
+  
+ActionController::RoutingError (uninitialized constant Users):
+  
+Started GET "/users/edit" for 127.0.0.1 at 2024-02-29 14:14:58 +0100
+  
+ActionController::RoutingError (uninitialized constant Users):
+  
+Started GET "/users/edit" for 127.0.0.1 at 2024-02-29 14:16:03 +0100
+  
+Zeitwerk::NameError (expected file /Users/johan/Documents/Code/lemoners-bibliotheek-1/app/models/user.rb to define constant User, but didn't):
+  
+config/routes.rb:8:in `block in <main>'
+config/routes.rb:1:in `<main>'
+Started GET "/users/edit" for 127.0.0.1 at 2024-02-29 14:16:05 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/users/edit"):
+  
+Started GET "/users/edit" for 127.0.0.1 at 2024-02-29 14:16:06 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/users/edit"):
+  
+Started GET "/users/edit" for 127.0.0.1 at 2024-02-29 14:16:06 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/users/edit"):
+  
+Started GET "/users/edit" for 127.0.0.1 at 2024-02-29 14:16:06 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/users/edit"):
+  
+Started GET "/users/edit" for 127.0.0.1 at 2024-02-29 14:16:07 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/users/edit"):
+  
+Started GET "/users/edit" for 127.0.0.1 at 2024-02-29 14:16:08 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/users/edit"):
+  
+Started GET "/users/edit" for 127.0.0.1 at 2024-02-29 14:16:09 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/users/edit"):
+  
+Started GET "/users/edit" for 127.0.0.1 at 2024-02-29 14:16:16 +0100
+  
+ActionController::RoutingError (uninitialized constant Users::RegistrationsController):
+  
+Started GET "/users/edit" for 127.0.0.1 at 2024-02-29 14:16:27 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/users/edit"):
+  
+Started GET "/users/edit" for 127.0.0.1 at 2024-02-29 14:16:28 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/users/edit"):
+  
+Started GET "/users/edit" for 127.0.0.1 at 2024-02-29 14:16:29 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/users/edit"):
+  
+Started GET "/users/edit" for 127.0.0.1 at 2024-02-29 14:16:29 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/users/edit"):
+  
+Started GET "/users/edit" for 127.0.0.1 at 2024-02-29 14:16:29 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/users/edit"):
+  
+Started GET "/users/edit" for 127.0.0.1 at 2024-02-29 14:16:38 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/users/edit"):
+  
+Started GET "/users/edit" for 127.0.0.1 at 2024-02-29 14:16:39 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/users/edit"):
+  
+Started GET "/users/edit" for 127.0.0.1 at 2024-02-29 14:16:39 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/users/edit"):
+  
+Started GET "/users/edit" for 127.0.0.1 at 2024-02-29 14:16:39 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/users/edit"):
+  
+Started GET "/users/edit" for 127.0.0.1 at 2024-02-29 14:16:40 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/users/edit"):
+  
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/users/edit" for 127.0.0.1 at 2024-02-29 14:16:41 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/users/edit"):
+  
+Started GET "/users/edit" for 127.0.0.1 at 2024-02-29 14:16:42 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/users/edit"):
+  
+Started GET "/users/edit" for 127.0.0.1 at 2024-02-29 14:17:39 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/users/edit"):
+  
+Started GET "/users/edit" for 127.0.0.1 at 2024-02-29 14:17:40 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/users/edit"):
+  
+Started GET "/users/edit" for 127.0.0.1 at 2024-02-29 14:17:40 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/users/edit"):
+  
+Started GET "/users/edit" for 127.0.0.1 at 2024-02-29 14:17:47 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/users/edit"):
+  
+Started GET "/users/edit" for 127.0.0.1 at 2024-02-29 14:18:08 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/users/edit"):
+  
+Started GET "/users/edit" for 127.0.0.1 at 2024-02-29 14:18:09 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/users/edit"):
+  
+Started GET "/users/edit" for 127.0.0.1 at 2024-02-29 14:18:10 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/users/edit"):
+  
+Started GET "/" for 127.0.0.1 at 2024-02-29 14:18:18 +0100
+Processing by PagesController#index as HTML
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms | Allocations: 1380)
+
+
+  
+NoMethodError (undefined method `authenticate_user!' for #<PagesController:0x0000000000d0e8>):
+  
+activesupport (7.1.3) lib/active_support/callbacks.rb:403:in `block in make_lambda'
+activesupport (7.1.3) lib/active_support/callbacks.rb:202:in `block (2 levels) in halting'
+actionpack (7.1.3) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (7.1.3) lib/active_support/callbacks.rb:203:in `block in halting'
+activesupport (7.1.3) lib/active_support/callbacks.rb:598:in `block in invoke_before'
+activesupport (7.1.3) lib/active_support/callbacks.rb:598:in `each'
+activesupport (7.1.3) lib/active_support/callbacks.rb:598:in `invoke_before'
+activesupport (7.1.3) lib/active_support/callbacks.rb:119:in `block in run_callbacks'
+turbo-rails (2.0.2) lib/turbo-rails.rb:24:in `with_request_id'
+turbo-rails (2.0.2) app/controllers/concerns/turbo/request_id_tracking.rb:10:in `turbo_tracking_request_id'
+activesupport (7.1.3) lib/active_support/callbacks.rb:130:in `block in run_callbacks'
+actiontext (7.1.3) lib/action_text/rendering.rb:23:in `with_renderer'
+actiontext (7.1.3) lib/action_text/engine.rb:69:in `block (4 levels) in <class:Engine>'
+activesupport (7.1.3) lib/active_support/callbacks.rb:130:in `instance_exec'
+activesupport (7.1.3) lib/active_support/callbacks.rb:130:in `block in run_callbacks'
+activesupport (7.1.3) lib/active_support/callbacks.rb:141:in `run_callbacks'
+actionpack (7.1.3) lib/abstract_controller/callbacks.rb:258:in `process_action'
+actionpack (7.1.3) lib/action_controller/metal/rescue.rb:25:in `process_action'
+actionpack (7.1.3) lib/action_controller/metal/instrumentation.rb:74:in `block in process_action'
+activesupport (7.1.3) lib/active_support/notifications.rb:206:in `block in instrument'
+activesupport (7.1.3) lib/active_support/notifications/instrumenter.rb:58:in `instrument'
+activesupport (7.1.3) lib/active_support/notifications.rb:206:in `instrument'
+actionpack (7.1.3) lib/action_controller/metal/instrumentation.rb:73:in `process_action'
+actionpack (7.1.3) lib/action_controller/metal/params_wrapper.rb:261:in `process_action'
+activerecord (7.1.3) lib/active_record/railties/controller_runtime.rb:32:in `process_action'
+actionpack (7.1.3) lib/abstract_controller/base.rb:160:in `process'
+actionview (7.1.3) lib/action_view/rendering.rb:40:in `process'
+actionpack (7.1.3) lib/action_controller/metal.rb:227:in `dispatch'
+actionpack (7.1.3) lib/action_controller/metal.rb:309:in `dispatch'
+actionpack (7.1.3) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.1.3) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.1.3) lib/action_dispatch/journey/router.rb:51:in `block in serve'
+actionpack (7.1.3) lib/action_dispatch/journey/router.rb:131:in `block in find_routes'
+actionpack (7.1.3) lib/action_dispatch/journey/router.rb:124:in `each'
+actionpack (7.1.3) lib/action_dispatch/journey/router.rb:124:in `find_routes'
+actionpack (7.1.3) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.1.3) lib/action_dispatch/routing/route_set.rb:882:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (3.0.9) lib/rack/tempfile_reaper.rb:20:in `call'
+rack (3.0.9) lib/rack/etag.rb:29:in `call'
+rack (3.0.9) lib/rack/conditional_get.rb:31:in `call'
+rack (3.0.9) lib/rack/head.rb:15:in `call'
+actionpack (7.1.3) lib/action_dispatch/http/permissions_policy.rb:36:in `call'
+actionpack (7.1.3) lib/action_dispatch/http/content_security_policy.rb:33:in `call'
+rack-session (2.0.0) lib/rack/session/abstract/id.rb:272:in `context'
+rack-session (2.0.0) lib/rack/session/abstract/id.rb:266:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/cookies.rb:689:in `call'
+activerecord (7.1.3) lib/active_record/migration.rb:655:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+activesupport (7.1.3) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (7.1.3) lib/action_dispatch/middleware/callbacks.rb:28:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/actionable_exceptions.rb:16:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (7.1.3) lib/rails/rack/logger.rb:37:in `call_app'
+railties (7.1.3) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (7.1.3) lib/active_support/tagged_logging.rb:135:in `block in tagged'
+activesupport (7.1.3) lib/active_support/tagged_logging.rb:39:in `tagged'
+activesupport (7.1.3) lib/active_support/tagged_logging.rb:135:in `tagged'
+activesupport (7.1.3) lib/active_support/broadcast_logger.rb:240:in `method_missing'
+railties (7.1.3) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/remote_ip.rb:92:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/request_id.rb:28:in `call'
+rack (3.0.9) lib/rack/method_override.rb:28:in `call'
+rack (3.0.9) lib/rack/runtime.rb:24:in `call'
+activesupport (7.1.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/server_timing.rb:59:in `block in call'
+actionpack (7.1.3) lib/action_dispatch/middleware/server_timing.rb:24:in `collect_events'
+actionpack (7.1.3) lib/action_dispatch/middleware/server_timing.rb:58:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/static.rb:25:in `call'
+rack (3.0.9) lib/rack/sendfile.rb:114:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/host_authorization.rb:141:in `call'
+railties (7.1.3) lib/rails/engine.rb:536:in `call'
+puma (6.4.2) lib/puma/configuration.rb:272:in `call'
+puma (6.4.2) lib/puma/request.rb:100:in `block in handle_request'
+puma (6.4.2) lib/puma/thread_pool.rb:378:in `with_force_shutdown'
+puma (6.4.2) lib/puma/request.rb:99:in `handle_request'
+puma (6.4.2) lib/puma/server.rb:464:in `process_client'
+puma (6.4.2) lib/puma/server.rb:245:in `block in run'
+puma (6.4.2) lib/puma/thread_pool.rb:155:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2024-02-29 14:18:30 +0100
+Processing by PagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  [1m[36mBookPost Load (0.1ms)[0m  [1m[34mSELECT "book_posts".* FROM "book_posts"[0m
+  ↳ app/views/pages/index.html.erb:10
+  Rendered pages/index.html.erb within layouts/application (Duration: 31.0ms | Allocations: 12196)
+  Rendered layout layouts/application.html.erb (Duration: 139.1ms | Allocations: 69164)
+Completed 500 Internal Server Error in 159ms (ActiveRecord: 3.8ms | Allocations: 73146)
+
+
+  
+ActionView::Template::Error (undefined method `username' for [[13], "$2a$12$V1N5X8dNXzeFky4KLKankO"]:Array):
+    21:     </div>
+    22:     <div class="inline-flex ml-auto gap-x-5">
+    23:       <% if user_signed_in? %>
+    24:         <div class=""><h2>Welcome back <b><%= current_user.username %></b></h2></div>
+    25:       <p class=""><%= link_to "New book post", new_book_post_path %></p>  
+    26:         <%= link_to "Admin", admin_index_path if current_user.admin? %>
+    27:         <p><%= link_to "Profile", edit_user_registration_path %></p>
+  
+app/views/layouts/application.html.erb:24
+Started GET "/" for 127.0.0.1 at 2024-02-29 14:18:55 +0100
+Processing by PagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  [1m[36mBookPost Load (0.1ms)[0m  [1m[34mSELECT "book_posts".* FROM "book_posts"[0m
+  ↳ app/views/pages/index.html.erb:10
+  Rendered pages/index.html.erb within layouts/application (Duration: 15.7ms | Allocations: 4373)
+  Rendered layout layouts/application.html.erb (Duration: 73.8ms | Allocations: 32622)
+Completed 500 Internal Server Error in 82ms (ActiveRecord: 5.0ms | Allocations: 35307)
+
+
+  
+ActionView::Template::Error (undefined method `username' for [[13], "$2a$12$V1N5X8dNXzeFky4KLKankO"]:Array):
+    21:     </div>
+    22:     <div class="inline-flex ml-auto gap-x-5">
+    23:       <% if user_signed_in? %>
+    24:         <div class=""><h2>Welcome back <b><%= current_user.username %></b></h2></div>
+    25:       <p class=""><%= link_to "New book post", new_book_post_path %></p>  
+    26:         <%= link_to "Admin", admin_index_path if current_user.admin? %>
+    27:         <p><%= link_to "Profile", edit_user_registration_path %></p>
+  
+app/views/layouts/application.html.erb:24
+Started GET "/" for 127.0.0.1 at 2024-02-29 14:18:59 +0100
+Processing by PagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  [1m[36mBookPost Load (0.1ms)[0m  [1m[34mSELECT "book_posts".* FROM "book_posts"[0m
+  ↳ app/views/pages/index.html.erb:10
+  Rendered pages/index.html.erb within layouts/application (Duration: 1.0ms | Allocations: 559)
+  Rendered layout layouts/application.html.erb (Duration: 13.9ms | Allocations: 8788)
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.1ms | Allocations: 9335)
+
+
+  
+ActionView::Template::Error (undefined method `username' for [[13], "$2a$12$V1N5X8dNXzeFky4KLKankO"]:Array):
+    21:     </div>
+    22:     <div class="inline-flex ml-auto gap-x-5">
+    23:       <% if user_signed_in? %>
+    24:         <div class=""><h2>Welcome back <b><%= current_user.username %></b></h2></div>
+    25:       <p class=""><%= link_to "New book post", new_book_post_path %></p>  
+    26:         <%= link_to "Admin", admin_index_path if current_user.admin? %>
+    27:         <p><%= link_to "Profile", edit_user_registration_path %></p>
+  
+app/views/layouts/application.html.erb:24
+Started GET "/" for 127.0.0.1 at 2024-02-29 14:25:09 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  [1m[36mBookPost Load (0.1ms)[0m  [1m[34mSELECT "book_posts".* FROM "book_posts"[0m
+  ↳ app/views/pages/index.html.erb:10
+  Rendered pages/index.html.erb within layouts/application (Duration: 30.3ms | Allocations: 7838)
+  Rendered layout layouts/application.html.erb (Duration: 167.3ms | Allocations: 63478)
+Completed 200 OK in 270ms (Views: 172.5ms | ActiveRecord: 6.9ms | Allocations: 95067)
+
+
+Started GET "/users/edit" for 127.0.0.1 at 2024-02-29 14:25:11 +0100
+  
+ActionController::RoutingError (uninitialized constant Users):
+  
+Started GET "/users/edit" for 127.0.0.1 at 2024-02-29 14:40:47 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/users/edit"):
+  
+Started GET "/users/edit" for 127.0.0.1 at 2024-02-29 14:40:48 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/users/edit"):
+  
+Started GET "/users/edit" for 127.0.0.1 at 2024-02-29 14:40:52 +0100
+  
+ActionController::RoutingError (uninitialized constant Users):
+  
+Started GET "/users/edit" for 127.0.0.1 at 2024-02-29 14:43:42 +0100
+  
+ActionController::RoutingError (uninitialized constant Users):
+  
+Started GET "/users/edit" for 127.0.0.1 at 2024-02-29 14:44:28 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/users/edit"):
+  
+Started GET "/users/edit" for 127.0.0.1 at 2024-02-29 14:46:21 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/users/edit"):
+  
+Started GET "/users/edit" for 127.0.0.1 at 2024-02-29 14:46:23 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/users/edit"):
+  
+Started GET "/users/edit" for 127.0.0.1 at 2024-02-29 14:46:25 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/users/edit"):
+  
+Started GET "/users/edit" for 127.0.0.1 at 2024-02-29 14:50:20 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/users/edit"):
+  
+Started GET "/users/edit" for 127.0.0.1 at 2024-02-29 14:50:21 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/users/edit"):
+  
+Started GET "/users/edit" for 127.0.0.1 at 2024-02-29 14:50:43 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/users/edit"):
+  
+Started GET "/users/edit" for 127.0.0.1 at 2024-02-29 14:50:44 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/users/edit"):
+  
+Started GET "/users/edit" for 127.0.0.1 at 2024-02-29 14:50:56 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/users/edit"):
+  
+Started GET "/users/edit" for 127.0.0.1 at 2024-02-29 14:50:58 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/users/edit"):
+  
+Started GET "/users/edit" for 127.0.0.1 at 2024-02-29 14:50:59 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/users/edit"):
+  
+Started GET "/users/edit" for 127.0.0.1 at 2024-02-29 14:51:25 +0100
+  
+ActionController::RoutingError (uninitialized constant Users):
+  
+Started GET "/users/edit" for 127.0.0.1 at 2024-02-29 14:51:26 +0100
+  
+ActionController::RoutingError (uninitialized constant Users):
+  
+Started GET "/users/edit" for 127.0.0.1 at 2024-02-29 14:51:26 +0100
+  
+ActionController::RoutingError (uninitialized constant Users):
+  
+Started GET "/users/edit" for 127.0.0.1 at 2024-02-29 14:51:48 +0100
+  
+NameError (uninitialized constant User):
+  
+config/routes.rb:8:in `block in <main>'
+config/routes.rb:1:in `<main>'
+Started GET "/users/edit" for 127.0.0.1 at 2024-02-29 14:51:50 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/users/edit"):
+  
+Started GET "/users/edit" for 127.0.0.1 at 2024-02-29 14:53:05 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/users/edit"):
+  
+Started GET "/users/edit" for 127.0.0.1 at 2024-02-29 14:53:31 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/users/edit"):
+  
+Started GET "/users/edit" for 127.0.0.1 at 2024-02-29 14:53:32 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/users/edit"):
+  
+Started GET "/users/edit" for 127.0.0.1 at 2024-02-29 14:53:37 +0100
+  
+ActionController::RoutingError (uninitialized constant Users):
+  
+Started GET "/users/edit" for 127.0.0.1 at 2024-02-29 15:12:22 +0100
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering users/registrations/edit.html.erb within layouts/application
+  Rendered users/shared/_error_messages.html.erb (Duration: 0.5ms | Allocations: 227)
+  Rendered users/registrations/edit.html.erb within layouts/application (Duration: 11.6ms | Allocations: 3538)
+  Rendered layout layouts/application.html.erb (Duration: 42.5ms | Allocations: 31181)
+Completed 200 OK in 59ms (Views: 45.8ms | ActiveRecord: 2.0ms | Allocations: 39297)
+
+
+Started GET "/users/edit" for 127.0.0.1 at 2024-02-29 15:12:24 +0100
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering users/registrations/edit.html.erb within layouts/application
+  Rendered users/shared/_error_messages.html.erb (Duration: 0.0ms | Allocations: 13)
+  Rendered users/registrations/edit.html.erb within layouts/application (Duration: 2.2ms | Allocations: 1459)
+  Rendered layout layouts/application.html.erb (Duration: 14.2ms | Allocations: 8695)
+Completed 200 OK in 19ms (Views: 15.0ms | ActiveRecord: 0.1ms | Allocations: 10371)
+
+
+Started GET "/" for 127.0.0.1 at 2024-02-29 15:12:31 +0100
+Processing by PagesController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  [1m[36mBookPost Load (0.1ms)[0m  [1m[34mSELECT "book_posts".* FROM "book_posts"[0m
+  ↳ app/views/pages/index.html.erb:10
+  Rendered pages/index.html.erb within layouts/application (Duration: 4.9ms | Allocations: 3525)
+  Rendered layout layouts/application.html.erb (Duration: 21.1ms | Allocations: 11005)
+Completed 200 OK in 29ms (Views: 23.9ms | ActiveRecord: 0.2ms | Allocations: 13789)
+
+
+Started DELETE "/users/sign_out?_method=delete" for 127.0.0.1 at 2024-02-29 15:12:32 +0100
+Processing by Devise::SessionsController#destroy as TURBO_STREAM
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+Redirected to http://127.0.0.1:3000/
+Completed 303 See Other in 7ms (ActiveRecord: 0.1ms | Allocations: 2947)
+
+
+Started GET "/" for 127.0.0.1 at 2024-02-29 15:12:32 +0100
+Processing by PagesController#index as TURBO_STREAM
+Completed 401 Unauthorized in 2ms (ActiveRecord: 0.0ms | Allocations: 435)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2024-02-29 15:12:32 +0100
+Processing by Devise::SessionsController#new as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (Duration: 1.1ms | Allocations: 564)
+  Rendered users/sessions/new.html.erb within layouts/application (Duration: 6.2ms | Allocations: 1934)
+  Rendered layout layouts/application.html.erb (Duration: 14.4ms | Allocations: 9316)
+Completed 200 OK in 18ms (Views: 16.6ms | ActiveRecord: 0.0ms | Allocations: 10373)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2024-02-29 15:12:35 +0100
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/registrations/new.html.erb within layouts/application
+  Rendered users/shared/_error_messages.html.erb (Duration: 0.0ms | Allocations: 13)
+  Rendered users/shared/_links.html.erb (Duration: 0.1ms | Allocations: 76)
+  Rendered users/registrations/new.html.erb within layouts/application (Duration: 4.6ms | Allocations: 1763)
+  Rendered layout layouts/application.html.erb (Duration: 13.1ms | Allocations: 8993)
+Completed 200 OK in 16ms (Views: 14.5ms | ActiveRecord: 0.0ms | Allocations: 9764)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2024-02-29 15:12:36 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (Duration: 0.3ms | Allocations: 115)
+  Rendered users/sessions/new.html.erb within layouts/application (Duration: 1.7ms | Allocations: 871)
+  Rendered layout layouts/application.html.erb (Duration: 12.3ms | Allocations: 8102)
+Completed 200 OK in 15ms (Views: 13.0ms | ActiveRecord: 0.0ms | Allocations: 8834)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2024-02-29 15:12:37 +0100
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/registrations/new.html.erb within layouts/application
+  Rendered users/shared/_error_messages.html.erb (Duration: 0.0ms | Allocations: 13)
+  Rendered users/shared/_links.html.erb (Duration: 0.1ms | Allocations: 70)
+  Rendered users/registrations/new.html.erb within layouts/application (Duration: 2.0ms | Allocations: 1230)
+  Rendered layout layouts/application.html.erb (Duration: 10.5ms | Allocations: 8460)
+Completed 200 OK in 13ms (Views: 11.3ms | ActiveRecord: 0.0ms | Allocations: 9174)
+
+
+Started POST "/users" for 127.0.0.1 at 2024-02-29 15:12:50 +0100
+Processing by Devise::RegistrationsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"username"=>"user23", "email"=>"user23@lemone.com", "phone"=>"3123123123", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (1.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "user23@lemone.com"], ["LIMIT", 1]]
+  [1m[36mCACHE User Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "user23@lemone.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "created_at", "updated_at", "role", "username", "phone", "otp_secret", "consumed_timestep", "otp_required_for_login") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["email", "user23@lemone.com"], ["encrypted_password", "[FILTERED]"], ["reset_password_token", "[FILTERED]"], ["reset_password_sent_at", "[FILTERED]"], ["remember_created_at", nil], ["created_at", "2024-02-29 14:12:51.224171"], ["updated_at", "2024-02-29 14:12:51.224171"], ["role", nil], ["username", "user23"], ["phone", "3123123123"], ["otp_secret", "[FILTERED]"], ["consumed_timestep", nil], ["otp_required_for_login", "[FILTERED]"]]
+  [1m[36mTRANSACTION (1.9ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://127.0.0.1:3000/
+Completed 303 See Other in 232ms (ActiveRecord: 3.3ms | Allocations: 9410)
+
+
+Started GET "/" for 127.0.0.1 at 2024-02-29 15:12:51 +0100
+Processing by PagesController#index as TURBO_STREAM
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  [1m[36mBookPost Load (0.1ms)[0m  [1m[34mSELECT "book_posts".* FROM "book_posts"[0m
+  ↳ app/views/pages/index.html.erb:10
+  Rendered pages/index.html.erb within layouts/application (Duration: 1.0ms | Allocations: 552)
+  Rendered layout layouts/application.html.erb (Duration: 8.5ms | Allocations: 8024)
+Completed 200 OK in 12ms (Views: 8.8ms | ActiveRecord: 0.1ms | Allocations: 9726)
+
+
+Started GET "/book_posts/new" for 127.0.0.1 at 2024-02-29 15:12:54 +0100
+Processing by BookPostsController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `authenticate_user_using_2fa'
+  Rendering layout layouts/application.html.erb
+  Rendering book_posts/new.html.erb within layouts/application
+  Rendered book_posts/_form.html.erb (Duration: 3.6ms | Allocations: 1542)
+  Rendered book_posts/new.html.erb within layouts/application (Duration: 5.1ms | Allocations: 1776)
+  Rendered layout layouts/application.html.erb (Duration: 14.1ms | Allocations: 9020)
+Completed 200 OK in 19ms (Views: 15.5ms | ActiveRecord: 0.1ms | Allocations: 10483)
+
+
+Started GET "/users/edit" for 127.0.0.1 at 2024-02-29 15:12:54 +0100
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering users/registrations/edit.html.erb within layouts/application
+  Rendered users/shared/_error_messages.html.erb (Duration: 0.0ms | Allocations: 13)
+  Rendered users/registrations/edit.html.erb within layouts/application (Duration: 2.2ms | Allocations: 1479)
+  Rendered layout layouts/application.html.erb (Duration: 23.6ms | Allocations: 8716)
+Completed 200 OK in 27ms (Views: 24.1ms | ActiveRecord: 0.1ms | Allocations: 10367)
+
+
+Started DELETE "/users/sign_out?_method=delete" for 127.0.0.1 at 2024-02-29 15:12:57 +0100
+Processing by Devise::SessionsController#destroy as TURBO_STREAM
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+Redirected to http://127.0.0.1:3000/
+Completed 303 See Other in 31ms (ActiveRecord: 0.1ms | Allocations: 1784)
+
+
+Started GET "/" for 127.0.0.1 at 2024-02-29 15:12:57 +0100
+Processing by PagesController#index as TURBO_STREAM
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms | Allocations: 358)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2024-02-29 15:12:57 +0100
+Processing by Devise::SessionsController#new as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (Duration: 1.2ms | Allocations: 115)
+  Rendered users/sessions/new.html.erb within layouts/application (Duration: 11.7ms | Allocations: 874)
+  Rendered layout layouts/application.html.erb (Duration: 49.4ms | Allocations: 8184)
+Completed 200 OK in 54ms (Views: 51.1ms | ActiveRecord: 0.0ms | Allocations: 8934)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2024-02-29 15:17:50 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (Duration: 0.7ms | Allocations: 550)
+  Rendered users/sessions/new.html.erb within layouts/application (Duration: 3.6ms | Allocations: 1787)
+  Rendered layout layouts/application.html.erb (Duration: 27.1ms | Allocations: 29256)
+Completed 200 OK in 41ms (Views: 30.5ms | ActiveRecord: 2.7ms | Allocations: 36775)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2024-02-29 15:17:51 +0100
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/registrations/new.html.erb within layouts/application
+  Rendered users/shared/_error_messages.html.erb (Duration: 0.4ms | Allocations: 212)
+  Rendered users/shared/_links.html.erb (Duration: 0.1ms | Allocations: 76)
+  Rendered users/registrations/new.html.erb within layouts/application (Duration: 3.7ms | Allocations: 1956)
+  Rendered layout layouts/application.html.erb (Duration: 13.2ms | Allocations: 9191)
+Completed 200 OK in 15ms (Views: 14.3ms | ActiveRecord: 0.0ms | Allocations: 10269)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2024-02-29 15:17:54 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (Duration: 0.2ms | Allocations: 115)
+  Rendered users/sessions/new.html.erb within layouts/application (Duration: 1.3ms | Allocations: 871)
+  Rendered layout layouts/application.html.erb (Duration: 14.0ms | Allocations: 8330)
+Completed 200 OK in 16ms (Views: 14.5ms | ActiveRecord: 0.0ms | Allocations: 9053)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2024-02-29 15:18:03 +0100
+Processing by Devise::SessionsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"user22@lemone.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "user22@lemone.com"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `authenticate_user_using_2fa'
+Completed 401 Unauthorized in 5ms (ActiveRecord: 0.2ms | Allocations: 1494)
+
+
+Processing by Devise::SessionsController#new as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"user22@lemone.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendering layout layouts/application.html.erb
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (Duration: 0.2ms | Allocations: 115)
+  Rendered users/sessions/new.html.erb within layouts/application (Duration: 1.7ms | Allocations: 867)
+  Rendered layout layouts/application.html.erb (Duration: 9.4ms | Allocations: 8257)
+Completed 200 OK in 219ms (Views: 9.9ms | ActiveRecord: 0.0ms | Allocations: 8793)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2024-02-29 15:18:09 +0100
+Processing by Devise::SessionsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"user21@lemone.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "user21@lemone.com"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `authenticate_user_using_2fa'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "user21@lemone.com"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `authenticate_user_using_2fa'
+Redirected to http://127.0.0.1:3000/
+Completed 303 See Other in 215ms (ActiveRecord: 0.1ms | Allocations: 2929)
+
+
+Started GET "/" for 127.0.0.1 at 2024-02-29 15:18:09 +0100
+Processing by PagesController#index as TURBO_STREAM
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  [1m[36mBookPost Load (0.1ms)[0m  [1m[34mSELECT "book_posts".* FROM "book_posts"[0m
+  ↳ app/views/pages/index.html.erb:10
+  Rendered pages/index.html.erb within layouts/application (Duration: 4.8ms | Allocations: 3954)
+  Rendered layout layouts/application.html.erb (Duration: 12.8ms | Allocations: 11356)
+Completed 200 OK in 18ms (Views: 13.8ms | ActiveRecord: 0.5ms | Allocations: 14233)
+
+
+Started GET "/users/edit" for 127.0.0.1 at 2024-02-29 15:18:10 +0100
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering users/registrations/edit.html.erb within layouts/application
+  Rendered users/shared/_error_messages.html.erb (Duration: 0.0ms | Allocations: 13)
+  Rendered users/registrations/edit.html.erb within layouts/application (Duration: 2.7ms | Allocations: 2042)
+  Rendered layout layouts/application.html.erb (Duration: 10.3ms | Allocations: 9287)
+Completed 200 OK in 14ms (Views: 11.0ms | ActiveRecord: 0.1ms | Allocations: 11026)
+
+
+Started GET "/" for 127.0.0.1 at 2024-02-29 15:24:08 +0100
+Processing by PagesController#index as HTML
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  [1m[36mBookPost Load (0.2ms)[0m  [1m[34mSELECT "book_posts".* FROM "book_posts"[0m
+  ↳ app/views/pages/index.html.erb:10
+  Rendered pages/index.html.erb within layouts/application (Duration: 1.7ms | Allocations: 584)
+  Rendered layout layouts/application.html.erb (Duration: 18.7ms | Allocations: 7822)
+Completed 200 OK in 25ms (Views: 19.0ms | ActiveRecord: 2.2ms | Allocations: 9784)
+
+
+Started GET "/" for 127.0.0.1 at 2024-02-29 15:24:33 +0100
+Processing by PagesController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 3.2ms | Allocations: 8803)
+
+
+  
+NoMethodError (undefined method `authenticate_user_using_2fa' for #<PagesController:0x0000000004a8d0>):
+  
+activesupport (7.1.3) lib/active_support/callbacks.rb:403:in `block in make_lambda'
+activesupport (7.1.3) lib/active_support/callbacks.rb:202:in `block (2 levels) in halting'
+actionpack (7.1.3) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (7.1.3) lib/active_support/callbacks.rb:203:in `block in halting'
+activesupport (7.1.3) lib/active_support/callbacks.rb:598:in `block in invoke_before'
+activesupport (7.1.3) lib/active_support/callbacks.rb:598:in `each'
+activesupport (7.1.3) lib/active_support/callbacks.rb:598:in `invoke_before'
+activesupport (7.1.3) lib/active_support/callbacks.rb:119:in `block in run_callbacks'
+turbo-rails (2.0.2) lib/turbo-rails.rb:24:in `with_request_id'
+turbo-rails (2.0.2) app/controllers/concerns/turbo/request_id_tracking.rb:10:in `turbo_tracking_request_id'
+activesupport (7.1.3) lib/active_support/callbacks.rb:130:in `block in run_callbacks'
+actiontext (7.1.3) lib/action_text/rendering.rb:23:in `with_renderer'
+actiontext (7.1.3) lib/action_text/engine.rb:69:in `block (4 levels) in <class:Engine>'
+activesupport (7.1.3) lib/active_support/callbacks.rb:130:in `instance_exec'
+activesupport (7.1.3) lib/active_support/callbacks.rb:130:in `block in run_callbacks'
+activesupport (7.1.3) lib/active_support/callbacks.rb:141:in `run_callbacks'
+actionpack (7.1.3) lib/abstract_controller/callbacks.rb:258:in `process_action'
+actionpack (7.1.3) lib/action_controller/metal/rescue.rb:25:in `process_action'
+actionpack (7.1.3) lib/action_controller/metal/instrumentation.rb:74:in `block in process_action'
+activesupport (7.1.3) lib/active_support/notifications.rb:206:in `block in instrument'
+activesupport (7.1.3) lib/active_support/notifications/instrumenter.rb:58:in `instrument'
+activesupport (7.1.3) lib/active_support/notifications.rb:206:in `instrument'
+actionpack (7.1.3) lib/action_controller/metal/instrumentation.rb:73:in `process_action'
+actionpack (7.1.3) lib/action_controller/metal/params_wrapper.rb:261:in `process_action'
+activerecord (7.1.3) lib/active_record/railties/controller_runtime.rb:32:in `process_action'
+actionpack (7.1.3) lib/abstract_controller/base.rb:160:in `process'
+actionview (7.1.3) lib/action_view/rendering.rb:40:in `process'
+actionpack (7.1.3) lib/action_controller/metal.rb:227:in `dispatch'
+actionpack (7.1.3) lib/action_controller/metal.rb:309:in `dispatch'
+actionpack (7.1.3) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.1.3) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.1.3) lib/action_dispatch/journey/router.rb:51:in `block in serve'
+actionpack (7.1.3) lib/action_dispatch/journey/router.rb:131:in `block in find_routes'
+actionpack (7.1.3) lib/action_dispatch/journey/router.rb:124:in `each'
+actionpack (7.1.3) lib/action_dispatch/journey/router.rb:124:in `find_routes'
+actionpack (7.1.3) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.1.3) lib/action_dispatch/routing/route_set.rb:882:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (3.0.9) lib/rack/tempfile_reaper.rb:20:in `call'
+rack (3.0.9) lib/rack/etag.rb:29:in `call'
+rack (3.0.9) lib/rack/conditional_get.rb:31:in `call'
+rack (3.0.9) lib/rack/head.rb:15:in `call'
+actionpack (7.1.3) lib/action_dispatch/http/permissions_policy.rb:36:in `call'
+actionpack (7.1.3) lib/action_dispatch/http/content_security_policy.rb:33:in `call'
+rack-session (2.0.0) lib/rack/session/abstract/id.rb:272:in `context'
+rack-session (2.0.0) lib/rack/session/abstract/id.rb:266:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/cookies.rb:689:in `call'
+activerecord (7.1.3) lib/active_record/migration.rb:655:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+activesupport (7.1.3) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (7.1.3) lib/action_dispatch/middleware/callbacks.rb:28:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/actionable_exceptions.rb:16:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (7.1.3) lib/rails/rack/logger.rb:37:in `call_app'
+railties (7.1.3) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (7.1.3) lib/active_support/tagged_logging.rb:135:in `block in tagged'
+activesupport (7.1.3) lib/active_support/tagged_logging.rb:39:in `tagged'
+activesupport (7.1.3) lib/active_support/tagged_logging.rb:135:in `tagged'
+activesupport (7.1.3) lib/active_support/broadcast_logger.rb:240:in `method_missing'
+railties (7.1.3) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/remote_ip.rb:92:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/request_id.rb:28:in `call'
+rack (3.0.9) lib/rack/method_override.rb:28:in `call'
+rack (3.0.9) lib/rack/runtime.rb:24:in `call'
+activesupport (7.1.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/server_timing.rb:59:in `block in call'
+actionpack (7.1.3) lib/action_dispatch/middleware/server_timing.rb:24:in `collect_events'
+actionpack (7.1.3) lib/action_dispatch/middleware/server_timing.rb:58:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/static.rb:25:in `call'
+rack (3.0.9) lib/rack/sendfile.rb:114:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/host_authorization.rb:141:in `call'
+railties (7.1.3) lib/rails/engine.rb:536:in `call'
+puma (6.4.2) lib/puma/configuration.rb:272:in `call'
+puma (6.4.2) lib/puma/request.rb:100:in `block in handle_request'
+puma (6.4.2) lib/puma/thread_pool.rb:378:in `with_force_shutdown'
+puma (6.4.2) lib/puma/request.rb:99:in `handle_request'
+puma (6.4.2) lib/puma/server.rb:464:in `process_client'
+puma (6.4.2) lib/puma/server.rb:245:in `block in run'
+puma (6.4.2) lib/puma/thread_pool.rb:155:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2024-02-29 15:24:36 +0100
+Processing by PagesController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.1ms | Allocations: 1849)
+
+
+  
+NoMethodError (undefined method `authenticate_user_using_2fa' for #<PagesController:0x0000000004ac40>):
+  
+activesupport (7.1.3) lib/active_support/callbacks.rb:403:in `block in make_lambda'
+activesupport (7.1.3) lib/active_support/callbacks.rb:202:in `block (2 levels) in halting'
+actionpack (7.1.3) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (7.1.3) lib/active_support/callbacks.rb:203:in `block in halting'
+activesupport (7.1.3) lib/active_support/callbacks.rb:598:in `block in invoke_before'
+activesupport (7.1.3) lib/active_support/callbacks.rb:598:in `each'
+activesupport (7.1.3) lib/active_support/callbacks.rb:598:in `invoke_before'
+activesupport (7.1.3) lib/active_support/callbacks.rb:119:in `block in run_callbacks'
+turbo-rails (2.0.2) lib/turbo-rails.rb:24:in `with_request_id'
+turbo-rails (2.0.2) app/controllers/concerns/turbo/request_id_tracking.rb:10:in `turbo_tracking_request_id'
+activesupport (7.1.3) lib/active_support/callbacks.rb:130:in `block in run_callbacks'
+actiontext (7.1.3) lib/action_text/rendering.rb:23:in `with_renderer'
+actiontext (7.1.3) lib/action_text/engine.rb:69:in `block (4 levels) in <class:Engine>'
+activesupport (7.1.3) lib/active_support/callbacks.rb:130:in `instance_exec'
+activesupport (7.1.3) lib/active_support/callbacks.rb:130:in `block in run_callbacks'
+activesupport (7.1.3) lib/active_support/callbacks.rb:141:in `run_callbacks'
+actionpack (7.1.3) lib/abstract_controller/callbacks.rb:258:in `process_action'
+actionpack (7.1.3) lib/action_controller/metal/rescue.rb:25:in `process_action'
+actionpack (7.1.3) lib/action_controller/metal/instrumentation.rb:74:in `block in process_action'
+activesupport (7.1.3) lib/active_support/notifications.rb:206:in `block in instrument'
+activesupport (7.1.3) lib/active_support/notifications/instrumenter.rb:58:in `instrument'
+activesupport (7.1.3) lib/active_support/notifications.rb:206:in `instrument'
+actionpack (7.1.3) lib/action_controller/metal/instrumentation.rb:73:in `process_action'
+actionpack (7.1.3) lib/action_controller/metal/params_wrapper.rb:261:in `process_action'
+activerecord (7.1.3) lib/active_record/railties/controller_runtime.rb:32:in `process_action'
+actionpack (7.1.3) lib/abstract_controller/base.rb:160:in `process'
+actionview (7.1.3) lib/action_view/rendering.rb:40:in `process'
+actionpack (7.1.3) lib/action_controller/metal.rb:227:in `dispatch'
+actionpack (7.1.3) lib/action_controller/metal.rb:309:in `dispatch'
+actionpack (7.1.3) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.1.3) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.1.3) lib/action_dispatch/journey/router.rb:51:in `block in serve'
+actionpack (7.1.3) lib/action_dispatch/journey/router.rb:131:in `block in find_routes'
+actionpack (7.1.3) lib/action_dispatch/journey/router.rb:124:in `each'
+actionpack (7.1.3) lib/action_dispatch/journey/router.rb:124:in `find_routes'
+actionpack (7.1.3) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.1.3) lib/action_dispatch/routing/route_set.rb:882:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (3.0.9) lib/rack/tempfile_reaper.rb:20:in `call'
+rack (3.0.9) lib/rack/etag.rb:29:in `call'
+rack (3.0.9) lib/rack/conditional_get.rb:31:in `call'
+rack (3.0.9) lib/rack/head.rb:15:in `call'
+actionpack (7.1.3) lib/action_dispatch/http/permissions_policy.rb:36:in `call'
+actionpack (7.1.3) lib/action_dispatch/http/content_security_policy.rb:33:in `call'
+rack-session (2.0.0) lib/rack/session/abstract/id.rb:272:in `context'
+rack-session (2.0.0) lib/rack/session/abstract/id.rb:266:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/cookies.rb:689:in `call'
+activerecord (7.1.3) lib/active_record/migration.rb:655:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+activesupport (7.1.3) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (7.1.3) lib/action_dispatch/middleware/callbacks.rb:28:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/actionable_exceptions.rb:16:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (7.1.3) lib/rails/rack/logger.rb:37:in `call_app'
+railties (7.1.3) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (7.1.3) lib/active_support/tagged_logging.rb:135:in `block in tagged'
+activesupport (7.1.3) lib/active_support/tagged_logging.rb:39:in `tagged'
+activesupport (7.1.3) lib/active_support/tagged_logging.rb:135:in `tagged'
+activesupport (7.1.3) lib/active_support/broadcast_logger.rb:240:in `method_missing'
+railties (7.1.3) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/remote_ip.rb:92:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/request_id.rb:28:in `call'
+rack (3.0.9) lib/rack/method_override.rb:28:in `call'
+rack (3.0.9) lib/rack/runtime.rb:24:in `call'
+activesupport (7.1.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/server_timing.rb:59:in `block in call'
+actionpack (7.1.3) lib/action_dispatch/middleware/server_timing.rb:24:in `collect_events'
+actionpack (7.1.3) lib/action_dispatch/middleware/server_timing.rb:58:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/static.rb:25:in `call'
+rack (3.0.9) lib/rack/sendfile.rb:114:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/host_authorization.rb:141:in `call'
+railties (7.1.3) lib/rails/engine.rb:536:in `call'
+puma (6.4.2) lib/puma/configuration.rb:272:in `call'
+puma (6.4.2) lib/puma/request.rb:100:in `block in handle_request'
+puma (6.4.2) lib/puma/thread_pool.rb:378:in `with_force_shutdown'
+puma (6.4.2) lib/puma/request.rb:99:in `handle_request'
+puma (6.4.2) lib/puma/server.rb:464:in `process_client'
+puma (6.4.2) lib/puma/server.rb:245:in `block in run'
+puma (6.4.2) lib/puma/thread_pool.rb:155:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2024-02-29 15:24:42 +0100
+Processing by PagesController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  [1m[36mBookPost Load (0.1ms)[0m  [1m[34mSELECT "book_posts".* FROM "book_posts"[0m
+  ↳ app/views/pages/index.html.erb:10
+  Rendered pages/index.html.erb within layouts/application (Duration: 5.6ms | Allocations: 3940)
+  Rendered layout layouts/application.html.erb (Duration: 37.8ms | Allocations: 31593)
+Completed 200 OK in 63ms (Views: 39.9ms | ActiveRecord: 2.8ms | Allocations: 41488)
+
+
+Started DELETE "/users/sign_out?_method=delete" for 127.0.0.1 at 2024-02-29 15:24:43 +0100
+Processing by Devise::SessionsController#destroy as TURBO_STREAM
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+Redirected to http://127.0.0.1:3000/
+Completed 303 See Other in 3ms (ActiveRecord: 0.1ms | Allocations: 2212)
+
+
+Started GET "/" for 127.0.0.1 at 2024-02-29 15:24:43 +0100
+Processing by PagesController#index as TURBO_STREAM
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms | Allocations: 366)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2024-02-29 15:24:43 +0100
+Processing by Devise::SessionsController#new as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (Duration: 0.9ms | Allocations: 550)
+  Rendered users/sessions/new.html.erb within layouts/application (Duration: 3.4ms | Allocations: 1770)
+  Rendered layout layouts/application.html.erb (Duration: 16.3ms | Allocations: 9090)
+Completed 200 OK in 25ms (Views: 22.6ms | ActiveRecord: 0.0ms | Allocations: 10312)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2024-02-29 15:24:45 +0100
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/registrations/new.html.erb within layouts/application
+  Rendered users/shared/_error_messages.html.erb (Duration: 0.6ms | Allocations: 212)
+  Rendered users/shared/_links.html.erb (Duration: 0.2ms | Allocations: 75)
+  Rendered users/registrations/new.html.erb within layouts/application (Duration: 4.5ms | Allocations: 1953)
+  Rendered layout layouts/application.html.erb (Duration: 13.7ms | Allocations: 9188)
+Completed 200 OK in 17ms (Views: 15.1ms | ActiveRecord: 0.0ms | Allocations: 10240)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2024-02-29 15:24:46 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (Duration: 0.4ms | Allocations: 115)
+  Rendered users/sessions/new.html.erb within layouts/application (Duration: 3.1ms | Allocations: 871)
+  Rendered layout layouts/application.html.erb (Duration: 50.0ms | Allocations: 8190)
+Completed 200 OK in 54ms (Views: 50.7ms | ActiveRecord: 0.0ms | Allocations: 8910)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2024-02-29 15:24:51 +0100
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/registrations/new.html.erb within layouts/application
+  Rendered users/shared/_error_messages.html.erb (Duration: 0.0ms | Allocations: 13)
+  Rendered users/shared/_links.html.erb (Duration: 0.1ms | Allocations: 70)
+  Rendered users/registrations/new.html.erb within layouts/application (Duration: 1.5ms | Allocations: 1230)
+  Rendered layout layouts/application.html.erb (Duration: 10.3ms | Allocations: 8496)
+Completed 200 OK in 12ms (Views: 11.2ms | ActiveRecord: 0.0ms | Allocations: 9205)
+
+
+Started GET "/" for 127.0.0.1 at 2024-02-29 15:24:56 +0100
+Processing by PagesController#index as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms | Allocations: 361)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2024-02-29 15:24:56 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (Duration: 0.1ms | Allocations: 115)
+  Rendered users/sessions/new.html.erb within layouts/application (Duration: 1.2ms | Allocations: 871)
+  Rendered layout layouts/application.html.erb (Duration: 11.6ms | Allocations: 8159)
+Completed 200 OK in 14ms (Views: 12.2ms | ActiveRecord: 0.0ms | Allocations: 8928)
+
+
+Started GET "/" for 127.0.0.1 at 2024-02-29 15:41:52 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  [1m[36mBookPost Load (1.2ms)[0m  [1m[34mSELECT "book_posts".* FROM "book_posts"[0m
+  ↳ app/views/pages/index.html.erb:10
+  Rendered pages/index.html.erb within layouts/application (Duration: 12.8ms | Allocations: 3866)
+  Rendered layout layouts/application.html.erb (Duration: 49.7ms | Allocations: 33825)
+Completed 500 Internal Server Error in 70ms (ActiveRecord: 2.0ms | Allocations: 36411)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `new_user_session_path' for #<ActionView::Base:0x00000000054cb8>):
+    27:         <p><%= link_to "Profile", edit_user_registration_path %></p>
+    28:         <p class=""><%= link_to "Sign Out", destroy_user_session_path, data: { turbo_method: :delete } %></p>
+    29:       <% else %>
+    30:         <p><%= link_to "Sign In", new_user_session_path %></p>
+    31:         <p><%= link_to "Sign Up", new_user_registration_path %></p>
+    32:       <% end %>
+    33:     </div>
+  
+app/views/layouts/application.html.erb:30
+Started GET "/" for 127.0.0.1 at 2024-02-29 15:41:53 +0100
+Processing by PagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  [1m[36mBookPost Load (0.1ms)[0m  [1m[34mSELECT "book_posts".* FROM "book_posts"[0m
+  ↳ app/views/pages/index.html.erb:10
+  Rendered pages/index.html.erb within layouts/application (Duration: 2.6ms | Allocations: 554)
+  Rendered layout layouts/application.html.erb (Duration: 21.0ms | Allocations: 9246)
+Completed 500 Internal Server Error in 24ms (ActiveRecord: 0.1ms | Allocations: 9496)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `new_user_session_path' for #<ActionView::Base:0x00000000054f88>):
+    27:         <p><%= link_to "Profile", edit_user_registration_path %></p>
+    28:         <p class=""><%= link_to "Sign Out", destroy_user_session_path, data: { turbo_method: :delete } %></p>
+    29:       <% else %>
+    30:         <p><%= link_to "Sign In", new_user_session_path %></p>
+    31:         <p><%= link_to "Sign Up", new_user_registration_path %></p>
+    32:       <% end %>
+    33:     </div>
+  
+app/views/layouts/application.html.erb:30
+Started GET "/" for 127.0.0.1 at 2024-02-29 15:42:50 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  [1m[36mBookPost Load (0.1ms)[0m  [1m[34mSELECT "book_posts".* FROM "book_posts"[0m
+  ↳ app/views/pages/index.html.erb:10
+  Rendered pages/index.html.erb within layouts/application (Duration: 44.6ms | Allocations: 13050)
+  Rendered layout layouts/application.html.erb (Duration: 765.3ms | Allocations: 172296)
+Completed 500 Internal Server Error in 846ms (ActiveRecord: 3.0ms | Allocations: 188557)
+
+
+  
+ActionView::Template::Error (undefined method `user_signed_in?' for #<ActionView::Base:0x0000000000cc10>):
+    20:       <p class="font-bold"><%= link_to "Lemoners Bibliotheek", root_path %></p>
+    21:     </div>
+    22:     <div class="inline-flex ml-auto gap-x-5">
+    23:       <% if user_signed_in? %>
+    24:         <div class=""><h2>Welcome back <b><%= current_user.username %></b></h2></div>
+    25:       <p class=""><%= link_to "New book post", new_book_post_path %></p>  
+    26:         <%= link_to "Admin", admin_index_path if current_user.admin? %>
+  
+app/views/layouts/application.html.erb:23
+Started GET "/" for 127.0.0.1 at 2024-02-29 15:42:53 +0100
+Processing by PagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  [1m[36mBookPost Load (0.1ms)[0m  [1m[34mSELECT "book_posts".* FROM "book_posts"[0m
+  ↳ app/views/pages/index.html.erb:10
+  Rendered pages/index.html.erb within layouts/application (Duration: 1.0ms | Allocations: 561)
+  Rendered layout layouts/application.html.erb (Duration: 17.8ms | Allocations: 8980)
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 0.1ms | Allocations: 9238)
+
+
+  
+ActionView::Template::Error (undefined method `user_signed_in?' for #<ActionView::Base:0x0000000000cf58>):
+    20:       <p class="font-bold"><%= link_to "Lemoners Bibliotheek", root_path %></p>
+    21:     </div>
+    22:     <div class="inline-flex ml-auto gap-x-5">
+    23:       <% if user_signed_in? %>
+    24:         <div class=""><h2>Welcome back <b><%= current_user.username %></b></h2></div>
+    25:       <p class=""><%= link_to "New book post", new_book_post_path %></p>  
+    26:         <%= link_to "Admin", admin_index_path if current_user.admin? %>
+  
+app/views/layouts/application.html.erb:23
+Started GET "/" for 127.0.0.1 at 2024-02-29 15:45:46 +0100
+Processing by PagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  [1m[36mBookPost Load (0.1ms)[0m  [1m[34mSELECT "book_posts".* FROM "book_posts"[0m
+  ↳ app/views/pages/index.html.erb:10
+  Rendered pages/index.html.erb within layouts/application (Duration: 28.6ms | Allocations: 4371)
+  Rendered layout layouts/application.html.erb (Duration: 91.4ms | Allocations: 32363)
+Completed 500 Internal Server Error in 122ms (ActiveRecord: 12.5ms | Allocations: 34741)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `new_user_session_path' for #<ActionView::Base:0x000000000121b0>):
+    27:         <p><%= link_to "Profile", edit_user_registration_path %></p>
+    28:         <p class=""><%= link_to "Sign Out", destroy_user_session_path, data: { turbo_method: :delete } %></p>
+    29:       <% else %>
+    30:         <p><%= link_to "Sign In", new_user_session_path %></p>
+    31:         <p><%= link_to "Sign Up", new_user_registration_path %></p>
+    32:       <% end %>
+    33:     </div>
+  
+app/views/layouts/application.html.erb:30
+Started GET "/" for 127.0.0.1 at 2024-02-29 15:46:49 +0100
+Processing by PagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  [1m[36mBookPost Load (0.1ms)[0m  [1m[34mSELECT "book_posts".* FROM "book_posts"[0m
+  ↳ app/views/pages/index.html.erb:10
+  Rendered pages/index.html.erb within layouts/application (Duration: 9.6ms | Allocations: 4356)
+  Rendered layout layouts/application.html.erb (Duration: 48.6ms | Allocations: 32321)
+Completed 500 Internal Server Error in 64ms (ActiveRecord: 3.4ms | Allocations: 34688)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `new_user_session_path' for #<ActionView::Base:0x00000000017430>):
+    27:         <p><%= link_to "Profile", edit_user_registration_path %></p>
+    28:         <p class=""><%= link_to "Sign Out", destroy_user_session_path, data: { turbo_method: :delete } %></p>
+    29:       <% else %>
+    30:         <p><%= link_to "Sign In", new_user_session_path %></p>
+    31:         <p><%= link_to "Sign Up", new_user_registration_path %></p>
+    32:       <% end %>
+    33:     </div>
+  
+app/views/layouts/application.html.erb:30
+Started GET "/" for 127.0.0.1 at 2024-02-29 15:47:07 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (2.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  [1m[36mBookPost Load (0.1ms)[0m  [1m[34mSELECT "book_posts".* FROM "book_posts"[0m
+  ↳ app/views/pages/index.html.erb:10
+  Rendered pages/index.html.erb within layouts/application (Duration: 41.8ms | Allocations: 12332)
+  Rendered layout layouts/application.html.erb (Duration: 193.8ms | Allocations: 71050)
+Completed 500 Internal Server Error in 239ms (ActiveRecord: 4.6ms | Allocations: 77954)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `new_user_session_path' for #<ActionView::Base:0x0000000000d6d8>):
+    27:         <p><%= link_to "Profile", edit_user_registration_path %></p>
+    28:         <p class=""><%= link_to "Sign Out", destroy_user_session_path, data: { turbo_method: :delete } %></p>
+    29:       <% else %>
+    30:         <p><%= link_to "Sign In", new_user_session_path %></p>
+    31:         <p><%= link_to "Sign Up", new_user_registration_path %></p>
+    32:       <% end %>
+    33:     </div>
+  
+app/views/layouts/application.html.erb:30
+Started GET "/" for 127.0.0.1 at 2024-02-29 15:47:08 +0100
+Processing by PagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  [1m[36mBookPost Load (0.1ms)[0m  [1m[34mSELECT "book_posts".* FROM "book_posts"[0m
+  ↳ app/views/pages/index.html.erb:10
+  Rendered pages/index.html.erb within layouts/application (Duration: 1.1ms | Allocations: 561)
+  Rendered layout layouts/application.html.erb (Duration: 21.9ms | Allocations: 9131)
+Completed 500 Internal Server Error in 23ms (ActiveRecord: 0.1ms | Allocations: 9389)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `new_user_session_path' for #<ActionView::Base:0x0000000000da20>):
+    27:         <p><%= link_to "Profile", edit_user_registration_path %></p>
+    28:         <p class=""><%= link_to "Sign Out", destroy_user_session_path, data: { turbo_method: :delete } %></p>
+    29:       <% else %>
+    30:         <p><%= link_to "Sign In", new_user_session_path %></p>
+    31:         <p><%= link_to "Sign Up", new_user_registration_path %></p>
+    32:       <% end %>
+    33:     </div>
+  
+app/views/layouts/application.html.erb:30
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 127.0.0.1 at 2024-02-29 15:49:11 +0100
+Processing by PagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  [1m[36mBookPost Load (0.1ms)[0m  [1m[34mSELECT "book_posts".* FROM "book_posts"[0m
+  ↳ app/views/pages/index.html.erb:10
+  Rendered pages/index.html.erb within layouts/application (Duration: 12.0ms | Allocations: 4371)
+  Rendered layout layouts/application.html.erb (Duration: 47.9ms | Allocations: 32488)
+Completed 500 Internal Server Error in 59ms (ActiveRecord: 2.4ms | Allocations: 34858)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `new_user_session_path' for #<ActionView::Base:0x00000000012c78>):
+    27:         <p><%= link_to "Profile", edit_user_registration_path %></p>
+    28:         <p class=""><%= link_to "Sign Out", destroy_user_session_path, data: { turbo_method: :delete } %></p>
+    29:       <% else %>
+    30:         <p><%= link_to "Sign In", new_user_session_path %></p>
+    31:         <p><%= link_to "Sign Up", new_user_registration_path %></p>
+    32:       <% end %>
+    33:     </div>
+  
+app/views/layouts/application.html.erb:30
+Started GET "/" for 127.0.0.1 at 2024-02-29 15:50:19 +0100
+Processing by PagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  [1m[36mBookPost Load (0.1ms)[0m  [1m[34mSELECT "book_posts".* FROM "book_posts"[0m
+  ↳ app/views/pages/index.html.erb:10
+  Rendered pages/index.html.erb within layouts/application (Duration: 10.4ms | Allocations: 4356)
+  Rendered layout layouts/application.html.erb (Duration: 60.8ms | Allocations: 32473)
+Completed 500 Internal Server Error in 76ms (ActiveRecord: 2.4ms | Allocations: 34840)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `new_user_session_path' for #<ActionView::Base:0x00000000017ef8>):
+    27:         <p><%= link_to "Profile", edit_user_registration_path %></p>
+    28:         <p class=""><%= link_to "Sign Out", destroy_user_session_path, data: { turbo_method: :delete } %></p>
+    29:       <% else %>
+    30:         <p><%= link_to "Sign In", new_user_session_path %></p>
+    31:         <p><%= link_to "Sign Up", new_user_registration_path %></p>
+    32:       <% end %>
+    33:     </div>
+  
+app/views/layouts/application.html.erb:30
+Started GET "/" for 127.0.0.1 at 2024-02-29 15:50:26 +0100
+  
+NoMethodError (undefined method `resrouces' for #<ActionDispatch::Routing::Mapper:0x000000010c78f890 @set=#<ActionDispatch::Routing::RouteSet:0x000000010b3f21c0>, @draw_paths=[#<Pathname:/Users/johan/.rvm/gems/ruby-3.2.2/gems/actionview-7.1.3.2/config/routes>, #<Pathname:/Users/johan/.rvm/gems/ruby-3.2.2/gems/activestorage-7.1.3.2/config/routes>, #<Pathname:/Users/johan/.rvm/gems/ruby-3.2.2/gems/actioncable-7.1.3.2/config/routes>, #<Pathname:/Users/johan/.rvm/gems/ruby-3.2.2/gems/actionmailbox-7.1.3.2/config/routes>, #<Pathname:/Users/johan/.rvm/gems/ruby-3.2.2/gems/actiontext-7.1.3.2/config/routes>, #<Pathname:/Users/johan/.rvm/gems/ruby-3.2.2/gems/importmap-rails-2.0.1/config/routes>, #<Pathname:/Users/johan/.rvm/gems/ruby-3.2.2/gems/turbo-rails-2.0.4/config/routes>, #<Pathname:/Users/johan/.rvm/gems/ruby-3.2.2/gems/stimulus-rails-1.3.3/config/routes>, #<Pathname:/Users/johan/.rvm/gems/ruby-3.2.2/gems/devise-4.9.3/config/routes>, #<Pathname:/Users/johan/.rvm/gems/ruby-3.2.2/gems/tailwindcss-rails-2.3.0-x86_64-darwin/config/routes>, #<Pathname:/Users/johan/Documents/Code/lemoners-bibliotheek-1/config/routes>, #<Pathname:/Users/johan/Documents/Code/lemoners-bibliotheek-1/config/routes>], @scope=#<ActionDispatch::Routing::Mapper::Scope:0x000000010ba79818 @hash={:path_names=>{:new=>"new", :edit=>"edit"}}, @parent=#<ActionDispatch::Routing::Mapper::Scope:0x000000010a60a7d8 @hash=nil, @parent=nil, @scope_level=nil>, @scope_level=nil>, @concerns={}, @devise_finalized=false>):
+  
+config/routes.rb:5:in `block in <main>'
+config/routes.rb:1:in `<main>'
+Started GET "/" for 127.0.0.1 at 2024-02-29 15:50:33 +0100
+Processing by PagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  [1m[36mBookPost Load (0.1ms)[0m  [1m[34mSELECT "book_posts".* FROM "book_posts"[0m
+  ↳ app/views/pages/index.html.erb:10
+  Rendered pages/index.html.erb within layouts/application (Duration: 9.1ms | Allocations: 4357)
+  Rendered layout layouts/application.html.erb (Duration: 32.6ms | Allocations: 32513)
+Completed 500 Internal Server Error in 38ms (ActiveRecord: 2.3ms | Allocations: 34880)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `new_user_session_path' for #<ActionView::Base:0x0000000001dc68>):
+    27:         <p><%= link_to "Profile", edit_user_registration_path %></p>
+    28:         <p class=""><%= link_to "Sign Out", destroy_user_session_path, data: { turbo_method: :delete } %></p>
+    29:       <% else %>
+    30:         <p><%= link_to "Sign In", new_user_session_path %></p>
+    31:         <p><%= link_to "Sign Up", new_user_registration_path %></p>
+    32:       <% end %>
+    33:     </div>
+  
+app/views/layouts/application.html.erb:30
+Started GET "/" for 127.0.0.1 at 2024-02-29 15:50:36 +0100
+Processing by PagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  [1m[36mBookPost Load (0.1ms)[0m  [1m[34mSELECT "book_posts".* FROM "book_posts"[0m
+  ↳ app/views/pages/index.html.erb:10
+  Rendered pages/index.html.erb within layouts/application (Duration: 1.4ms | Allocations: 553)
+  Rendered layout layouts/application.html.erb (Duration: 12.6ms | Allocations: 9118)
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.1ms | Allocations: 9367)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `new_user_session_path' for #<ActionView::Base:0x0000000001df38>):
+    27:         <p><%= link_to "Profile", edit_user_registration_path %></p>
+    28:         <p class=""><%= link_to "Sign Out", destroy_user_session_path, data: { turbo_method: :delete } %></p>
+    29:       <% else %>
+    30:         <p><%= link_to "Sign In", new_user_session_path %></p>
+    31:         <p><%= link_to "Sign Up", new_user_registration_path %></p>
+    32:       <% end %>
+    33:     </div>
+  
+app/views/layouts/application.html.erb:30
+Started GET "/" for 127.0.0.1 at 2024-02-29 15:51:10 +0100
+Processing by PagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  [1m[36mBookPost Load (0.1ms)[0m  [1m[34mSELECT "book_posts".* FROM "book_posts"[0m
+  ↳ app/views/pages/index.html.erb:10
+  Rendered pages/index.html.erb within layouts/application (Duration: 8.9ms | Allocations: 4352)
+  Rendered layout layouts/application.html.erb (Duration: 45.0ms | Allocations: 31579)
+Completed 200 OK in 55ms (Views: 44.7ms | ActiveRecord: 4.4ms | Allocations: 34009)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2024-02-29 15:51:12 +0100
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/registrations/new.html.erb within layouts/application
+  Rendered users/shared/_error_messages.html.erb (Duration: 0.5ms | Allocations: 227)
+  Rendered users/shared/_links.html.erb (Duration: 1.1ms | Allocations: 1585)
+  Rendered users/registrations/new.html.erb within layouts/application (Duration: 22.2ms | Allocations: 5693)
+  Rendered layout layouts/application.html.erb (Duration: 22.7ms | Allocations: 5785)
+Completed 500 Internal Server Error in 63ms (ActiveRecord: 0.4ms | Allocations: 23654)
+
+
+  
+ActionView::Template::Error (undefined method `new_session_path' for #<ActionView::Base:0x000000000235a0>):
+    1: <%- if controller_name != 'sessions' %>
+    2:   <%= link_to "Log in", new_session_path(resource_name) %><br />
+    3: <% end %>
+    4: 
+    5: <%- if devise_mapping.registerable? && controller_name != 'registrations' %>
+  
+app/views/users/shared/_links.html.erb:2
+app/views/users/registrations/new.html.erb:39
+Started GET "/users/sign_up" for 127.0.0.1 at 2024-02-29 15:51:13 +0100
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/registrations/new.html.erb within layouts/application
+  Rendered users/shared/_error_messages.html.erb (Duration: 0.0ms | Allocations: 13)
+  Rendered users/shared/_links.html.erb (Duration: 0.4ms | Allocations: 1207)
+  Rendered users/registrations/new.html.erb within layouts/application (Duration: 2.4ms | Allocations: 2367)
+  Rendered layout layouts/application.html.erb (Duration: 2.6ms | Allocations: 2458)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms | Allocations: 3068)
+
+
+  
+ActionView::Template::Error (undefined method `new_session_path' for #<ActionView::Base:0x00000000023870>):
+    1: <%- if controller_name != 'sessions' %>
+    2:   <%= link_to "Log in", new_session_path(resource_name) %><br />
+    3: <% end %>
+    4: 
+    5: <%- if devise_mapping.registerable? && controller_name != 'registrations' %>
+  
+app/views/users/shared/_links.html.erb:2
+app/views/users/registrations/new.html.erb:39
+Started GET "/users/sign_up" for 127.0.0.1 at 2024-02-29 15:51:15 +0100
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/registrations/new.html.erb within layouts/application
+  Rendered users/shared/_error_messages.html.erb (Duration: 0.1ms | Allocations: 13)
+  Rendered users/shared/_links.html.erb (Duration: 0.7ms | Allocations: 1207)
+  Rendered users/registrations/new.html.erb within layouts/application (Duration: 2.8ms | Allocations: 2367)
+  Rendered layout layouts/application.html.erb (Duration: 2.9ms | Allocations: 2458)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms | Allocations: 3067)
+
+
+  
+ActionView::Template::Error (undefined method `new_session_path' for #<ActionView::Base:0x00000000023b40>):
+    1: <%- if controller_name != 'sessions' %>
+    2:   <%= link_to "Log in", new_session_path(resource_name) %><br />
+    3: <% end %>
+    4: 
+    5: <%- if devise_mapping.registerable? && controller_name != 'registrations' %>
+  
+app/views/users/shared/_links.html.erb:2
+app/views/users/registrations/new.html.erb:39
+Started GET "/" for 127.0.0.1 at 2024-02-29 15:51:16 +0100
+Processing by PagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  [1m[36mBookPost Load (0.1ms)[0m  [1m[34mSELECT "book_posts".* FROM "book_posts"[0m
+  ↳ app/views/pages/index.html.erb:10
+  Rendered pages/index.html.erb within layouts/application (Duration: 2.6ms | Allocations: 556)
+  Rendered layout layouts/application.html.erb (Duration: 16.3ms | Allocations: 8176)
+Completed 200 OK in 18ms (Views: 16.9ms | ActiveRecord: 0.1ms | Allocations: 8445)
+
+
+Started GET "/" for 127.0.0.1 at 2024-02-29 15:51:17 +0100
+Processing by PagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  [1m[36mBookPost Load (0.1ms)[0m  [1m[34mSELECT "book_posts".* FROM "book_posts"[0m
+  ↳ app/views/pages/index.html.erb:10
+  Rendered pages/index.html.erb within layouts/application (Duration: 1.4ms | Allocations: 552)
+  Rendered layout layouts/application.html.erb (Duration: 17.8ms | Allocations: 8085)
+Completed 200 OK in 19ms (Views: 18.3ms | ActiveRecord: 0.1ms | Allocations: 8353)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2024-02-29 15:51:18 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered users/sessions/new.html.erb within layouts/application (Duration: 0.9ms | Allocations: 1336)
+  Rendered layout layouts/application.html.erb (Duration: 1.1ms | Allocations: 1427)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms | Allocations: 2463)
+
+
+  
+ActionView::Template::Error (undefined method `session_path' for #<ActionView::Base:0x00000000023ed8>):
+    1: <h2>Log in</h2>
+    2: 
+    3: <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+    4:   <div class="field">
+    5:     <%= f.label :email %><br />
+    6:     <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+  
+app/views/users/sessions/new.html.erb:3
+Started GET "/" for 127.0.0.1 at 2024-02-29 15:51:27 +0100
+Processing by PagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  [1m[36mBookPost Load (0.1ms)[0m  [1m[34mSELECT "book_posts".* FROM "book_posts"[0m
+  ↳ app/views/pages/index.html.erb:10
+  Rendered pages/index.html.erb within layouts/application (Duration: 7.9ms | Allocations: 552)
+  Rendered layout layouts/application.html.erb (Duration: 33.1ms | Allocations: 8154)
+Completed 200 OK in 38ms (Views: 35.0ms | ActiveRecord: 0.1ms | Allocations: 8422)
+
+
+Started GET "/book_posts/1" for 127.0.0.1 at 2024-02-29 15:51:28 +0100
+Processing by BookPostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBookPost Load (0.1ms)[0m  [1m[34mSELECT "book_posts".* FROM "book_posts" WHERE "book_posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/book_posts_controller.rb:48:in `set_book_post'
+  Rendering layout layouts/application.html.erb
+  Rendering book_posts/show.html.erb within layouts/application
+  Rendered book_posts/show.html.erb within layouts/application (Duration: 0.8ms | Allocations: 522)
+  Rendered layout layouts/application.html.erb (Duration: 9.7ms | Allocations: 7794)
+Completed 200 OK in 16ms (Views: 10.9ms | ActiveRecord: 0.1ms | Allocations: 11009)
+
+
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to RemoveOtpFieldsFromUsers (20240229145453)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE TEMPORARY TABLE "ausers" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar DEFAULT NULL, "reset_password_sent_at" datetime(6) DEFAULT NULL, "remember_created_at" datetime(6) DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "role" integer DEFAULT NULL, "username" varchar DEFAULT NULL, "phone" varchar DEFAULT NULL, "otp_secret" varchar DEFAULT NULL, "consumed_timestep" integer DEFAULT NULL, "otp_required_for_login" boolean DEFAULT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE UNIQUE INDEX "tindex_ausers_on_phone" ON "ausers" ("phone")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE UNIQUE INDEX "tindex_ausers_on_username" ON "ausers" ("username")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE UNIQUE INDEX "tindex_ausers_on_reset_password_token" ON "ausers" ("reset_password_token")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE UNIQUE INDEX "tindex_ausers_on_email" ON "ausers" ("email")[0m
+  [1m[35m (0.8ms)[0m  [1m[32mINSERT INTO "ausers" ("id","email","encrypted_password","reset_password_token","reset_password_sent_at","remember_created_at","created_at","updated_at","role","username","phone","otp_secret","consumed_timestep","otp_required_for_login")
+                     SELECT "id","email","encrypted_password","reset_password_token","reset_password_sent_at","remember_created_at","created_at","updated_at","role","username","phone","otp_secret","consumed_timestep","otp_required_for_login" FROM "users"[0m
+  [1m[35m (1.7ms)[0m  [1m[35mDROP TABLE "users"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar DEFAULT NULL, "reset_password_sent_at" datetime(6) DEFAULT NULL, "remember_created_at" datetime(6) DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "role" integer DEFAULT NULL, "username" varchar DEFAULT NULL, "phone" varchar DEFAULT NULL, "consumed_timestep" integer DEFAULT NULL, "otp_required_for_login" boolean DEFAULT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_username" ON "users" ("username")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_phone" ON "users" ("phone")[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "users" ("id","email","encrypted_password","reset_password_token","reset_password_sent_at","remember_created_at","created_at","updated_at","role","username","phone","consumed_timestep","otp_required_for_login")
+                     SELECT "id","email","encrypted_password","reset_password_token","reset_password_sent_at","remember_created_at","created_at","updated_at","role","username","phone","consumed_timestep","otp_required_for_login" FROM "ausers"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "ausers"[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TEMPORARY TABLE "ausers" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar DEFAULT NULL, "reset_password_sent_at" datetime(6) DEFAULT NULL, "remember_created_at" datetime(6) DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "role" integer DEFAULT NULL, "username" varchar DEFAULT NULL, "phone" varchar DEFAULT NULL, "consumed_timestep" integer DEFAULT NULL, "otp_required_for_login" boolean DEFAULT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE UNIQUE INDEX "tindex_ausers_on_phone" ON "ausers" ("phone")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE UNIQUE INDEX "tindex_ausers_on_username" ON "ausers" ("username")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE UNIQUE INDEX "tindex_ausers_on_reset_password_token" ON "ausers" ("reset_password_token")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE UNIQUE INDEX "tindex_ausers_on_email" ON "ausers" ("email")[0m
+  [1m[35m (0.2ms)[0m  [1m[32mINSERT INTO "ausers" ("id","email","encrypted_password","reset_password_token","reset_password_sent_at","remember_created_at","created_at","updated_at","role","username","phone","consumed_timestep","otp_required_for_login")
+                     SELECT "id","email","encrypted_password","reset_password_token","reset_password_sent_at","remember_created_at","created_at","updated_at","role","username","phone","consumed_timestep","otp_required_for_login" FROM "users"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE "users"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar DEFAULT NULL, "reset_password_sent_at" datetime(6) DEFAULT NULL, "remember_created_at" datetime(6) DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "role" integer DEFAULT NULL, "username" varchar DEFAULT NULL, "phone" varchar DEFAULT NULL, "otp_required_for_login" boolean DEFAULT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_username" ON "users" ("username")[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_phone" ON "users" ("phone")[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "users" ("id","email","encrypted_password","reset_password_token","reset_password_sent_at","remember_created_at","created_at","updated_at","role","username","phone","otp_required_for_login")
+                     SELECT "id","email","encrypted_password","reset_password_token","reset_password_sent_at","remember_created_at","created_at","updated_at","role","username","phone","otp_required_for_login" FROM "ausers"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "ausers"[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TEMPORARY TABLE "ausers" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar DEFAULT NULL, "reset_password_sent_at" datetime(6) DEFAULT NULL, "remember_created_at" datetime(6) DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "role" integer DEFAULT NULL, "username" varchar DEFAULT NULL, "phone" varchar DEFAULT NULL, "otp_required_for_login" boolean DEFAULT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE UNIQUE INDEX "tindex_ausers_on_phone" ON "ausers" ("phone")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE UNIQUE INDEX "tindex_ausers_on_username" ON "ausers" ("username")[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE UNIQUE INDEX "tindex_ausers_on_reset_password_token" ON "ausers" ("reset_password_token")[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE UNIQUE INDEX "tindex_ausers_on_email" ON "ausers" ("email")[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "ausers" ("id","email","encrypted_password","reset_password_token","reset_password_sent_at","remember_created_at","created_at","updated_at","role","username","phone","otp_required_for_login")
+                     SELECT "id","email","encrypted_password","reset_password_token","reset_password_sent_at","remember_created_at","created_at","updated_at","role","username","phone","otp_required_for_login" FROM "users"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "users"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar DEFAULT NULL, "reset_password_sent_at" datetime(6) DEFAULT NULL, "remember_created_at" datetime(6) DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "role" integer DEFAULT NULL, "username" varchar DEFAULT NULL, "phone" varchar DEFAULT NULL)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_username" ON "users" ("username")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_phone" ON "users" ("phone")[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "users" ("id","email","encrypted_password","reset_password_token","reset_password_sent_at","remember_created_at","created_at","updated_at","role","username","phone")
+                     SELECT "id","email","encrypted_password","reset_password_token","reset_password_sent_at","remember_created_at","created_at","updated_at","role","username","phone" FROM "ausers"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE "ausers"[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20240229145453') RETURNING "version"[0m
+  [1m[36mTRANSACTION (2.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 127.0.0.1 at 2024-02-29 15:57:18 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  [1m[36mBookPost Load (1.3ms)[0m  [1m[34mSELECT "book_posts".* FROM "book_posts"[0m
+  ↳ app/views/pages/index.html.erb:10
+  Rendered pages/index.html.erb within layouts/application (Duration: 8.0ms | Allocations: 3854)
+Started GET "/users/sign_up" for 127.0.0.1 at 2024-02-29 15:57:18 +0100
+  Rendered layout layouts/application.html.erb (Duration: 57.5ms | Allocations: 31473)
+Completed 200 OK in 68ms (Views: 58.3ms | ActiveRecord: 1.8ms | Allocations: 33865)
+
+
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/registrations/new.html.erb within layouts/application
+  Rendered users/shared/_error_messages.html.erb (Duration: 0.5ms | Allocations: 214)
+  Rendered users/shared/_links.html.erb (Duration: 0.9ms | Allocations: 1570)
+  Rendered users/registrations/new.html.erb within layouts/application (Duration: 5.6ms | Allocations: 3601)
+  Rendered layout layouts/application.html.erb (Duration: 5.7ms | Allocations: 3693)
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 1.6ms | Allocations: 10398)
+
+
+  
+ActionView::Template::Error (undefined method `new_session_path' for #<ActionView::Base:0x0000000002e950>):
+    1: <%- if controller_name != 'sessions' %>
+    2:   <%= link_to "Log in", new_session_path(resource_name) %><br />
+    3: <% end %>
+    4: 
+    5: <%- if devise_mapping.registerable? && controller_name != 'registrations' %>
+  
+app/views/users/shared/_links.html.erb:2
+app/views/users/registrations/new.html.erb:39
+Started GET "/users/sign_up" for 127.0.0.1 at 2024-02-29 15:57:19 +0100
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/registrations/new.html.erb within layouts/application
+  Rendered users/shared/_error_messages.html.erb (Duration: 0.0ms | Allocations: 13)
+  Rendered users/shared/_links.html.erb (Duration: 0.4ms | Allocations: 1207)
+  Rendered users/registrations/new.html.erb within layouts/application (Duration: 2.7ms | Allocations: 2654)
+  Rendered layout layouts/application.html.erb (Duration: 4.2ms | Allocations: 4379)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms | Allocations: 6565)
+
+
+  
+ActionView::Template::Error (undefined method `new_session_path' for #<ActionView::Base:0x0000000002e9f0>):
+    1: <%- if controller_name != 'sessions' %>
+    2:   <%= link_to "Log in", new_session_path(resource_name) %><br />
+    3: <% end %>
+    4: 
+    5: <%- if devise_mapping.registerable? && controller_name != 'registrations' %>
+  
+app/views/users/shared/_links.html.erb:2
+app/views/users/registrations/new.html.erb:39
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" /* loading for pp */ LIMIT ?[0m  [["LIMIT", 11]]
+Started GET "/users/sign_up" for 127.0.0.1 at 2024-02-29 15:58:17 +0100
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/registrations/new.html.erb within layouts/application
+  Rendered users/shared/_error_messages.html.erb (Duration: 0.1ms | Allocations: 13)
+  Rendered users/shared/_links.html.erb (Duration: 0.6ms | Allocations: 1207)
+  Rendered users/registrations/new.html.erb within layouts/application (Duration: 5.3ms | Allocations: 2367)
+  Rendered layout layouts/application.html.erb (Duration: 5.5ms | Allocations: 2458)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms | Allocations: 3065)
+
+
+  
+ActionView::Template::Error (undefined method `new_session_path' for #<ActionView::Base:0x0000000002ef40>):
+    1: <%- if controller_name != 'sessions' %>
+    2:   <%= link_to "Log in", new_session_path(resource_name) %><br />
+    3: <% end %>
+    4: 
+    5: <%- if devise_mapping.registerable? && controller_name != 'registrations' %>
+  
+app/views/users/shared/_links.html.erb:2
+app/views/users/registrations/new.html.erb:39
+Started GET "/users/sign_up" for 127.0.0.1 at 2024-02-29 15:58:34 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/registrations/new.html.erb within layouts/application
+  Rendered users/shared/_error_messages.html.erb (Duration: 0.7ms | Allocations: 236)
+  Rendered users/shared/_links.html.erb (Duration: 0.9ms | Allocations: 522)
+  Rendered users/registrations/new.html.erb within layouts/application (Duration: 51.4ms | Allocations: 4190)
+  Rendered layout layouts/application.html.erb (Duration: 273.7ms | Allocations: 59497)
+Completed 200 OK in 521ms (Views: 324.0ms | ActiveRecord: 2.2ms | Allocations: 83559)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2024-02-29 15:58:36 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (Duration: 0.3ms | Allocations: 128)
+  Rendered users/sessions/new.html.erb within layouts/application (Duration: 11.4ms | Allocations: 1705)
+  Rendered layout layouts/application.html.erb (Duration: 26.7ms | Allocations: 8978)
+Completed 200 OK in 76ms (Views: 71.6ms | ActiveRecord: 0.0ms | Allocations: 10064)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2024-02-29 15:58:37 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (Duration: 0.1ms | Allocations: 115)
+  Rendered users/sessions/new.html.erb within layouts/application (Duration: 1.3ms | Allocations: 871)
+  Rendered layout layouts/application.html.erb (Duration: 13.6ms | Allocations: 8137)
+Completed 200 OK in 15ms (Views: 14.2ms | ActiveRecord: 0.0ms | Allocations: 8793)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2024-02-29 15:58:37 +0100
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/registrations/new.html.erb within layouts/application
+  Rendered users/shared/_error_messages.html.erb (Duration: 0.1ms | Allocations: 13)
+  Rendered users/shared/_links.html.erb (Duration: 0.1ms | Allocations: 70)
+  Rendered users/registrations/new.html.erb within layouts/application (Duration: 3.5ms | Allocations: 1230)
+  Rendered layout layouts/application.html.erb (Duration: 23.9ms | Allocations: 8521)
+Completed 200 OK in 27ms (Views: 24.8ms | ActiveRecord: 0.0ms | Allocations: 9148)
+
+
+Started POST "/users" for 127.0.0.1 at 2024-02-29 15:58:58 +0100
+Processing by Devise::RegistrationsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"username"=>"user24", "email"=>"user24@lemone.com", "phone"=>"31231241412", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (1.9ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "user24@lemone.com"], ["LIMIT", 1]]
+  [1m[36mCACHE User Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "user24@lemone.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.7ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "created_at", "updated_at", "role", "username", "phone") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["email", "user24@lemone.com"], ["encrypted_password", "[FILTERED]"], ["reset_password_token", "[FILTERED]"], ["reset_password_sent_at", "[FILTERED]"], ["remember_created_at", nil], ["created_at", "2024-02-29 14:58:58.795682"], ["updated_at", "2024-02-29 14:58:58.795682"], ["role", nil], ["username", "user24"], ["phone", "31231241412"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://127.0.0.1:3000/
+Completed 303 See Other in 257ms (ActiveRecord: 2.9ms | Allocations: 12631)
+
+
+Started GET "/" for 127.0.0.1 at 2024-02-29 15:58:58 +0100
+Processing by PagesController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  [1m[36mBookPost Load (0.1ms)[0m  [1m[34mSELECT "book_posts".* FROM "book_posts"[0m
+  ↳ app/views/pages/index.html.erb:10
+  Rendered pages/index.html.erb within layouts/application (Duration: 17.9ms | Allocations: 7674)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:23
+  Rendered layout layouts/application.html.erb (Duration: 30.9ms | Allocations: 16302)
+Completed 200 OK in 39ms (Views: 32.7ms | ActiveRecord: 0.8ms | Allocations: 17775)
+
+
+Started GET "/users/edit" for 127.0.0.1 at 2024-02-29 15:59:00 +0100
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering users/registrations/edit.html.erb within layouts/application
+  Rendered users/shared/_error_messages.html.erb (Duration: 0.0ms | Allocations: 13)
+  Rendered users/registrations/edit.html.erb within layouts/application (Duration: 4.2ms | Allocations: 2104)
+  Rendered layout layouts/application.html.erb (Duration: 19.8ms | Allocations: 9365)
+Completed 200 OK in 25ms (Views: 21.6ms | ActiveRecord: 0.1ms | Allocations: 11083)
+
+
+Started DELETE "/users/sign_out?_method=delete" for 127.0.0.1 at 2024-02-29 15:59:03 +0100
+Processing by Devise::SessionsController#destroy as TURBO_STREAM
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+Redirected to http://127.0.0.1:3000/
+Completed 303 See Other in 15ms (ActiveRecord: 0.1ms | Allocations: 2314)
+
+
+Started GET "/" for 127.0.0.1 at 2024-02-29 15:59:03 +0100
+Processing by PagesController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  [1m[36mBookPost Load (0.3ms)[0m  [1m[34mSELECT "book_posts".* FROM "book_posts"[0m
+  ↳ app/views/pages/index.html.erb:10
+  Rendered pages/index.html.erb within layouts/application (Duration: 2.4ms | Allocations: 553)
+  Rendered layout layouts/application.html.erb (Duration: 20.9ms | Allocations: 8099)
+Completed 200 OK in 22ms (Views: 21.5ms | ActiveRecord: 0.3ms | Allocations: 8375)
+
+
+Started GET "/" for 127.0.0.1 at 2024-02-29 16:07:22 +0100
+Processing by PagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  [1m[36mBookPost Load (1.1ms)[0m  [1m[34mSELECT "book_posts".* FROM "book_posts"[0m
+  ↳ app/views/pages/index.html.erb:10
+  Rendered pages/index.html.erb within layouts/application (Duration: 6.1ms | Allocations: 3865)
+  Rendered layout layouts/application.html.erb (Duration: 39.8ms | Allocations: 31163)
+Completed 200 OK in 48ms (Views: 41.2ms | ActiveRecord: 1.7ms | Allocations: 33555)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2024-02-29 16:07:23 +0100
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/registrations/new.html.erb within layouts/application
+  Rendered users/shared/_error_messages.html.erb (Duration: 0.4ms | Allocations: 214)
+  Rendered users/shared/_links.html.erb (Duration: 1.9ms | Allocations: 501)
+  Rendered users/registrations/new.html.erb within layouts/application (Duration: 6.8ms | Allocations: 2523)
+  Rendered layout layouts/application.html.erb (Duration: 29.3ms | Allocations: 9898)
+Completed 200 OK in 44ms (Views: 34.6ms | ActiveRecord: 0.0ms | Allocations: 15361)
+
+
+Started GET "/" for 127.0.0.1 at 2024-02-29 16:07:24 +0100
+Processing by PagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  [1m[36mBookPost Load (0.1ms)[0m  [1m[34mSELECT "book_posts".* FROM "book_posts"[0m
+  ↳ app/views/pages/index.html.erb:10
+  Rendered pages/index.html.erb within layouts/application (Duration: 1.8ms | Allocations: 554)
+  Rendered layout layouts/application.html.erb (Duration: 18.0ms | Allocations: 8166)
+Completed 200 OK in 20ms (Views: 18.9ms | ActiveRecord: 0.1ms | Allocations: 8438)
+
+
+Started GET "/" for 127.0.0.1 at 2024-02-29 16:27:13 +0100
+Processing by PagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  [1m[36mBookPost Load (1.0ms)[0m  [1m[34mSELECT "book_posts".* FROM "book_posts"[0m
+  ↳ app/views/pages/index.html.erb:10
+  Rendered pages/index.html.erb within layouts/application (Duration: 6.5ms | Allocations: 3854)
+  Rendered layout layouts/application.html.erb (Duration: 44.2ms | Allocations: 31162)
+Completed 200 OK in 56ms (Views: 48.0ms | ActiveRecord: 1.5ms | Allocations: 33552)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2024-02-29 16:27:14 +0100
+Processing by Users::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/registrations/new.html.erb within layouts/application
+  Rendered users/shared/_error_messages.html.erb (Duration: 0.6ms | Allocations: 214)
+  Rendered users/shared/_links.html.erb (Duration: 1.1ms | Allocations: 501)
+  Rendered users/registrations/new.html.erb within layouts/application (Duration: 5.7ms | Allocations: 2524)
+  Rendered layout layouts/application.html.erb (Duration: 20.2ms | Allocations: 9982)
+Completed 200 OK in 31ms (Views: 23.9ms | ActiveRecord: 0.0ms | Allocations: 15594)
+
+
+Started GET "/" for 127.0.0.1 at 2024-02-29 16:27:15 +0100
+Processing by PagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  [1m[36mBookPost Load (0.1ms)[0m  [1m[34mSELECT "book_posts".* FROM "book_posts"[0m
+  ↳ app/views/pages/index.html.erb:10
+  Rendered pages/index.html.erb within layouts/application (Duration: 1.8ms | Allocations: 558)
+  Rendered layout layouts/application.html.erb (Duration: 20.3ms | Allocations: 8068)
+Completed 200 OK in 23ms (Views: 21.9ms | ActiveRecord: 0.1ms | Allocations: 8340)
+
+

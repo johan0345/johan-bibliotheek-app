@@ -32346,3 +32346,532 @@ Processing by PagesController#index as HTML
 Completed 200 OK in 23ms (Views: 21.9ms | ActiveRecord: 0.1ms | Allocations: 8340)
 
 
+Started GET "/" for 127.0.0.1 at 2024-03-04 09:27:44 +0100
+Started GET "/" for 127.0.0.1 at 2024-03-04 09:27:44 +0100
+Processing by PagesController#index as HTML
+Processing by PagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  [1m[36mBookPost Load (15.2ms)[0m  [1m[34mSELECT "book_posts".* FROM "book_posts"[0m
+  [1m[36mBookPost Load (3.1ms)[0m  [1m[34mSELECT "book_posts".* FROM "book_posts"[0m
+  ↳ app/views/pages/index.html.erb:10
+  ↳ app/views/pages/index.html.erb:10
+  Rendered pages/index.html.erb within layouts/application (Duration: 32.5ms | Allocations: 4711)
+  Rendered pages/index.html.erb within layouts/application (Duration: 16.1ms | Allocations: 4396)
+  Rendered layout layouts/application.html.erb (Duration: 107.0ms | Allocations: 49812)
+  Rendered layout layouts/application.html.erb (Duration: 115.7ms | Allocations: 58123)
+Completed 200 OK in 133ms (Views: 96.8ms | ActiveRecord: 24.0ms | Allocations: 61105)
+
+
+Completed 200 OK in 133ms (Views: 118.4ms | ActiveRecord: 4.0ms | Allocations: 61278)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2024-03-04 09:27:46 +0100
+Processing by Users::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (Duration: 1.2ms | Allocations: 550)
+  Rendered users/sessions/new.html.erb within layouts/application (Duration: 6.3ms | Allocations: 1781)
+  Rendered layout layouts/application.html.erb (Duration: 15.9ms | Allocations: 9232)
+Completed 200 OK in 30ms (Views: 20.2ms | ActiveRecord: 0.0ms | Allocations: 14880)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2024-03-04 09:28:00 +0100
+Processing by Users::SessionsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"johan.ton@lemone.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "johan.ton@lemone.com"], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.9ms | Allocations: 2796)
+
+
+  
+NoMethodError (undefined method `otp_required_for_login' for #<User id: 2, email: "johan.ton@lemone.com", created_at: "2024-02-28 15:09:38.237310000 +0000", updated_at: "2024-02-28 15:09:38.237310000 +0000", role: "admin", username: "johan admin", phone: "31612345678", otp_secret: nil>):
+  
+activemodel (7.1.3.2) lib/active_model/attribute_methods.rb:489:in `method_missing'
+devise-two-factor (5.0.0) lib/devise_two_factor/strategies/two_factor_authenticatable.rb:23:in `validate_otp'
+devise-two-factor (5.0.0) lib/devise_two_factor/strategies/two_factor_authenticatable.rb:11:in `block in authenticate!'
+devise (4.9.3) lib/devise/models/authenticatable.rb:86:in `valid_for_authentication?'
+devise (4.9.3) lib/devise/strategies/authenticatable.rb:38:in `validate'
+devise-two-factor (5.0.0) lib/devise_two_factor/strategies/two_factor_authenticatable.rb:11:in `authenticate!'
+warden (1.2.9) lib/warden/strategies/base.rb:55:in `_run!'
+warden (1.2.9) lib/warden/proxy.rb:372:in `block in _run_strategies_for'
+warden (1.2.9) lib/warden/proxy.rb:365:in `each'
+warden (1.2.9) lib/warden/proxy.rb:365:in `_run_strategies_for'
+warden (1.2.9) lib/warden/proxy.rb:335:in `_perform_authentication'
+warden (1.2.9) lib/warden/proxy.rb:133:in `authenticate!'
+devise (4.9.3) app/controllers/devise/sessions_controller.rb:19:in `create'
+actionpack (7.1.3.2) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (7.1.3.2) lib/abstract_controller/base.rb:224:in `process_action'
+actionpack (7.1.3.2) lib/action_controller/metal/rendering.rb:165:in `process_action'
+actionpack (7.1.3.2) lib/abstract_controller/callbacks.rb:259:in `block in process_action'
+activesupport (7.1.3.2) lib/active_support/callbacks.rb:121:in `block in run_callbacks'
+turbo-rails (2.0.4) lib/turbo-rails.rb:24:in `with_request_id'
+turbo-rails (2.0.4) app/controllers/concerns/turbo/request_id_tracking.rb:10:in `turbo_tracking_request_id'
+activesupport (7.1.3.2) lib/active_support/callbacks.rb:130:in `block in run_callbacks'
+actiontext (7.1.3.2) lib/action_text/rendering.rb:23:in `with_renderer'
+actiontext (7.1.3.2) lib/action_text/engine.rb:69:in `block (4 levels) in <class:Engine>'
+activesupport (7.1.3.2) lib/active_support/callbacks.rb:130:in `instance_exec'
+activesupport (7.1.3.2) lib/active_support/callbacks.rb:130:in `block in run_callbacks'
+activesupport (7.1.3.2) lib/active_support/callbacks.rb:141:in `run_callbacks'
+actionpack (7.1.3.2) lib/abstract_controller/callbacks.rb:258:in `process_action'
+actionpack (7.1.3.2) lib/action_controller/metal/rescue.rb:25:in `process_action'
+actionpack (7.1.3.2) lib/action_controller/metal/instrumentation.rb:74:in `block in process_action'
+activesupport (7.1.3.2) lib/active_support/notifications.rb:206:in `block in instrument'
+activesupport (7.1.3.2) lib/active_support/notifications/instrumenter.rb:58:in `instrument'
+activesupport (7.1.3.2) lib/active_support/notifications.rb:206:in `instrument'
+actionpack (7.1.3.2) lib/action_controller/metal/instrumentation.rb:73:in `process_action'
+actionpack (7.1.3.2) lib/action_controller/metal/params_wrapper.rb:261:in `process_action'
+activerecord (7.1.3.2) lib/active_record/railties/controller_runtime.rb:32:in `process_action'
+actionpack (7.1.3.2) lib/abstract_controller/base.rb:160:in `process'
+actionview (7.1.3.2) lib/action_view/rendering.rb:40:in `process'
+actionpack (7.1.3.2) lib/action_controller/metal.rb:227:in `dispatch'
+actionpack (7.1.3.2) lib/action_controller/metal.rb:309:in `dispatch'
+actionpack (7.1.3.2) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.1.3.2) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.1.3.2) lib/action_dispatch/routing/mapper.rb:21:in `block in <class:Constraints>'
+actionpack (7.1.3.2) lib/action_dispatch/routing/mapper.rb:51:in `serve'
+actionpack (7.1.3.2) lib/action_dispatch/journey/router.rb:51:in `block in serve'
+actionpack (7.1.3.2) lib/action_dispatch/journey/router.rb:131:in `block in find_routes'
+actionpack (7.1.3.2) lib/action_dispatch/journey/router.rb:124:in `each'
+actionpack (7.1.3.2) lib/action_dispatch/journey/router.rb:124:in `find_routes'
+actionpack (7.1.3.2) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.1.3.2) lib/action_dispatch/routing/route_set.rb:882:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (3.0.9.1) lib/rack/tempfile_reaper.rb:20:in `call'
+rack (3.0.9.1) lib/rack/etag.rb:29:in `call'
+rack (3.0.9.1) lib/rack/conditional_get.rb:43:in `call'
+rack (3.0.9.1) lib/rack/head.rb:15:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/http/permissions_policy.rb:36:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/http/content_security_policy.rb:33:in `call'
+rack-session (2.0.0) lib/rack/session/abstract/id.rb:272:in `context'
+rack-session (2.0.0) lib/rack/session/abstract/id.rb:266:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/cookies.rb:689:in `call'
+activerecord (7.1.3.2) lib/active_record/migration.rb:655:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+activesupport (7.1.3.2) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/callbacks.rb:28:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/actionable_exceptions.rb:16:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (7.1.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (7.1.3.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (7.1.3.2) lib/active_support/tagged_logging.rb:135:in `block in tagged'
+activesupport (7.1.3.2) lib/active_support/tagged_logging.rb:39:in `tagged'
+activesupport (7.1.3.2) lib/active_support/tagged_logging.rb:135:in `tagged'
+activesupport (7.1.3.2) lib/active_support/broadcast_logger.rb:240:in `method_missing'
+railties (7.1.3.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/remote_ip.rb:92:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/request_id.rb:28:in `call'
+rack (3.0.9.1) lib/rack/method_override.rb:28:in `call'
+rack (3.0.9.1) lib/rack/runtime.rb:24:in `call'
+activesupport (7.1.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/server_timing.rb:59:in `block in call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/server_timing.rb:24:in `collect_events'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/server_timing.rb:58:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/static.rb:25:in `call'
+rack (3.0.9.1) lib/rack/sendfile.rb:114:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/host_authorization.rb:141:in `call'
+railties (7.1.3.2) lib/rails/engine.rb:536:in `call'
+puma (6.4.2) lib/puma/configuration.rb:272:in `call'
+puma (6.4.2) lib/puma/request.rb:100:in `block in handle_request'
+puma (6.4.2) lib/puma/thread_pool.rb:378:in `with_force_shutdown'
+puma (6.4.2) lib/puma/request.rb:99:in `handle_request'
+puma (6.4.2) lib/puma/server.rb:464:in `process_client'
+puma (6.4.2) lib/puma/server.rb:245:in `block in run'
+puma (6.4.2) lib/puma/thread_pool.rb:155:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2024-03-04 09:28:05 +0100
+Processing by PagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  [1m[36mBookPost Load (0.1ms)[0m  [1m[34mSELECT "book_posts".* FROM "book_posts"[0m
+  ↳ app/views/pages/index.html.erb:10
+  Rendered pages/index.html.erb within layouts/application (Duration: 1.7ms | Allocations: 554)
+  Rendered layout layouts/application.html.erb (Duration: 12.6ms | Allocations: 8199)
+Completed 200 OK in 14ms (Views: 13.3ms | ActiveRecord: 0.1ms | Allocations: 8471)
+
+
+Started GET "/" for 127.0.0.1 at 2024-03-04 09:28:05 +0100
+Processing by PagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  [1m[36mBookPost Load (0.1ms)[0m  [1m[34mSELECT "book_posts".* FROM "book_posts"[0m
+  ↳ app/views/pages/index.html.erb:10
+  Rendered pages/index.html.erb within layouts/application (Duration: 1.1ms | Allocations: 552)
+  Rendered layout layouts/application.html.erb (Duration: 11.4ms | Allocations: 8080)
+Completed 200 OK in 12ms (Views: 11.8ms | ActiveRecord: 0.1ms | Allocations: 8348)
+
+
+Started GET "/" for 127.0.0.1 at 2024-03-04 09:28:06 +0100
+Processing by PagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  [1m[36mBookPost Load (0.1ms)[0m  [1m[34mSELECT "book_posts".* FROM "book_posts"[0m
+  ↳ app/views/pages/index.html.erb:10
+  Rendered pages/index.html.erb within layouts/application (Duration: 0.9ms | Allocations: 552)
+  Rendered layout layouts/application.html.erb (Duration: 13.5ms | Allocations: 8096)
+Completed 200 OK in 14ms (Views: 13.8ms | ActiveRecord: 0.1ms | Allocations: 8368)
+
+
+Started GET "/" for 127.0.0.1 at 2024-03-04 09:28:07 +0100
+Processing by PagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  [1m[36mBookPost Load (0.1ms)[0m  [1m[34mSELECT "book_posts".* FROM "book_posts"[0m
+  ↳ app/views/pages/index.html.erb:10
+  Rendered pages/index.html.erb within layouts/application (Duration: 1.0ms | Allocations: 552)
+  Rendered layout layouts/application.html.erb (Duration: 11.8ms | Allocations: 8139)
+Completed 200 OK in 13ms (Views: 12.1ms | ActiveRecord: 0.1ms | Allocations: 8410)
+
+
+Started GET "/" for 127.0.0.1 at 2024-03-04 09:28:07 +0100
+Processing by PagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  [1m[36mBookPost Load (0.1ms)[0m  [1m[34mSELECT "book_posts".* FROM "book_posts"[0m
+  ↳ app/views/pages/index.html.erb:10
+  Rendered pages/index.html.erb within layouts/application (Duration: 1.0ms | Allocations: 552)
+  Rendered layout layouts/application.html.erb (Duration: 8.8ms | Allocations: 8138)
+Completed 200 OK in 10ms (Views: 9.1ms | ActiveRecord: 0.1ms | Allocations: 8409)
+
+
+Started GET "/book_posts/1" for 127.0.0.1 at 2024-03-04 09:28:08 +0100
+Processing by BookPostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBookPost Load (0.1ms)[0m  [1m[34mSELECT "book_posts".* FROM "book_posts" WHERE "book_posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/book_posts_controller.rb:48:in `set_book_post'
+  Rendering layout layouts/application.html.erb
+  Rendering book_posts/show.html.erb within layouts/application
+  Rendered book_posts/show.html.erb within layouts/application (Duration: 0.9ms | Allocations: 512)
+  Rendered layout layouts/application.html.erb (Duration: 10.4ms | Allocations: 7792)
+Completed 200 OK in 14ms (Views: 11.7ms | ActiveRecord: 0.1ms | Allocations: 9391)
+
+
+Started GET "/" for 127.0.0.1 at 2024-03-04 09:28:09 +0100
+Processing by PagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  [1m[36mBookPost Load (0.1ms)[0m  [1m[34mSELECT "book_posts".* FROM "book_posts"[0m
+  ↳ app/views/pages/index.html.erb:10
+  Rendered pages/index.html.erb within layouts/application (Duration: 1.2ms | Allocations: 552)
+  Rendered layout layouts/application.html.erb (Duration: 10.1ms | Allocations: 8063)
+Completed 200 OK in 12ms (Views: 10.9ms | ActiveRecord: 0.1ms | Allocations: 8334)
+
+
+Started GET "/" for 127.0.0.1 at 2024-03-04 09:28:09 +0100
+Processing by PagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  [1m[36mBookPost Load (0.1ms)[0m  [1m[34mSELECT "book_posts".* FROM "book_posts"[0m
+  ↳ app/views/pages/index.html.erb:10
+  Rendered pages/index.html.erb within layouts/application (Duration: 1.3ms | Allocations: 552)
+  Rendered layout layouts/application.html.erb (Duration: 9.7ms | Allocations: 8065)
+Completed 200 OK in 11ms (Views: 10.1ms | ActiveRecord: 0.1ms | Allocations: 8336)
+
+
+Started GET "/book_posts/2" for 127.0.0.1 at 2024-03-04 09:28:10 +0100
+Processing by BookPostsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mBookPost Load (0.1ms)[0m  [1m[34mSELECT "book_posts".* FROM "book_posts" WHERE "book_posts"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/book_posts_controller.rb:48:in `set_book_post'
+  Rendering layout layouts/application.html.erb
+  Rendering book_posts/show.html.erb within layouts/application
+  Rendered book_posts/show.html.erb within layouts/application (Duration: 0.4ms | Allocations: 324)
+  Rendered layout layouts/application.html.erb (Duration: 9.5ms | Allocations: 7690)
+Completed 200 OK in 13ms (Views: 10.0ms | ActiveRecord: 0.1ms | Allocations: 8308)
+
+
+Started GET "/" for 127.0.0.1 at 2024-03-04 09:28:11 +0100
+Processing by PagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  [1m[36mBookPost Load (0.1ms)[0m  [1m[34mSELECT "book_posts".* FROM "book_posts"[0m
+  ↳ app/views/pages/index.html.erb:10
+  Rendered pages/index.html.erb within layouts/application (Duration: 1.1ms | Allocations: 552)
+  Rendered layout layouts/application.html.erb (Duration: 9.1ms | Allocations: 8173)
+Completed 200 OK in 10ms (Views: 9.8ms | ActiveRecord: 0.1ms | Allocations: 8444)
+
+
+Started GET "/" for 127.0.0.1 at 2024-03-04 09:28:11 +0100
+Processing by PagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  [1m[36mBookPost Load (0.1ms)[0m  [1m[34mSELECT "book_posts".* FROM "book_posts"[0m
+  ↳ app/views/pages/index.html.erb:10
+  Rendered pages/index.html.erb within layouts/application (Duration: 1.1ms | Allocations: 552)
+  Rendered layout layouts/application.html.erb (Duration: 9.1ms | Allocations: 8062)
+Completed 200 OK in 10ms (Views: 9.4ms | ActiveRecord: 0.1ms | Allocations: 8333)
+
+
+Started GET "/" for 127.0.0.1 at 2024-03-04 09:28:13 +0100
+Processing by PagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  [1m[36mBookPost Load (0.1ms)[0m  [1m[34mSELECT "book_posts".* FROM "book_posts"[0m
+  ↳ app/views/pages/index.html.erb:10
+  Rendered pages/index.html.erb within layouts/application (Duration: 1.0ms | Allocations: 552)
+  Rendered layout layouts/application.html.erb (Duration: 11.5ms | Allocations: 8078)
+Completed 200 OK in 12ms (Views: 11.9ms | ActiveRecord: 0.1ms | Allocations: 8350)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2024-03-04 09:38:51 +0100
+Processing by Users::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (Duration: 0.1ms | Allocations: 115)
+  Rendered users/sessions/new.html.erb within layouts/application (Duration: 1.3ms | Allocations: 871)
+  Rendered layout layouts/application.html.erb (Duration: 10.3ms | Allocations: 8137)
+Completed 200 OK in 12ms (Views: 11.0ms | ActiveRecord: 0.0ms | Allocations: 8810)
+
+
+Started GET "/" for 127.0.0.1 at 2024-03-04 09:44:54 +0100
+Processing by PagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  [1m[36mBookPost Load (1.5ms)[0m  [1m[34mSELECT "book_posts".* FROM "book_posts"[0m
+  ↳ app/views/pages/index.html.erb:10
+  Rendered pages/index.html.erb within layouts/application (Duration: 2.7ms | Allocations: 831)
+  Rendered layout layouts/application.html.erb (Duration: 17.7ms | Allocations: 8419)
+Completed 200 OK in 19ms (Views: 15.9ms | ActiveRecord: 2.4ms | Allocations: 8689)
+
+
+Started GET "/" for 127.0.0.1 at 2024-03-04 13:13:06 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  [1m[36mBookPost Load (0.1ms)[0m  [1m[34mSELECT "book_posts".* FROM "book_posts"[0m
+  ↳ app/views/pages/index.html.erb:10
+  Rendered pages/index.html.erb within layouts/application (Duration: 36.5ms | Allocations: 12332)
+  Rendered layout layouts/application.html.erb (Duration: 312.5ms | Allocations: 69560)
+Completed 200 OK in 349ms (Views: 312.6ms | ActiveRecord: 5.5ms | Allocations: 76502)
+
+
+Started GET "/" for 127.0.0.1 at 2024-03-04 13:13:21 +0100
+Processing by PagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  [1m[36mBookPost Load (0.1ms)[0m  [1m[34mSELECT "book_posts".* FROM "book_posts"[0m
+  ↳ app/views/pages/index.html.erb:10
+  Rendered pages/index.html.erb within layouts/application (Duration: 1.4ms | Allocations: 560)
+  Rendered layout layouts/application.html.erb (Duration: 16.8ms | Allocations: 8173)
+Completed 200 OK in 18ms (Views: 17.4ms | ActiveRecord: 0.1ms | Allocations: 8451)
+
+
+Started GET "/" for 127.0.0.1 at 2024-03-04 13:13:22 +0100
+Processing by PagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  [1m[36mBookPost Load (0.1ms)[0m  [1m[34mSELECT "book_posts".* FROM "book_posts"[0m
+  ↳ app/views/pages/index.html.erb:10
+  Rendered pages/index.html.erb within layouts/application (Duration: 1.0ms | Allocations: 558)
+  Rendered layout layouts/application.html.erb (Duration: 9.8ms | Allocations: 8098)
+Completed 200 OK in 11ms (Views: 10.1ms | ActiveRecord: 0.1ms | Allocations: 8375)
+
+
+Started GET "/" for 127.0.0.1 at 2024-03-04 13:13:22 +0100
+Processing by PagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  [1m[36mBookPost Load (0.1ms)[0m  [1m[34mSELECT "book_posts".* FROM "book_posts"[0m
+  ↳ app/views/pages/index.html.erb:10
+  Rendered pages/index.html.erb within layouts/application (Duration: 1.3ms | Allocations: 552)
+  Rendered layout layouts/application.html.erb (Duration: 11.5ms | Allocations: 8078)
+Completed 200 OK in 13ms (Views: 12.1ms | ActiveRecord: 0.1ms | Allocations: 8347)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2024-03-04 13:13:23 +0100
+Processing by Users::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (Duration: 1.1ms | Allocations: 575)
+  Rendered users/sessions/new.html.erb within layouts/application (Duration: 16.6ms | Allocations: 3105)
+  Rendered layout layouts/application.html.erb (Duration: 28.3ms | Allocations: 10461)
+Completed 200 OK in 59ms (Views: 31.3ms | ActiveRecord: 0.7ms | Allocations: 25553)
+
+
+Started GET "/" for 127.0.0.1 at 2024-03-04 15:29:00 +0100
+Processing by PagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  [1m[36mBookPost Load (8.4ms)[0m  [1m[34mSELECT "book_posts".* FROM "book_posts"[0m
+  ↳ app/views/pages/index.html.erb:10
+  Rendered pages/index.html.erb within layouts/application (Duration: 26.1ms | Allocations: 843)
+  Rendered layout layouts/application.html.erb (Duration: 184.8ms | Allocations: 8609)
+Completed 200 OK in 216ms (Views: 178.6ms | ActiveRecord: 15.7ms | Allocations: 8891)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2024-03-04 15:29:03 +0100
+Processing by Users::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/registrations/new.html.erb within layouts/application
+  Rendered users/shared/_error_messages.html.erb (Duration: 3.4ms | Allocations: 222)
+  Rendered users/shared/_links.html.erb (Duration: 0.3ms | Allocations: 77)
+  Rendered users/registrations/new.html.erb within layouts/application (Duration: 27.2ms | Allocations: 2210)
+  Rendered layout layouts/application.html.erb (Duration: 49.3ms | Allocations: 9636)
+Completed 200 OK in 60ms (Views: 56.2ms | ActiveRecord: 0.0ms | Allocations: 10753)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2024-03-04 15:29:10 +0100
+Processing by Users::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (Duration: 0.2ms | Allocations: 115)
+  Rendered users/sessions/new.html.erb within layouts/application (Duration: 1.2ms | Allocations: 871)
+  Rendered layout layouts/application.html.erb (Duration: 20.6ms | Allocations: 8137)
+Completed 200 OK in 22ms (Views: 21.1ms | ActiveRecord: 0.0ms | Allocations: 8811)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2024-03-04 15:29:11 +0100
+Processing by Users::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (Duration: 0.2ms | Allocations: 115)
+  Rendered users/sessions/new.html.erb within layouts/application (Duration: 2.1ms | Allocations: 871)
+  Rendered layout layouts/application.html.erb (Duration: 40.3ms | Allocations: 8137)
+Completed 200 OK in 43ms (Views: 41.4ms | ActiveRecord: 0.0ms | Allocations: 8820)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2024-03-04 15:29:11 +0100
+Processing by Users::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (Duration: 0.2ms | Allocations: 115)
+  Rendered users/sessions/new.html.erb within layouts/application (Duration: 1.5ms | Allocations: 871)
+  Rendered layout layouts/application.html.erb (Duration: 21.4ms | Allocations: 8195)
+Completed 200 OK in 24ms (Views: 22.7ms | ActiveRecord: 0.0ms | Allocations: 8870)
+
+
+DEPRECATION WARNING: `Rails.application.secrets` is deprecated in favor of `Rails.application.credentials` and will be removed in Rails 7.2. (called from <main> at /Users/johan/Documents/Code/lemoners-bibliotheek-1/config/environment.rb:5)
+Started GET "/" for 127.0.0.1 at 2024-03-04 16:46:46 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/users/sign_in" for 127.0.0.1 at 2024-03-04 16:46:47 +0100
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate
+
+You have 1 pending migration:
+
+db/migrate/20240304145143_add_devise_two_factor_to_users.rb
+
+
+):
+  
+activerecord (7.1.3.2) lib/active_record/migration.rb:755:in `check_pending_migrations'
+activerecord (7.1.3.2) lib/active_record/migration.rb:644:in `block (2 levels) in call'
+activesupport (7.1.3.2) lib/active_support/file_update_checker.rb:85:in `execute'
+activesupport (7.1.3.2) lib/active_support/file_update_checker.rb:95:in `execute_if_updated'
+activerecord (7.1.3.2) lib/active_record/migration.rb:651:in `block in call'
+activerecord (7.1.3.2) lib/active_record/migration.rb:641:in `synchronize'
+activerecord (7.1.3.2) lib/active_record/migration.rb:641:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+activesupport (7.1.3.2) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/callbacks.rb:28:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/actionable_exceptions.rb:16:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (7.1.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (7.1.3.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (7.1.3.2) lib/active_support/tagged_logging.rb:135:in `block in tagged'
+activesupport (7.1.3.2) lib/active_support/tagged_logging.rb:39:in `tagged'
+activesupport (7.1.3.2) lib/active_support/tagged_logging.rb:135:in `tagged'
+activesupport (7.1.3.2) lib/active_support/broadcast_logger.rb:240:in `method_missing'
+railties (7.1.3.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/remote_ip.rb:92:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/request_id.rb:28:in `call'
+rack (3.0.9.1) lib/rack/method_override.rb:28:in `call'
+rack (3.0.9.1) lib/rack/runtime.rb:24:in `call'
+activesupport (7.1.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/server_timing.rb:59:in `block in call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/server_timing.rb:24:in `collect_events'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/server_timing.rb:58:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/static.rb:25:in `call'
+rack (3.0.9.1) lib/rack/sendfile.rb:114:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/host_authorization.rb:141:in `call'
+railties (7.1.3.2) lib/rails/engine.rb:536:in `call'
+puma (6.4.2) lib/puma/configuration.rb:272:in `call'
+puma (6.4.2) lib/puma/request.rb:100:in `block in handle_request'
+puma (6.4.2) lib/puma/thread_pool.rb:378:in `with_force_shutdown'
+puma (6.4.2) lib/puma/request.rb:99:in `handle_request'
+puma (6.4.2) lib/puma/server.rb:464:in `process_client'
+puma (6.4.2) lib/puma/server.rb:245:in `block in run'
+puma (6.4.2) lib/puma/thread_pool.rb:155:in `block in spawn_thread'
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate
+
+You have 1 pending migration:
+
+db/migrate/20240304145143_add_devise_two_factor_to_users.rb
+
+
+):
+  
+activerecord (7.1.3.2) lib/active_record/migration.rb:755:in `check_pending_migrations'
+activerecord (7.1.3.2) lib/active_record/migration.rb:644:in `block (2 levels) in call'
+activesupport (7.1.3.2) lib/active_support/file_update_checker.rb:85:in `execute'
+activerecord (7.1.3.2) lib/active_record/migration.rb:649:in `block in call'
+activerecord (7.1.3.2) lib/active_record/migration.rb:641:in `synchronize'
+activerecord (7.1.3.2) lib/active_record/migration.rb:641:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+activesupport (7.1.3.2) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/callbacks.rb:28:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/actionable_exceptions.rb:16:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (7.1.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (7.1.3.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (7.1.3.2) lib/active_support/tagged_logging.rb:135:in `block in tagged'
+activesupport (7.1.3.2) lib/active_support/tagged_logging.rb:39:in `tagged'
+activesupport (7.1.3.2) lib/active_support/tagged_logging.rb:135:in `tagged'
+activesupport (7.1.3.2) lib/active_support/broadcast_logger.rb:240:in `method_missing'
+railties (7.1.3.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/remote_ip.rb:92:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/request_id.rb:28:in `call'
+rack (3.0.9.1) lib/rack/method_override.rb:28:in `call'
+rack (3.0.9.1) lib/rack/runtime.rb:24:in `call'
+activesupport (7.1.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/server_timing.rb:59:in `block in call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/server_timing.rb:24:in `collect_events'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/server_timing.rb:58:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/static.rb:25:in `call'
+rack (3.0.9.1) lib/rack/sendfile.rb:114:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/host_authorization.rb:141:in `call'
+railties (7.1.3.2) lib/rails/engine.rb:536:in `call'
+puma (6.4.2) lib/puma/configuration.rb:272:in `call'
+puma (6.4.2) lib/puma/request.rb:100:in `block in handle_request'
+puma (6.4.2) lib/puma/thread_pool.rb:378:in `with_force_shutdown'
+puma (6.4.2) lib/puma/request.rb:99:in `handle_request'
+puma (6.4.2) lib/puma/server.rb:464:in `process_client'
+puma (6.4.2) lib/puma/server.rb:245:in `block in run'
+puma (6.4.2) lib/puma/thread_pool.rb:155:in `block in spawn_thread'

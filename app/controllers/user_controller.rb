@@ -1,22 +1,15 @@
 class UserController < ApplicationController
+  before_action :authenticate_user!, except: %i[show_otp verify_otp]
 
-  def index
-    # Your code here
+  def show_otp
+    @user = current_user
   end
 
-  def show
-    # Your code here
-  end
+  def verify_otp
+    verifier = Rails.application.message.verifier(:otp_session)
+    user_id = verifier.verify(session[:otp_token])
+    user = User.find(user_id)
 
-  def create
-    # Your code here
-  end
+    if user.validate_and_consume_otp!(params[:otp_attempt])
 
-  def update
-    # Your code here
-  end
-
-  def destroy
-    # Your code here
-  end
 end

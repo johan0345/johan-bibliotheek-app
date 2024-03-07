@@ -8,10 +8,10 @@
     <h2 class="font-bold">Auteur: <p class="font-normal"><%= @book_post.author %></p></h2>
     <h2 class="font-bold">Genre: <p class="font-normal"><%= @book_post.genre %></p></h2>
     <h2 class="font-bold">ISBN: <p class="font-normal"><%= @book_post.isbn %></p></h2>
-  </div>
-  <p class="mt-4 border-4 border-gray-400">
+  </div><br />
+  <button class="mt-4 border-2 border-gray-400 p-4">
     <% if @book_post.user == current_user || current_user.admin? %>
-    <%= link_to 'Edit', edit_book_post_path(@book_post) %>
+    <%= link_to 'Edit', edit_book_post_path(@book_post), class: 'p-4' %>
   <% end %>
-  </p>
+  </button>
 </div>

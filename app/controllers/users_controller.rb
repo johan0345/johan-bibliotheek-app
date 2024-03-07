@@ -59,7 +59,4 @@ class UsersController < ApplicationController
     end
   end
 
-  def avatar_thumbnail
-    avatar.variant(resize: '150x150!').processed
-  end
 end

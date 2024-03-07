@@ -26,11 +26,17 @@
         <%= link_to "Admin", admin_index_path if current_user.admin? %>
         <p><%= link_to "Profile", edit_user_registration_path %></p>
         <p class=""><%= link_to "Sign Out", destroy_user_session_path, data: { turbo_method: :delete } %></p><br />
-        <%= raw RQRCode::QRCode.new(current_user.otp_provisioning_uri(current_user.email, issuer: "Devise-Two-Factor-Demo"), 
+        <%= image_tag(current_user.avatar_thumbnail) %>
+        <%
+=begin%>
+ <%= raw RQRCode::QRCode.new(current_user.otp_provisioning_uri(current_user.email, issuer: "Devise-Two-Factor-Demo"), 
         :svg, 
         :level => :h,
         :size => 10,
-        :unit => 2).as_svg %>
+        :unit => 2).as_svg %> 
+<%
+=end
+%>
       <% else %>
         <p><%= link_to "Sign In", new_user_session_path %></p>
         <p><%= link_to "Sign Up", new_user_registration_path %></p>

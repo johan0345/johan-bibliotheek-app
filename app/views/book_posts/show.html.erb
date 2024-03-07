@@ -10,7 +10,7 @@
     <h2 class="font-bold">ISBN: <p class="font-normal"><%= @book_post.isbn %></p></h2>
   </div><br />
   <button class="mt-4 border-2 border-gray-400 p-4">
-    <% if @book_post.user == current_user || current_user.admin? %>
+    <% if current_user && (@book_post.user == current_user || current_user.admin?) %>
     <%= link_to 'Edit', edit_book_post_path(@book_post), class: 'p-4' %>
   <% end %>
   </button>

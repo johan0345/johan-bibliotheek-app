@@ -9,6 +9,8 @@ class User < ApplicationRecord
   has_one_attached :avatar
   after_commit :add_default_avatar, on: %i[create update]
 
+  has_many :book_posts
+
   validates :email, uniqueness: true
 
   validate :email_domain

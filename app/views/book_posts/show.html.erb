@@ -1,5 +1,11 @@
 <div class="mt-2">
-  <div class="text-lg"><%= link_to "Edit", edit_book_post_path(@book_post) if user_signed_in? %></div>
+  <% if @book_post.user == current_user %>
+    <%= link_to 'Edit', edit_book_post_path(@book_post) %>
+  <% end %>
+  <p>
+    <strong>Posted by:</strong>
+    <%= @book_post.user.username %>
+  </p>
   <h1 class="font-bold text-2xl py-2"><%= @book_post.title %></h1>
   <div class="inline-block">
     <h2 class="font-bold">Auteur: <p class="font-normal"><%= @book_post.author %></p></h2>

@@ -6,4 +6,6 @@ class BookPost < ApplicationRecord
 
   scope :sorted, ->{ order(published_at: :desc, updated_at: :desc) } 
 
+  belongs_to :user
+
 end

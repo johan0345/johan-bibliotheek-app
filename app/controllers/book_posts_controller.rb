@@ -1,6 +1,7 @@
 class BookPostsController < ApplicationController
   before_action :authenticate_user!, except: [:index, :show]
   before_action :set_book_post, only: [:show, :edit, :update, :destroy]
+  before_action :check_user, only: [:edit, :update, :destroy]
 
   def show
   end
@@ -14,7 +15,7 @@ class BookPostsController < ApplicationController
   end
 
   def create
-    @book_post = BookPost.new(book_post_params)
+    @book_post = current_user.book_posts.build(book_post_params)
     if @book_post.save
       redirect_to @book_post
     else
@@ -48,5 +49,11 @@ end
     @book_post = BookPost.find(params[:id])
     rescue ActiveRecord::RecordNotFound
     redirect_to root_path
+  end
+
+  def check_user
+    unless @book_post.user_id == current_user.id
+      redirect_to root_path
+    end
   end
 end

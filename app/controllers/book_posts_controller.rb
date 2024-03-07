@@ -52,7 +52,7 @@ end
   end
 
   def check_user
-    unless @book_post.user_id == current_user.id
+    unless @book_post.user_id == current_user.id || current_user.admin?
       redirect_to root_path
     end
   end

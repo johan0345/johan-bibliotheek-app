@@ -1,7 +1,4 @@
 <div class="mt-2">
-  <% if @book_post.user == current_user %>
-    <%= link_to 'Edit', edit_book_post_path(@book_post) %>
-  <% end %>
   <p>
     <strong>Posted by:</strong>
     <%= @book_post.user.username %>
@@ -12,4 +9,9 @@
     <h2 class="font-bold">Genre: <p class="font-normal"><%= @book_post.genre %></p></h2>
     <h2 class="font-bold">ISBN: <p class="font-normal"><%= @book_post.isbn %></p></h2>
   </div>
+  <p class="mt-4 border-4 border-gray-400">
+    <% if @book_post.user == current_user %>
+    <%= link_to 'Edit', edit_book_post_path(@book_post) %>
+  <% end %>
+  </p>
 </div>

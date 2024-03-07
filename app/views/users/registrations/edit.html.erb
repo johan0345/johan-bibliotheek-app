@@ -4,6 +4,10 @@
   <%= render "users/shared/error_messages", resource: resource %>
 
   <div class="field">
+   <%= image_tag(resource.avatar_thumbnail) if resource.avatar.attached? %>
+  </div>
+
+  <div class="field">
     <%= f.label :username %><br />
     <%= f.text_field :username, autofocus: true, autocomplete: "username" %>
   </div>
@@ -20,6 +24,19 @@
 
   <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
     <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
+  <% end %>
+
+  <!-- Disable 2FA with OTP -->
+  <% if resource.otp_required_for_login %>
+    <div class="field" style="margin: 1em">
+      <i>Enter OTP to disable 2FA</i><br />
+      <%= f.text_field :otp_attempt %>
+    </div>
+  <% else %>
+    <div class="field" style="margin: 1em">
+      <i>Enable OTP?</i><br />
+      <%= link_to "Enable 2FA", enable_otp_show_qr_path %>
+    </div>
   <% end %>
 
   <div class="field">

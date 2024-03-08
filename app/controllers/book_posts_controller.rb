@@ -5,7 +5,7 @@ class BookPostsController < ApplicationController
 
   def show
   end
-  
+
   def index
     @book_posts = BookPost.all
   end

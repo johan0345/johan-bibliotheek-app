@@ -1,4 +1,4 @@
-# 📖 Lemoners bibliotheek
+# 📖 bibliotheek
 
 ## Resources
 
